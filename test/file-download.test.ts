@@ -44,18 +44,17 @@ describe('FileDownload', () => {
       //   }
       // }
       if (percent > last + 30) {
-        console.log(id, '🚀 ~ onDownloadProgress ~ percent: %', p, transferredBytes, totalBytes)
+        console.log(id, `🚀 ~ onDownloadProgress ~ percent: %${(p * 100)}, transferredBytes: ${transferredBytes}, totalBytes: ${totalBytes}`)
         last = percent
         if (reqAbort) {
           await this.stop()
         }
-      }
-      if (percent === 100) {
-        console.log(id, '🚀 ~ onDownloadProgress ~ percent: %', p, transferredBytes, totalBytes)
+      } else if (percent === 100) {
+        console.log(id, `🚀 ~ onDownloadProgress ~ percent: %${(p * 100).toFixed(2)}, transferredBytes: ${transferredBytes}, totalBytes: ${totalBytes}`)
       }
     }
 
-    const dn = new FileDownload({url: url+xyj, filepath: tmpFilePath, chunkSizeInBytes, onDownloadProgress})
+    const dn = new FileDownload({url: url+xyj, filepath: tmpFilePath, cleanTempFile: false, chunkSizeInBytes, onDownloadProgress})
     try {
       await dn.start()
     } catch (error) {

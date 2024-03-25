@@ -235,5 +235,5 @@ async function combineStreams(sources: Stream[], destination: WriteStream) {
       stream.on('error', reject)
     })
   }
-  destination.emit('end')
+  destination.end()
 }
