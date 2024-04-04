@@ -2,9 +2,15 @@ import fs from "fs";
 import stream from 'node:stream';
 import ky from "ky";
 
+import type { Stream } from "node:stream";
+import type { WriteStream } from "fs";
+
 import type { KyResponse, Options } from 'ky';
 
 export type FileDownloadStatus = 'pending' | 'downloading' | 'pausing' | 'paused' | 'completed' | 'failed'
+export const defaultChunkSizeInBytes = 1024 * 1024 * 64 // 64MB
+export const defaultConcurrency = 3
+export const minSplitSizeInBytes = 1024 * 1024 * 1 // 1MB
 
 export interface UrlMetaInfo {
   size: number | null
@@ -15,7 +21,19 @@ export interface UrlMetaInfo {
 export const RangeRequestErrCode = 416
 export const AlreadyDownloadErrCode = 409
 
+export async function concatStreamTo(sources: Stream[], destination: WriteStream) {
+  for (const stream of sources) {
+    await new Promise((resolve, reject) => {
+      stream.pipe(destination, { end: false })
+      stream.on('end', resolve)
+      stream.on('error', reject)
+    })
+  }
+  destination.end()
+}
+
 export async function getUrlMetaInfo(url:string, options?: Options, headers?: Headers) {
+  // console.log('🚀 ~ getUrlMetaInfo ~ options:', url, options)
   if (!headers) {
     const response = await ky.head(url, {
       ...options,
@@ -23,6 +41,7 @@ export async function getUrlMetaInfo(url:string, options?: Options, headers?: He
     })
     headers = response.headers
   }
+  // the fastify use specified 'content-length' as payload size, not file size: see fastify/lib/headRoute.js
   const s = headers.get('content-length')
   const size = s != null ? Number(s) : null
   const canRange = headers.get('accept-ranges') === 'bytes'
