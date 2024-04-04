@@ -1,4 +1,3 @@
-import fs from 'fs'
 import path from 'path'
 import { AlreadyExistsError, EventName, event, eventServer, isValidFilepath, throwError, xxhashAsStr, ResServerTools, ResServerFuncParams, NotFoundError, ErrorCode } from "@isdk/ai-tool";
 import type { DownloadProgress } from 'ky';
@@ -313,6 +312,13 @@ export class DownloadFunc extends ResServerTools {
   list(options: DownloadFuncParams) {
     if (options?.finishedOnly) {
       return Object.keys(this.finished)
+    }
+    if (options?.downloadingOnly) {
+      return Object.keys(this.queue).filter(id => this.queue[id].status === 'downloading')
+    }
+
+    if (options?.pausedOnly) {
+      return Object.keys(this.queue).filter(id => this.queue[id].status !== 'downloading')
     }
 
     const ids = Object.keys(this.queue)
