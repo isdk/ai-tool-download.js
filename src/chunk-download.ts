@@ -183,4 +183,9 @@ export class ChunkDownload {
       }
     }
   }
+
+  toJSON(): any {
+    return {...this.options, status: this.status}
+  }
+
 }
