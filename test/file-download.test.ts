@@ -22,10 +22,44 @@ declare module 'vitest' {
 
 describe('FileDownload', () => {
   const url: string = inject('server-url')
-
-  it('should download a file', async () => {
+  beforeEach(() => {
     if (fs.existsSync(tmpFilePath)) fs.rmSync(tmpFilePath, { recursive: true })
     if (fs.existsSync(tmpFilePath+'.temp')) fs.rmSync(tmpFilePath+'.temp', { recursive: true })
+  })
+
+  it('should download a file and abort it with cleanTempFile', async () => {
+    let last: any = 0
+    let reqAbort = true
+
+    // totalBytes: the file size
+    const onDownloadProgress: any = async function({percent: p, totalBytes, transferredBytes, id}, chunk: Uint8Array) {
+      const percent = Math.round(p * 100)
+      if (percent > last + 30) {
+        console.log(id, `🚀 ~ onDownloadProgress ~ percent: %${(p * 100)}, transferredBytes: ${transferredBytes}, totalBytes: ${totalBytes}`)
+        last = percent
+        if (reqAbort) {
+          await this.stop({cleanTempFile: true})
+        }
+      } else if (percent === 100) {
+        console.log(id, `🚀 ~ onDownloadProgress ~ percent: %${(p * 100).toFixed(2)}, transferredBytes: ${transferredBytes}, totalBytes: ${totalBytes}`)
+      }
+    }
+
+    const dn = new FileDownload({url: url+xyj, filepath: tmpFilePath, cleanTempFile: false, chunkSizeInBytes, onDownloadProgress})
+    try {
+      await dn.start()
+    } catch (error) {
+      if (error.code === AbortErrorCode) {
+        reqAbort = false
+      } else {
+        throw error
+      }
+    }
+    expect(reqAbort).toBe(false)
+    expect(fs.existsSync(tmpDir)).toBeFalsy()
+  })
+
+  it('should download a file', async () => {
     // let last: any = {}
     let last: any = 0
     let reqAbort = true

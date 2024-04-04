@@ -231,6 +231,7 @@ export class BaseFileDownload extends EventEmitter {
   }
 
   async stop(options?: BaseFileDownloadOptions) {
+    const cleanTempFile = options?.cleanTempFile
     if (this.status === 'downloading') {
       options = this.resolveOptions(options)
       this.status = 'pausing'
@@ -239,6 +240,11 @@ export class BaseFileDownload extends EventEmitter {
         options.aborter?.abort({code: AbortErrorCode, message: 'paused'})
         await wait(0)
         await Promise.all(this.chunks.map(chunk => chunk.stop()))
+        if (cleanTempFile) {
+          const filepath = this.getAbsPath(options)
+          const dirPath = filepath + '.temp'
+          if (fs.existsSync(dirPath)) { fs.rmSync(dirPath, { recursive: true }) }
+        }
       } finally {
         this.status = 'paused'
       }
