@@ -1,16 +1,26 @@
 import { ChunkDownload } from "./chunk-download"
 
 export async function downloadFile(url, filepath, options) {
-  const port = options && options.port
+  if (!options) {
+    options = {url, filepath}
+  } else {
+    options = {
+      ...options,
+      url,
+      filepath,
+    }
+  }
+  const port = options.port
   if (port) {delete options.signal}
 
-  const downloader = new ChunkDownload(url, filepath, options)
+
+  const downloader = new ChunkDownload(options)
 
   if (port) {
     // get message from main process
-    port.on('message', (message) => {
+    port.on('message', async (message) => {
       if (message.type === 'abort') {
-         downloader.abortController?.abort()
+         await downloader.stop()
       }
     })
   }
