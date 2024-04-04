@@ -17,8 +17,7 @@ import {
   minSplitSizeInBytes
 } from "./utils";
 
-export interface BaseFileDownloadOptions extends Options {
-  url: string
+export interface CustomBaseFileDownloadOptions extends Options {
   filepath?: string
   /**
    * The number of concurrent chunk downloads.
@@ -34,6 +33,11 @@ export interface BaseFileDownloadOptions extends Options {
   destinationFolder?: string
   cleanTempFile?: boolean
   aborter?: AbortController
+  [name: string]: any
+}
+
+export type BaseFileDownloadOptions = CustomBaseFileDownloadOptions & {
+  url: string
 }
 
 export class BaseFileDownload extends EventEmitter {
@@ -47,8 +51,7 @@ export class BaseFileDownload extends EventEmitter {
   options: BaseFileDownloadOptions
   chunks: ChunkDownload[] = []
   _status: FileDownloadStatus = 'pending'
-
-  protected transferredBytes: number = 0
+  transferredBytes: number = 0
   protected urlMetaInfo?: UrlMetaInfo
 
   constructor(url: string|BaseFileDownloadOptions, options?: BaseFileDownloadOptions) {
@@ -95,7 +98,7 @@ export class BaseFileDownload extends EventEmitter {
     return result
   }
 
-  getAbsPath(options: BaseFileDownloadOptions) {
+  getAbsPath(options: CustomBaseFileDownloadOptions) {
     if (!options.filepath) {
       options.filepath = getFilenameFromUrl(options.url!)
     }
@@ -106,7 +109,7 @@ export class BaseFileDownload extends EventEmitter {
     throw new NotImplementationError
   }
 
-  resolveOptions(options?: BaseFileDownloadOptions) {
+  resolveOptions(options?: CustomBaseFileDownloadOptions) {
     if (!options) {options = this.options}
     else if (this.options) {
       const opts = this.options
@@ -121,7 +124,7 @@ export class BaseFileDownload extends EventEmitter {
     return options
   }
 
-  async mergeChunks(options: BaseFileDownloadOptions) {
+  async mergeChunks(options: CustomBaseFileDownloadOptions) {
     const filepath = this.getAbsPath(options)
     const dirPath = filepath + '.temp'
 
@@ -135,7 +138,7 @@ export class BaseFileDownload extends EventEmitter {
     }
   }
 
-  async splitChunks(options: BaseFileDownloadOptions) {
+  async splitChunks(options: CustomBaseFileDownloadOptions) {
     const filepath = this.getAbsPath(options)
     const tempDirPath = filepath + '.temp'
 
@@ -198,11 +201,11 @@ export class BaseFileDownload extends EventEmitter {
     }
   }
 
-  async _start(options: BaseFileDownloadOptions): Promise<any> {
+  async _start(options: CustomBaseFileDownloadOptions): Promise<any> {
     throw new NotImplementationError
   }
 
-  async start(options?: BaseFileDownloadOptions) {
+  async start(options?: CustomBaseFileDownloadOptions) {
     if (this.status === 'downloading') {
       throwError('File download has already started.', 'FileDownload', AlreadyDownloadErrCode)
     }
@@ -227,10 +230,10 @@ export class BaseFileDownload extends EventEmitter {
     }
   }
 
-  async _stop(options: BaseFileDownloadOptions) {
+  async _stop(options: CustomBaseFileDownloadOptions) {
   }
 
-  async stop(options?: BaseFileDownloadOptions) {
+  async stop(options?: CustomBaseFileDownloadOptions) {
     const cleanTempFile = options?.cleanTempFile
     if (this.status === 'downloading') {
       options = this.resolveOptions(options)
@@ -240,16 +243,20 @@ export class BaseFileDownload extends EventEmitter {
         options.aborter?.abort({code: AbortErrorCode, message: 'paused'})
         await wait(0)
         await Promise.all(this.chunks.map(chunk => chunk.stop()))
-        if (cleanTempFile) {
-          const filepath = this.getAbsPath(options)
-          const dirPath = filepath + '.temp'
-          if (fs.existsSync(dirPath)) { fs.rmSync(dirPath, { recursive: true }) }
-        }
+        if (cleanTempFile) { this.cleanTemp(options) }
       } finally {
         this.status = 'paused'
       }
     }
   }
+
+  cleanTemp(options?: CustomBaseFileDownloadOptions) {
+    options = this.resolveOptions(options)
+    const filepath = this.getAbsPath(options)
+    const dirPath = filepath + '.temp'
+    if (fs.existsSync(dirPath)) { fs.rmSync(dirPath, { recursive: true }) }
+  }
+
   toJSON(): any {
     let result: any = {...this.options, status: this.status}
     if (this.id != null) {result.id = this.id}
