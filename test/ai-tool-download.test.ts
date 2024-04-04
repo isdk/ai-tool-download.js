@@ -4,9 +4,11 @@ import path from 'path';
 import fs from 'fs'
 
 import { ResClientTools as ClientTools, type ResServerFuncParams, ResServerTools as ToolFunc, wait, xxhashAsStr } from '@isdk/ai-tool'
-import { findPort } from './find-port'
+import { findPort } from './util/find-port'
 import {DownloadFunc} from '../src/ai-tool-download'
 import { FileDownload } from '../src/file-download';
+import { compareStr } from './util/compare-str';
+import { rmFile } from './util/rm-file';
 
 const chunkSizeInBytes = 1024 * 512; // 512KB
 FileDownload.minSplitSizeInBytes = chunkSizeInBytes
@@ -32,7 +34,7 @@ describe('Tool Download class', () => {
 
   beforeAll(async () => {
     server.get('/api', async function(request, reply){
-      reply.send(ToolFunc.toJSON())
+      reply.send(ToolFunc)
     })
 
     server.all('/api/:toolId/:id?', async function(request, reply){
@@ -92,6 +94,7 @@ describe('Tool Download class', () => {
     ToolFunc.apiRoot = apiRoot
     const res = new DownloadFunc('download')
     res.rootDir = '/tmp/'
+    res.chunkSizeInBytes = chunkSizeInBytes
     res.register()
 
     ClientTools.apiRoot = apiRoot
@@ -100,6 +103,15 @@ describe('Tool Download class', () => {
 
   afterAll(async () => {
     await server.close()
+  })
+
+  beforeEach(async () => {
+    const result = ClientTools.get('download')
+    // clean all completed tasks
+    await result.clean()
+    rmFile(tmpFilePath)
+    rmFile('/tmp/' + xyjA)
+    rmFile('/tmp/' + three)
   })
 
   it('should list download tasks', async () => {
@@ -150,9 +162,66 @@ describe('Tool Download class', () => {
     expect(res).toHaveProperty('url', xyjUrl)
     res = await result.start({id})
     expect(res).toHaveProperty('id', expectId)
-    console.log('🚀 ~ it ~ res:', res)
-    await wait(10)
+    await wait(5)
     res = await result.get({id})
-    console.log('🚀 ~ it ~ res:', res)
-  });
+    expect(res).toHaveProperty('status', 'downloading')
+    await wait(100)
+    res = await result.get({id})
+    expect(res).toHaveProperty('status', 'completed')
+    const content = fs.readFileSync(tmpFilePath)
+    expect(content.length).toEqual(src.length)
+    expect(compareStr(src, content)).toBeTruthy()
+   });
+
+
+  it('should download file with resume', async () => {
+    const result = ClientTools.get('download')
+    const xyjUrl = url + xyj
+    const expectId = xxhashAsStr(xyjUrl)
+    let res = await result.post({url: xyjUrl, start: true})
+    expect(res).toHaveProperty('id', expectId)
+    let id = res.id
+    res = await result.get({id})
+    expect(res).toHaveProperty('id', expectId)
+    expect(res).toHaveProperty('url', xyjUrl)
+    await wait(5)
+    res = await result.get({id})
+    expect(res).toHaveProperty('status', 'downloading')
+    expect(res.chunks).toHaveLength(5)
+    res = await result.stop({id})
+    expect(res).toHaveProperty('status', 'paused')
+    res = await result.get({id})
+    expect(res).toHaveProperty('status', 'paused')
+
+    res = await result.start({id})
+    expect(res).toHaveProperty('id', expectId)
+    await wait(100)
+    res = await result.get({id})
+    expect(res).toHaveProperty('status', 'completed')
+    const content = fs.readFileSync(tmpFilePath)
+    expect(content.length).toEqual(src.length)
+    expect(compareStr(src, content)).toBeTruthy()
+  })
+
+  it('should clean temp file after removing task ', async () => {
+    const result = ClientTools.get('download')
+    const xyjUrl = url + xyj
+    const expectId = xxhashAsStr(xyjUrl)
+    let res = await result.post({url: xyjUrl, start: true})
+    expect(res).toHaveProperty('id', expectId)
+    let id = res.id
+    res = await result.get({id})
+    expect(res).toHaveProperty('id', expectId)
+    expect(res).toHaveProperty('url', xyjUrl)
+    await wait(5)
+    res = await result.get({id})
+    expect(res).toHaveProperty('status', 'downloading')
+    res = await result.stop({id})
+    expect(res).toHaveProperty('status', 'paused')
+    expect(fs.existsSync(path.join(tmpDir, '0.part'))).toBeTruthy()
+    res = await result.delete({id})
+    expect(res).toHaveProperty('id', expectId)
+    expect(res).toHaveProperty('status', 'paused')
+    expect(fs.existsSync(tmpDir)).toBeFalsy()
+  })
 });

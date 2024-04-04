@@ -4,6 +4,8 @@ import path from 'path'
 import { AbortErrorCode, wait } from '@isdk/ai-tool';
 
 import { FileDownload } from '../src/file-download';
+import { compareStr } from './util/compare-str';
+import { rmFile } from './util/rm-file';
 
 const chunkSizeInBytes = 1024 * 512; // 512KB
 FileDownload.minSplitSizeInBytes = chunkSizeInBytes
@@ -23,8 +25,7 @@ declare module 'vitest' {
 describe('FileDownload', () => {
   const url: string = inject('server-url')
   beforeEach(() => {
-    if (fs.existsSync(tmpFilePath)) fs.rmSync(tmpFilePath, { recursive: true })
-    if (fs.existsSync(tmpFilePath+'.temp')) fs.rmSync(tmpFilePath+'.temp', { recursive: true })
+    rmFile(tmpFilePath)
   })
 
   it('should download a file and abort it with cleanTempFile', async () => {
@@ -118,15 +119,3 @@ describe('FileDownload', () => {
   });
 
 });
-
-function compareStr(src: Buffer, dest: Buffer) {
-  expect(src.length).toBeGreaterThanOrEqual(dest.length)
-
-  for (let i = 0; i < dest.length; i++) {
-    if (src[i] !== dest[i]) {
-      console.log('🚀 ~ compareStr ~ src[i]:', i, src[i], dest[i], dest.length)
-      return false
-    }
-  }
-  return true
-}
