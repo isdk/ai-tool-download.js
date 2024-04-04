@@ -1,8 +1,8 @@
 import pLimit, { type LimitFunction } from 'p-limit';
 import { ChunkDownload, type ChunkOptions } from "./chunk-download";
-import { BaseFileDownload, BaseFileDownloadOptions } from "./base-file-download";
+import { BaseFileDownload, type CustomBaseFileDownloadOptions } from "./base-file-download";
 
-export interface FileDownloadOptions extends BaseFileDownloadOptions {
+export interface FileDownloadOptions extends CustomBaseFileDownloadOptions {
   limit?: LimitFunction
 }
 
