@@ -9,7 +9,7 @@ const chunkSizeInBytes = 1024 * 512; // 512KB
 FileDownload.minSplitSizeInBytes = chunkSizeInBytes
 
 const xyj  = 'xyj.txt'
-const tmpFilePath = '/tmp/' + xyj
+const tmpFilePath = '/tmp/123' + xyj
 const tmpDir = tmpFilePath + '.temp'
 const src = fs.readFileSync(path.join(__dirname, 'res', xyj))
 const totalBytes = src.length
