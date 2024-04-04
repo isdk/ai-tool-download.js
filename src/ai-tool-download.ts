@@ -4,7 +4,7 @@ import type { DownloadProgress } from 'ky';
 
 import { FileDownload, FileDownloadOptions } from "./file-download";
 import { BaseFileDownloadOptions } from "./base-file-download";
-import { FileDownloadStatus, defaultConcurrency } from './utils';
+import { FileDownloadStatus, defaultChunkSizeInBytes, defaultConcurrency } from './utils';
 
 //type DownloadProgressFunc = (progress: DownloadProgress, chunk: Uint8Array) => void
 
@@ -13,6 +13,7 @@ interface DownloadFuncParams extends BaseFileDownloadOptions, ResServerFuncParam
 }
 
 interface DownloadItem extends FileDownloadOptions {
+  url: string
   order?: number
   id?: string
 }
@@ -41,6 +42,8 @@ export class DownloadFunc extends ResServerTools {
   nextOrder = 0
   concurrency = defaultConcurrency
   autostart: boolean|undefined
+  cleanTempFile = true
+  chunkSizeInBytes = defaultChunkSizeInBytes
 
   depends = {[EventName]: eventServer}
 
@@ -118,7 +121,11 @@ export class DownloadFunc extends ResServerTools {
 
   newDownload(options: BaseFileDownloadOptions, id: string) {
     // , onDownloadProgress: DownloadFunc.onDownloadProgress
-    const download = new FileDownload({...options, destinationFolder: this.rootDir})
+    const download = new FileDownload({...options,
+      destinationFolder: this.rootDir,
+      chunkSizeInBytes: this.chunkSizeInBytes,
+      cleanTempFile: this.cleanTempFile,
+    })
     download.id = id
     download.order = this.nextOrder++
     download.manager = this
@@ -204,11 +211,13 @@ export class DownloadFunc extends ResServerTools {
 
   async $stop(options: DownloadFuncParams|string) {
     const id = this.getId(options)
+    const cleanTempFile = (options as any)?.cleanTempFile
     if (id) {
       const download = this.queue[id]
       if (download) {
         if (download.status === 'downloading') {
           await download.stop()
+          if (cleanTempFile) { download.cleanTemp() }
         }
         return {id, status: download.status, url: download.options.url}
       } else {
@@ -228,6 +237,7 @@ export class DownloadFunc extends ResServerTools {
     if (options?.paused) {
       for (const [id, download] of Object.entries(this.queue)) {
         if (download.status !== 'downloading') {
+          if (this.cleanTempFile) { download.cleanTemp() }
           result.push({id, url: download.options.url, filepath: download.options.filepath})
           delete this.queue[id]
         }
@@ -237,6 +247,7 @@ export class DownloadFunc extends ResServerTools {
       for (const [id, download] of Object.entries(this.queue)) {
         if (download.status === 'downloading') {
           await this.$stop(id)
+          if (this.cleanTempFile) { download.cleanTemp() }
           result.push({id, url: download.options.url, filepath: download.options.filepath})
           delete this.queue[id]
         }
@@ -245,19 +256,31 @@ export class DownloadFunc extends ResServerTools {
     return result
   }
 
-  $config(options?: {concurrency?: number, rootDir?: string, autostart?: boolean}) {
+  $config(options?: {concurrency?: number, rootDir?: string, autostart?: boolean, cleanTempFile?: boolean, chunkSizeInBytes?: number}) {
     if (options) {
       if (options.concurrency !== undefined) {
         this.concurrency = options.concurrency
       }
-      // if (options.rootDir !== undefined) {
-      //   this.rootDir = options.rootDir
-      // }
+      if (options.rootDir !== undefined) {
+        this.rootDir = options.rootDir
+      }
       if (options.autostart !== undefined) {
         this.autostart = options.autostart
       }
+      if (options.cleanTempFile !== undefined) {
+        this.cleanTempFile = options.cleanTempFile
+      }
+      if (options.chunkSizeInBytes! > 0) {
+        this.chunkSizeInBytes = options.chunkSizeInBytes!
+      }
     }
-    return {concurrency: this.concurrency, rootDir: this.rootDir, autostart: this.autostart}
+    return {
+      concurrency: this.concurrency,
+      rootDir: this.rootDir,
+      autostart: this.autostart,
+      cleanTempFile: this.cleanTempFile,
+      chunkSizeInBytes: this.chunkSizeInBytes,
+    }
   }
 
   post(options: DownloadFuncParams) {
@@ -303,7 +326,12 @@ export class DownloadFunc extends ResServerTools {
       if (!download) {
         throw new NotFoundError(options.url || id, 'get')
       }
-      return {url: download.options.url, filepath: download.options.filepath, id: options.id, status: download.status}
+      const result: any = {url: download.options.url, filepath: download.options.filepath, id: options.id, status: download.status}
+      if (download.status === 'downloading') {
+        result.chunks = download.chunks
+        result.transferredBytes = download.transferredBytes
+      }
+      return result
     } else {
       throwError('id required', 'get', ErrorCode.InvalidArgument)
     }
@@ -328,15 +356,22 @@ export class DownloadFunc extends ResServerTools {
     return ids
   }
 
-  delete(options: DownloadFuncParams) {
+  async delete(options: DownloadFuncParams) {
     let download: FileDownload|undefined
     const id = this.getId(options)
     if (id) {
       download = this.queue[id]
       if (download) {
         delete this.queue[id]
-        download.stop()
-        return {id, url: download.options.url, filepath: download.options.filepath}
+        await download.stop()
+        if (this.cleanTempFile) { download.cleanTemp() }
+        return {id, url: download.options.url, filepath: download.options.filepath, status: download.status}
+      } else {
+        download = this.finished[id]
+        if (download) {
+          delete this.finished[id]
+          return {id, url: download.options.url, filepath: download.options.filepath, status: download.status}
+        }
       }
       throw new NotFoundError(options.url || id, 'delete')
     } else {
