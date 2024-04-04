@@ -26,7 +26,7 @@ export async function setup({provide}) {
   server.url = url
   // can not provide server for this is in another process
   provide('server-url', url)
-  console.log(server.printRoutes({ includeHooks: true, includeMeta: ['errorHandler'] }))
+  // console.log(server.printRoutes({ includeHooks: true, includeMeta: ['errorHandler'] }))
 
 }
 
@@ -35,9 +35,7 @@ let teardownHappened = false
 export async function teardown() {
   if (teardownHappened) throw new Error('teardown called twice')
   teardownHappened = true
-  console.log('Closing server...');
   await server.close()
-  console.log('Server closed');
 }
 
 function createServer(options) {
