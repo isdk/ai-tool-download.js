@@ -185,7 +185,8 @@ export class ChunkDownload {
   }
 
   toJSON(): any {
-    return {...this.options, status: this.status}
+    const options = this.options
+    return {startByte: options.startByte, endByte: options.endByte, status: this.status}
   }
 
 }
