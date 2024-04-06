@@ -1,14 +1,31 @@
-import fastify from 'fastify';
+import fastify from 'fastify'
 import { inject } from 'vitest'
-import path from 'path';
+import path from 'path'
 import fs from 'fs'
+import EventSource from 'eventsource'
+global.EventSource = EventSource as any
 
-import { ResClientTools as ClientTools, type ResServerFuncParams, ResServerTools as ToolFunc, wait, xxhashAsStr } from '@isdk/ai-tool'
+import {
+  ResClientTools as ClientTools,
+  type ResServerFuncParams,
+  ResServerTools as ToolFunc,
+  wait,
+  xxhashAsStr,
+  event, // event bus for server
+  backendEventable,
+  EventToolFunc,
+  EventBusName,
+  eventClient as eventOnClient,
+  eventServer as eventOnServer,
+  EventClient,
+} from '@isdk/ai-tool'
+
 import { findPort } from './util/find-port'
-import {DownloadFunc} from '../src/ai-tool-download'
-import { FileDownload } from '../src/file-download';
-import { compareStr } from './util/compare-str';
-import { rmFile } from './util/rm-file';
+import {DownloadFunc, DownloadName, DownloadProgressEventName, DownloadStatusEventName} from '../src/ai-tool-download'
+import { FileDownload } from '../src/file-download'
+import { compareStr } from './util/compare-str'
+import { rmFile } from './util/rm-file'
+import {EventEmitter} from 'events-ex'
 
 const chunkSizeInBytes = 1024 * 512; // 512KB
 FileDownload.minSplitSizeInBytes = chunkSizeInBytes
@@ -20,6 +37,14 @@ const tmpFilePath = '/tmp/' + xyj
 const tmpDir = tmpFilePath + '.temp'
 const src = fs.readFileSync(path.join(__dirname, 'res', xyj))
 const totalBytes = src.length
+const eventBus4Client = new EventToolFunc(EventBusName)
+
+// the event-bus for server
+ToolFunc.register(event)
+// the event-bus for client
+ClientTools.register(eventBus4Client)
+backendEventable(ClientTools)
+backendEventable(ToolFunc)
 
 declare module 'vitest' {
   export interface ProvidedContext {
@@ -56,6 +81,7 @@ describe('Tool Download class', () => {
         params = request.body;
         if (typeof params === 'string') {params = JSON.parse(params)}
       }
+      // console.log('🚀 ~ server.all ~ toolId:', toolId, params, id)
       params._req = request.raw
       params._res = reply.raw
       if (id !== undefined) {params.id = id}
@@ -63,11 +89,19 @@ describe('Tool Download class', () => {
       // const result = JSON.stringify(await func.run(params))
       try {
         let result = await func.run(params)
-        result = JSON.stringify(result)
-        // console.log('🚀 ~ server.all ~ result:', result)
-
-        reply.send(result)
-        // reply.send({params: request.params as any, query: request.query, url: request.url})
+        if (!func.isStream(params)) {
+          result = JSON.stringify(result)
+          // console.log('🚀 ~ server.all ~ result:', result)
+          reply.send(result)
+          // reply.send({params: request.params as any, query: request.query, url: request.url})
+        } else if (result) {
+          reply.send(result)
+        // } else if (func.result && func.result !== 'any' && func.result !== 'void') {
+        //   // maybe should valid result type
+        //   reply.code(500).send({error: 'no result'})
+        // } else {
+        //   reply.send()
+        }
       } catch(e) {
         if (e.code !== undefined) {
           const err: any = {...e, error: e.message}
@@ -91,13 +125,16 @@ describe('Tool Download class', () => {
     console.log('server listening on ', result)
     apiRoot = `http://localhost:${port}/api`
 
-    ToolFunc.apiRoot = apiRoot
+
+    ToolFunc.register(eventOnServer)
+    ToolFunc.setApiRoot(apiRoot)
     const res = new DownloadFunc('download')
     res.rootDir = '/tmp/'
     res.chunkSizeInBytes = chunkSizeInBytes
-    res.register()
+    ToolFunc.register(res)
 
-    ClientTools.apiRoot = apiRoot
+    ClientTools.register(eventOnClient)
+    ClientTools.setApiRoot(apiRoot)
     await ClientTools.loadFrom()
   })
 
@@ -150,7 +187,6 @@ describe('Tool Download class', () => {
 
   it('should download file', async () => {
     const result = ClientTools.get('download')
-    console.log('🚀 ~ it ~ ClientTools:', Object.keys(ClientTools.items))
     expect(result).toBeInstanceOf(ClientTools)
     const xyjUrl = url + xyj
     const expectId = xxhashAsStr(xyjUrl)
@@ -223,5 +259,133 @@ describe('Tool Download class', () => {
     expect(res).toHaveProperty('id', expectId)
     expect(res).toHaveProperty('status', 'paused')
     expect(fs.existsSync(tmpDir)).toBeFalsy()
+  })
+
+  it('should config downloader', async () => {
+    const result = ClientTools.get('download')
+    const xyjUrl = url + xyj
+    const expectId = xxhashAsStr(xyjUrl)
+    const dnConfig = await result.config()
+    expect(dnConfig).toStrictEqual({
+      autoScaleDownloads: false,
+      autostartQueue: false,
+      chunkSizeInBytes: chunkSizeInBytes,
+      concurrency: 3,
+      rootDir: '/tmp/',
+      cleanTempFile: true,
+    })
+    let res = await result.config({
+      chunkSizeInBytes: 1024 * 1024 * 1,
+      concurrency: 1,
+      rootDir: '/tmp/aa',
+      cleanTempFile: false,
+    })
+    res = await result.config()
+    expect(res).toStrictEqual({
+      autoScaleDownloads: false,
+      autostartQueue: false,
+      chunkSizeInBytes: 1024 * 1024 * 1,
+      concurrency: 1,
+      rootDir: '/tmp/aa',
+      cleanTempFile: false,
+    })
+    try {
+      res = await result.post({url: xyjUrl, start: true})
+      await wait(100)
+      let id = res.id
+      res = await result.get({id})
+      expect(res).toHaveProperty('status', 'completed')
+      expect(fs.existsSync('/tmp/aa/'+xyj)).toBeTruthy()
+      expect(fs.existsSync('/tmp/aa/'+xyj+'.temp')).toBeTruthy()
+      rmFile('/tmp/aa')
+      await result.clean()
+      await result.post({url: xyjUrl, start: true, order: 1})
+      expect(result.post({url: url + xyjA, start: true, order: 0})).rejects.toThrow('Concurrency limit reached')
+      res = await result.config({
+        autoScaleDownloads: true,
+      })
+      res = await result.start({url: url + xyjA})
+      await wait(5)
+      res = await result.list({downloadingOnly: true})
+      expect(res).toHaveLength(1)
+      expect(res).toStrictEqual([ xxhashAsStr(url + xyjA) ])
+      expect(fs.existsSync('/tmp/aa/'+xyjA+'.temp')).toBeTruthy()
+      res = await result.config({
+        cleanTempFile: true,
+      })
+      await result.clean({downloading: true, paused: true})
+      expect(fs.existsSync('/tmp/aa/'+xyjA+'.temp')).toBeFalsy()
+      rmFile('/tmp/aa')
+    } finally {
+      await result.config(dnConfig)
+    }
+    await result.clean()
+    await result.post({url: xyjUrl, start: true})
+    await result.post({url: url + xyjA, start: true})
+    await wait(5)
+    res = await result.list({downloadingOnly: true})
+    expect(res).toHaveLength(2)
+    expect(res).toStrictEqual([ expectId, xxhashAsStr(url + xyjA) ])
+    expect(fs.existsSync(tmpDir)).toBeTruthy()
+    await result.clean({downloading: true})
+    expect(fs.existsSync(tmpDir)).toBeFalsy()
+  })
+
+  it('should use config autostart', async () => {
+    const result = ClientTools.get('download')
+    const xyjUrl = url + xyj
+    const dnConfig = await result.config()
+    try {
+      await result.config({
+        concurrency: 1,
+        autoScaleDownloads: true,
+        autostartQueue: true,
+      })
+      await result.post({url: xyjUrl, start: true})
+      await result.post({url: url + xyjA, start: true})
+      await wait(5)
+      let res = await result.list({downloadingOnly: true})
+      expect(res).toHaveLength(1)
+      expect(res).toStrictEqual([ xxhashAsStr(url + xyjA) ])
+    } finally {
+      await result.config(dnConfig)
+      await result.clean({downloading: true, paused: true})
+    }
+  })
+
+  it('should use event', async () => {
+    console.log('🚀 ~ it ~ ClientTools:', Object.keys(ClientTools.items))
+    const result = ClientTools.get('download')
+    const xyjUrl = url + xyj
+    const expectId = xxhashAsStr(xyjUrl)
+    const event = ClientTools.get('event') as EventClient
+    // await event.init([DownloadProgressEventName +':'+expectId, DownloadStatusEventName+':'+expectId])
+    await event.subscribe([DownloadProgressEventName +':'+expectId, DownloadStatusEventName+':'+expectId])
+    await wait(60)
+    try {
+      // result.on(`/^${DownloadName}[:]/`, function() {
+      //   console.log('event this', this)
+      //   console.log('event', arguments)
+      // })
+      let data: any
+      let typ: string|undefined
+      let c = 0
+      result.on(`/^${DownloadName}:status:/`, function(...dat: any[]) {
+        c++
+        data = dat
+        typ = this.type
+      })
+      await result.post({url: xyjUrl, start: true})
+      await wait(5)
+      expect(c).toStrictEqual(1)
+      expect(typ).toStrictEqual(DownloadStatusEventName+':'+expectId)
+      expect(data).toStrictEqual([ 'Download', 'downloading' ])
+      await result.stop({url: xyjUrl})
+      await wait(5)
+      expect(c).toStrictEqual(3)
+      expect(data).toStrictEqual([ 'Download', 'paused' ])
+    } finally {
+      event.active = false
+    }
   })
 });
