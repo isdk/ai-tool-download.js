@@ -2,7 +2,7 @@ import { AbortErrorCode, throwError, wait } from "@isdk/ai-tool";
 import fs from "fs";
 import ky, { type Options } from 'ky';
 import { AlreadyDownloadErrCode, FileDownloadStatus, RangeRequestErrCode, createWritableStream, getUrlMetaInfo } from "./utils";
-import type { MessagePort } from 'node:worker_threads'
+import type { MessagePort } from 'worker_threads'
 
 export interface ChunkOptions extends Options {
   /**

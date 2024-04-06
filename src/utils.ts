@@ -2,7 +2,7 @@ import fs from "fs";
 import stream from 'node:stream';
 import ky from "ky";
 
-import type { Stream } from "node:stream";
+import type { Stream } from "stream";
 import type { WriteStream } from "fs";
 
 import type { KyResponse, Options } from 'ky';
