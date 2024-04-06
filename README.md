@@ -77,7 +77,10 @@ ChunkDownload 类, 实现一个供nodejs使用的文件下载器类, 它在http�
 * post({url: string, filepath?: string}): 添加新的任务,如果不指定filepath,则由`url`推断文件名
 * start({id: string}): 启动指定id/url的任务
 * stop({id: string}): 停止指定id/url的任务
-* config({concurrency = 3, rootDir: string, autostart: boolean, cleanTempFile = true}): 配置下载参数或获取下载参数
+* config({concurrency = 3, rootDir: string, autostartQueue: boolean, cleanTempFile = true, autoScaleDownloads: boolean}): 配置下载参数或获取下载参数
+  * autostartQueue: 是否在下载任务完成后自动开始队列中的下一个pending任务, 默认false
+  * cleanTempFile: 是否在移除任务后清理下载的临时文件, 默认为true
+  * autoScaleDownloads: 当当并发限制达到后,启动新加下载任务是自动停止一个最老的任务,还是报告错误, 默认为false,报告错误.
 * clean({completed?: boolean, paused?: boolean, downloading?: boolean}): 默认只清除已经下载完成的任务
   * completed: 清除已经下载完成的任务, 默认为 true
   * paused: 清除已经暂停的任务, 默认为 false
