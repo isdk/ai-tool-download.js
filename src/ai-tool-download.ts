@@ -153,7 +153,7 @@ export class DownloadFunc extends ResServerTools {
   startAll() {
     let left = this.concurrency - this.getDownloadsInQueue('downloading').length
     if (left > 0) {
-      const ordered = this.getDownloadsInQueue('downloading', true).sort((a, b) => a.order! - b.order!)
+      const ordered = this.getDownloadsInQueue('pending').sort((a, b) => a.order! - b.order!)
       left = Math.min(left, ordered.length)
       if (ordered.length) {
         for (let i=0; i<left; i++) {
@@ -263,6 +263,7 @@ export class DownloadFunc extends ResServerTools {
               const dn = ordered[0]
               await dn.stop()
             } else {
+              download.status = 'pending'
               throwError('Concurrency limit reached', 'start', ErrorCode.NotAcceptable)
             }
           }
