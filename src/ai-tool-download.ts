@@ -1,6 +1,20 @@
 import path from 'path'
-import { AlreadyExistsError, EventName, event, eventServer, isValidFilepath, throwError, xxhashAsStr, ResServerTools, ResServerFuncParams, NotFoundError, ErrorCode } from "@isdk/ai-tool";
-import type { DownloadProgress } from 'ky';
+import {
+  AlreadyExistsError,
+  EventName,
+  event,
+  eventServer,
+  isValidFilepath,
+  throwError,
+  xxhashAsStr,
+  ResServerTools,
+  ResServerFuncParams,
+  NotFoundError,
+  ErrorCode,
+  // EventBusName,
+} from "@isdk/ai-tool";
+// import type { DownloadProgress } from 'ky';
+// import type { EventEmitter } from 'events-ex';
 
 import { FileDownload, FileDownloadOptions } from "./file-download";
 import { BaseFileDownloadOptions } from "./base-file-download";
@@ -9,7 +23,16 @@ import { FileDownloadStatus, defaultChunkSizeInBytes, defaultConcurrency } from 
 //type DownloadProgressFunc = (progress: DownloadProgress, chunk: Uint8Array) => void
 
 interface DownloadFuncParams extends BaseFileDownloadOptions, ResServerFuncParams {
+  autostart?: boolean
+}
 
+export interface DownloadConfiguration {
+  concurrency?: number
+  rootDir?: string
+  autostartQueue?: boolean
+  cleanTempFile?: boolean
+  chunkSizeInBytes?: number
+  autoScaleDownloads?: boolean
 }
 
 interface DownloadItem extends FileDownloadOptions {
@@ -28,8 +51,10 @@ interface DownloadOptionsItems {
 
 const eventBus = event.runSync()
 
-const DownloadProgressEventName = 'progress'
-const DownloadStatusEventName = 'status'
+export const DownloadName = 'download'
+export const DownloadProgressEventName = DownloadName + ':progress'
+export const DownloadStatusEventName   = DownloadName + ':status'
+export const DownloadErrorEventName   = DownloadName + ':error'
 
 /**
  * 服务器端下载管理工具,管理文件下载队列,通过SSE事件通知进度.
@@ -41,22 +66,40 @@ export class DownloadFunc extends ResServerTools {
   rootDir: string|undefined
   nextOrder = 0
   concurrency = defaultConcurrency
-  autostart: boolean|undefined
+  /**
+   * Indicates whether the download queue should automatically start processing the next task upon completion of the current one.
+   *
+   * When set to `true`, the system will automatically initiate the download of the next item in the queue as soon as the current
+   * download task finishes successfully. If set to `false`, manual intervention will be required to begin subsequent downloads.
+   */
+  autostartQueue: boolean|undefined
+  /**
+   * Determines whether to clean up temporary files when a downloading or paused task is removed.
+   * If set to `true`, temporary files will be deleted when a downloading or paused task is removed.
+   * If set to `false`, temporary files will not be deleted.
+   * @type {boolean}
+   */
   cleanTempFile = true
   chunkSizeInBytes = defaultChunkSizeInBytes
+  /**
+   * Determines whether to automatically scale downloads when the concurrency limit is reached.
+   * If set to `true`, the system will automatically stop existing download tasks to start new ones when the concurrency limit is reached.
+   * If set to `false`, an error message "Concurrency limit reached" will be reported instead.
+   */
+  autoScaleDownloads: boolean|undefined
 
   depends = {[EventName]: eventServer}
 
-  static onDownloadProgress = function(this: FileDownload, progress: DownloadProgress) {
-    const id = this.id
-    const eventType = id ? DownloadProgressEventName + ':' + id : DownloadProgressEventName
-    eventBus.emit(eventType, 'Download', progress)
-    if (progress.percent === 1 && id !== undefined) {
-      eventBus.emit(DownloadStatusEventName + ':' + id, 'Download', 'completed')
-      delete this.manager.queue[id]
-      this.manager.finished[id] = this
-    }
-  }
+  // static onDownloadProgress = function(this: FileDownload, progress: DownloadProgress) {
+  //   const id = this.id
+  //   const eventType = id ? DownloadProgressEventName + ':' + id : DownloadProgressEventName
+  //   eventBus?.emit(eventType, 'Download', progress)
+  //   if (progress.percent === 1 && id !== undefined) {
+  //     eventBus?.emit(DownloadStatusEventName + ':' + id, 'Download', 'completed')
+  //     delete this.manager.queue[id]
+  //     this.manager.finished[id] = this
+  //   }
+  // }
 
   importQueue(queue: DownloadOptionsItems) {
     for (const id in queue) {
@@ -93,15 +136,24 @@ export class DownloadFunc extends ResServerTools {
     if (dn) {
       delete queue[id]
       this.finished[id] = dn
-      if (this.autostart) this.startAll()
+      if (this.autostartQueue) this.startAll()
+    }
+  }
+
+  getDownloadsInQueue(status?: FileDownloadStatus, isNot?: boolean) {
+    const result = Object.values(this.queue)
+    if (!status) { return result }
+    if (!isNot) {
+      return result.filter(dn => dn.status === status)
+    } else {
+      return result.filter(dn => dn.status !== status)
     }
   }
 
   startAll() {
-    const queue = this.queue
-    let left = this.concurrency - Object.keys(queue).filter(k => queue[k].status === 'downloading').length
+    let left = this.concurrency - this.getDownloadsInQueue('downloading').length
     if (left > 0) {
-      const ordered = Object.values(queue).filter(dn => dn.status !== 'downloading').sort((a, b) => a.order! - b.order!)
+      const ordered = this.getDownloadsInQueue('downloading', true).sort((a, b) => a.order! - b.order!)
       left = Math.min(left, ordered.length)
       if (ordered.length) {
         for (let i=0; i<left; i++) {
@@ -111,10 +163,20 @@ export class DownloadFunc extends ResServerTools {
             try {
               await dn.start()
             } catch(err) {
-              eventBus.emit('error:' + dn.id, 'Download', err)
+              eventBus.emit(DownloadErrorEventName + ':' + dn.id, 'Download', err)
             }
           })
         }
+      }
+    }
+  }
+
+  async stopAll() {
+    const queue = this.queue
+    for (const id in queue) {
+      const download = queue[id]
+      if (download.status === 'downloading') {
+        await download.stop()
       }
     }
   }
@@ -127,7 +189,7 @@ export class DownloadFunc extends ResServerTools {
       cleanTempFile: this.cleanTempFile,
     })
     download.id = id
-    download.order = this.nextOrder++
+    download.order = options?.order !== undefined ? options?.order : this.nextOrder++
     download.manager = this
     download.on('status', (status: FileDownloadStatus, idInfo: {url: string, id?: string, filepath?: string}) => {
       const id = idInfo.id
@@ -182,8 +244,29 @@ export class DownloadFunc extends ResServerTools {
           try {
             await download.start()
           } catch (error) {
-            eventBus.emit('error:' + id, 'Download', error)
+            eventBus.emit(DownloadErrorEventName + ':' + id, 'Download', error)
           }
+        }
+      }
+    }
+  }
+
+  async start(options: DownloadFuncParams|string) {
+    const id = this.getId(options)
+    if (id) {
+      const download = this.queue[id]
+      if (download) {
+        if (download.status !== 'downloading') {
+          const ordered = this.getDownloadsInQueue('downloading').sort((a, b) => a.order! - b.order!)
+          if (this.concurrency - ordered.length <= 0) {
+            if (this.autoScaleDownloads) {
+              const dn = ordered[0]
+              await dn.stop()
+            } else {
+              throwError('Concurrency limit reached', 'start', ErrorCode.NotAcceptable)
+            }
+          }
+          setImmediate(async () => await this._start(id))
         }
       }
     }
@@ -197,15 +280,18 @@ export class DownloadFunc extends ResServerTools {
     }
   }
 
-  $start(options: DownloadFuncParams) {
+  async $start(options: DownloadFuncParams) {
     const id = this.getId(options)
     if (id) {
       if (this.queue[id]) {
-        setImmediate(async () => await this._start(id))
+        await this.start(id)
       } else {
         throw new NotFoundError(id, 'start')
       }
       return {id}
+    } else {
+      if (options?.autostartQueue) { this.autostartQueue = true }
+      this.startAll()
     }
   }
 
@@ -223,6 +309,9 @@ export class DownloadFunc extends ResServerTools {
       } else {
         throw new NotFoundError(id, 'stop')
       }
+    } else {
+      await this.stopAll()
+      return {status: 'paused'}
     }
   }
 
@@ -256,7 +345,7 @@ export class DownloadFunc extends ResServerTools {
     return result
   }
 
-  $config(options?: {concurrency?: number, rootDir?: string, autostart?: boolean, cleanTempFile?: boolean, chunkSizeInBytes?: number}) {
+  $config(options?: DownloadConfiguration) {
     if (options) {
       if (options.concurrency !== undefined) {
         this.concurrency = options.concurrency
@@ -264,8 +353,8 @@ export class DownloadFunc extends ResServerTools {
       if (options.rootDir !== undefined) {
         this.rootDir = options.rootDir
       }
-      if (options.autostart !== undefined) {
-        this.autostart = options.autostart
+      if (options.autostartQueue !== undefined) {
+        this.autostartQueue = options.autostartQueue
       }
       if (options.cleanTempFile !== undefined) {
         this.cleanTempFile = options.cleanTempFile
@@ -273,17 +362,21 @@ export class DownloadFunc extends ResServerTools {
       if (options.chunkSizeInBytes! > 0) {
         this.chunkSizeInBytes = options.chunkSizeInBytes!
       }
+      if (options.autoScaleDownloads !== undefined) {
+        this.autoScaleDownloads = options.autoScaleDownloads
+      }
     }
     return {
       concurrency: this.concurrency,
       rootDir: this.rootDir,
-      autostart: this.autostart,
+      autostartQueue: this.autostartQueue || false,
       cleanTempFile: this.cleanTempFile,
       chunkSizeInBytes: this.chunkSizeInBytes,
+      autoScaleDownloads: this.autoScaleDownloads || false,
     }
   }
 
-  post(options: DownloadFuncParams) {
+  async post(options: DownloadFuncParams) {
     const id = this.getId(options)
     if (id) {
       const download = this.queue[id] || this.finished[id]
@@ -293,7 +386,7 @@ export class DownloadFunc extends ResServerTools {
       }
       const hashId = this.add(options)
       if (options.start) {
-        setImmediate(async () => await this._start(hashId))
+        await this.start(id)
       }
       return {id: hashId}
     }
@@ -305,9 +398,9 @@ export class DownloadFunc extends ResServerTools {
       const download = this.queue[id]
       if (download) {
         if (options.start) {
-          this.start(options)
+          this.$start(options)
         } else if (options.start === false) {
-          this.stop(options)
+          this.$stop(options)
         } else {
           throwError('start option required', 'put')
         }
