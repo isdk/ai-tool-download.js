@@ -121,12 +121,12 @@ export class DownloadFunc extends ResServerTools {
     return queue
   }
 
-  getId(options: DownloadFuncParams|string) {
+  getId(options: DownloadFuncParams|string): string|undefined {
     if (typeof options === 'string') {
       return options
     } else if (options) {
       options = options.id || xxhashAsStr(options.url!)
-      return options
+      return options as string
     }
   }
 
