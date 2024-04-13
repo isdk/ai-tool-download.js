@@ -474,3 +474,4 @@ export class DownloadFunc extends ResServerTools {
   }
 }
 
+export const download = new DownloadFunc(DownloadName)
