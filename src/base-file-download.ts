@@ -2,7 +2,7 @@ import fs from "fs";
 import path from 'path'
 import type { Options } from 'ky';
 import { EventEmitter } from 'events-ex';
-import { AbortErrorCode, NotImplementationError, throwError, wait } from "@isdk/ai-tool";
+import { AbortErrorCode, AlreadyExistsError, NotImplementationError, throwError, wait } from "@isdk/ai-tool";
 
 import { ChunkDownload, type ChunkOptions } from "./chunk-download";
 import {
@@ -33,6 +33,7 @@ export interface CustomBaseFileDownloadOptions extends Options {
   destinationFolder?: string
   cleanTempFile?: boolean
   aborter?: AbortController
+  overwrite?: boolean
   [name: string]: any
 }
 
@@ -130,7 +131,7 @@ export class BaseFileDownload extends EventEmitter {
 
     const chunks = this.chunks.filter(chunk => chunk.status === 'completed')
     // merge all chunks to filepath
-    const writer = fs.createWriteStream(filepath, {flags: 'w+'})
+    const writer = fs.createWriteStream(filepath, {flags: 'w'})
     const streams: any = chunks.map(chunk => fs.createReadStream(chunk.options.filepath))
     await concatStreamTo(streams, writer)
     if (options.cleanTempFile !== false) {
@@ -141,6 +142,12 @@ export class BaseFileDownload extends EventEmitter {
   async splitChunks(options: CustomBaseFileDownloadOptions) {
     const filepath = this.getAbsPath(options)
     const tempDirPath = filepath + '.temp'
+
+    if (!options.overwrite) {
+      if (fs.existsSync(filepath)) {
+        throw new AlreadyExistsError(filepath, 'BaseFileDownload.splitChunks')
+      }
+    }
 
     if (!fs.existsSync(tempDirPath)) {
       fs.mkdirSync(tempDirPath, { recursive: true });
