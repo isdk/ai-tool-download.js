@@ -64,6 +64,5 @@
   "maintainers": [
     "Riceball LEE <snowyu.lee@gmail.com>"
   ],
-  "packageManager": "pnpm@9.0.5",
   "types": "./dist/index.d.ts"
 }
