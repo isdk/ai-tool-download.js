@@ -1,11 +1,12 @@
 {
   "name": "@isdk/ai-tool-download",
-  "private": true,
   "version": "0.0.1",
   "author": "Riceball LEE <snowyu.lee@gmail.com>",
-  "type": "module",
   "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
   "scripts": {
     "build-fast": "tsup",
     "build": "pnpm run build-fast --dts-resolve --dts && pnpm run doc:md",
