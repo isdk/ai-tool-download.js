@@ -128,7 +128,7 @@ describe('Tool Download class', () => {
 
     ToolFunc.register(eventOnServer)
     ToolFunc.setApiRoot(apiRoot)
-    const res = new DownloadFunc('download')
+    const res = new DownloadFunc(DownloadName)
     res.rootDir = '/tmp/'
     res.chunkSizeInBytes = chunkSizeInBytes
     ToolFunc.register(res)
@@ -143,7 +143,7 @@ describe('Tool Download class', () => {
   })
 
   beforeEach(async () => {
-    const result = ClientTools.get('download')
+    const result = ClientTools.get(DownloadName)
     // clean all completed tasks
     await result.clean()
     rmFile(tmpFilePath)
@@ -152,7 +152,7 @@ describe('Tool Download class', () => {
   })
 
   it('should list download tasks', async () => {
-    const result = ClientTools.get('download')
+    const result = ClientTools.get(DownloadName)
     const xyjUrl = url + xyj
     const expectId = xxhashAsStr(xyjUrl)
     let res = await result.post({url: xyjUrl, start: true})
@@ -186,7 +186,7 @@ describe('Tool Download class', () => {
   })
 
   it('should download file', async () => {
-    const result = ClientTools.get('download')
+    const result = ClientTools.get(DownloadName)
     expect(result).toBeInstanceOf(ClientTools)
     const xyjUrl = url + xyj
     const expectId = xxhashAsStr(xyjUrl)
@@ -211,7 +211,7 @@ describe('Tool Download class', () => {
 
 
   it('should download file with resume', async () => {
-    const result = ClientTools.get('download')
+    const result = ClientTools.get(DownloadName)
     const xyjUrl = url + xyj
     const expectId = xxhashAsStr(xyjUrl)
     let res = await result.post({url: xyjUrl, start: true})
@@ -240,7 +240,7 @@ describe('Tool Download class', () => {
   })
 
   it('should clean temp file after removing task ', async () => {
-    const result = ClientTools.get('download')
+    const result = ClientTools.get(DownloadName)
     const xyjUrl = url + xyj
     const expectId = xxhashAsStr(xyjUrl)
     let res = await result.post({url: xyjUrl, start: true})
@@ -262,7 +262,7 @@ describe('Tool Download class', () => {
   })
 
   it('should config downloader', async () => {
-    const result = ClientTools.get('download')
+    const result = ClientTools.get(DownloadName)
     const xyjUrl = url + xyj
     const expectId = xxhashAsStr(xyjUrl)
     const dnConfig = await result.config()
@@ -332,7 +332,7 @@ describe('Tool Download class', () => {
   })
 
   it('should use config autostart', async () => {
-    const result = ClientTools.get('download')
+    const result = ClientTools.get(DownloadName)
     const xyjUrl = url + xyj
     const dnConfig = await result.config()
     try {
@@ -355,7 +355,7 @@ describe('Tool Download class', () => {
 
   it('should use event', async () => {
     console.log('🚀 ~ it ~ ClientTools:', Object.keys(ClientTools.items))
-    const result = ClientTools.get('download')
+    const result = ClientTools.get(DownloadName)
     const xyjUrl = url + xyj
     const expectId = xxhashAsStr(xyjUrl)
     const event = ClientTools.get('event') as EventClient
