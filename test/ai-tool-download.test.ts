@@ -32,6 +32,7 @@ FileDownload.minSplitSizeInBytes = chunkSizeInBytes
 
 const xyj  = 'xyj.txt'
 const xyjA = 'xyj_annotated.txt'
+const cgt  = 'caigentang.txt'
 const three= 'the3Kingdoms.txt'
 const tmpFilePath = '/tmp/' + xyj
 const tmpDir = tmpFilePath + '.temp'
@@ -149,6 +150,8 @@ describe('Tool Download class', () => {
     rmFile(tmpFilePath)
     rmFile('/tmp/' + xyjA)
     rmFile('/tmp/' + three)
+    rmFile('/tmp/' + cgt)
+    rmFile('/tmp/aa')
   })
 
   it('should list download tasks', async () => {
@@ -177,6 +180,7 @@ describe('Tool Download class', () => {
     expect(res).toStrictEqual([{id: xxhashAsStr(url + xyjA), url: url + xyjA, filepath: xyjA}, {id: xxhashAsStr(url + three), url: url + three, filepath: three}])
     res = await result.list()
     expect(res).toStrictEqual([])
+    rmFile(tmpFilePath)
     res = await result.post({url: xyjUrl, start: true})
     await wait(5)
     res = await result.clean({downloading: true})
@@ -185,7 +189,31 @@ describe('Tool Download class', () => {
     expect(res).toStrictEqual([])
   })
 
-  it('should download file', async () => {
+  it('should download a short file', async () => {
+    const result = ClientTools.get(DownloadName)
+    expect(result).toBeInstanceOf(ClientTools)
+    const cgtUrl = url + cgt
+    const expectId = xxhashAsStr(cgtUrl)
+    let res = await result.post({url: cgtUrl})
+    expect(res).toHaveProperty('id', expectId)
+    let id = res.id
+    res = await result.get({id})
+    expect(res).toHaveProperty('id', expectId)
+    expect(res).toHaveProperty('url', cgtUrl)
+    res = await result.start({id})
+    expect(res).toHaveProperty('id', expectId)
+    res = await result.get({id})
+    expect(res).toHaveProperty('status', 'downloading')
+    await wait(100)
+    res = await result.get({id})
+    expect(res).toHaveProperty('status', 'completed')
+    const content = fs.readFileSync('/tmp/'+cgt)
+    const src = fs.readFileSync(path.join(__dirname, 'res', cgt))
+    expect(content.length).toEqual(src.length)
+    expect(compareStr(src, content)).toBeTruthy()
+   });
+
+   it('should download file', async () => {
     const result = ClientTools.get(DownloadName)
     expect(result).toBeInstanceOf(ClientTools)
     const xyjUrl = url + xyj
@@ -209,6 +237,36 @@ describe('Tool Download class', () => {
     expect(compareStr(src, content)).toBeTruthy()
    });
 
+   it.skip('should download file from remote', async () => {
+    rmFile('/tmp/tiny-random-bloomforcausallm.q2_k.gguf')
+    const result = ClientTools.get(DownloadName)
+    expect(result).toBeInstanceOf(ClientTools)
+    const xyjUrl = 'https://huggingface.co/afrideva/tiny-random-BloomForCausalLM-GGUF/resolve/main/tiny-random-bloomforcausallm.q2_k.gguf'
+    const expectId = xxhashAsStr(xyjUrl)
+    let res = await result.post({url: xyjUrl})
+    expect(res).toHaveProperty('id', expectId)
+    let id = res.id
+    res = await result.get({id})
+    expect(res).toHaveProperty('id', expectId)
+    expect(res).toHaveProperty('url', xyjUrl)
+    res = await result.start({id})
+    expect(res).toHaveProperty('id', expectId)
+    res = await result.get({id})
+    while (res.status === 'pending') {
+      await wait(500)
+      res = await result.get({id})
+    }
+    expect(res).toHaveProperty('status', 'downloading')
+    while (res.status === 'downloading') {
+      await wait(500)
+      res = await result.get({id})
+    }
+    res = await result.get({id})
+    expect(res).toHaveProperty('status', 'completed')
+    const content = fs.readFileSync('/tmp/tiny-random-bloomforcausallm.q2_k.gguf')
+    expect(content.length).toEqual(130688)
+    // expect(compareStr(src, content)).toBeTruthy()
+   });
 
   it('should download file with resume', async () => {
     const result = ClientTools.get(DownloadName)
@@ -298,6 +356,7 @@ describe('Tool Download class', () => {
       expect(fs.existsSync('/tmp/aa/'+xyj)).toBeTruthy()
       expect(fs.existsSync('/tmp/aa/'+xyj+'.temp')).toBeTruthy()
       rmFile('/tmp/aa')
+      rmFile(tmpFilePath)
       await result.clean()
       await result.post({url: xyjUrl, start: true, order: 1})
       expect(result.post({url: url + xyjA, start: true, order: 0})).rejects.toThrow('Concurrency limit reached')
@@ -354,7 +413,6 @@ describe('Tool Download class', () => {
   })
 
   it('should use event', async () => {
-    console.log('🚀 ~ it ~ ClientTools:', Object.keys(ClientTools.items))
     const result = ClientTools.get(DownloadName)
     const xyjUrl = url + xyj
     const expectId = xxhashAsStr(xyjUrl)
