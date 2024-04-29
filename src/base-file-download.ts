@@ -143,9 +143,16 @@ export class BaseFileDownload extends EventEmitter {
     const filepath = this.getAbsPath(options)
     const tempDirPath = filepath + '.temp'
 
+    const info = this.urlMetaInfo ?? (this.urlMetaInfo = await getUrlMetaInfo(options.url, options))
+    const totalSize = info.size
+
     if (!options.overwrite) {
       if (fs.existsSync(filepath)) {
-        throw new AlreadyExistsError(filepath, 'BaseFileDownload.splitChunks')
+        const stat = fs.statSync(filepath)
+        if ((!totalSize && stat.size > 0) || (totalSize === stat.size)) {
+          this.status = 'completed'
+          throw new AlreadyExistsError(filepath, 'BaseFileDownload.splitChunks')
+        }
       }
     }
 
@@ -160,8 +167,6 @@ export class BaseFileDownload extends EventEmitter {
       if (options.onDownloadProgress) { options.onDownloadProgress.call(this, progress, chunk) }
     }
 
-    const info = this.urlMetaInfo ?? (this.urlMetaInfo = await getUrlMetaInfo(options.url, options))
-    const totalSize = info.size
     if (info.canRange && totalSize && totalSize > this.minSplitSizeInBytes) {
       // split to chunks
       // const concurrency = options.concurrency ?? defaultConcurrency
@@ -200,7 +205,7 @@ export class BaseFileDownload extends EventEmitter {
       const chunk = this.createChunk({
         ...options,
         url: options.url,
-        filepath,
+        filepath: path.join(tempDirPath, '0.part'),
         skipCheck: info.headers,
         onDownloadProgress: onProgress,
       })
@@ -219,21 +224,26 @@ export class BaseFileDownload extends EventEmitter {
 
     this.status = 'downloading'
     options = this.resolveOptions(options)
-    if (this.chunks.length === 0) {
-      await this.splitChunks(options)
-    }
 
-    await this._start(options);
+    try {
+      if (this.chunks.length === 0) {
+        await this.splitChunks(options)
+      }
+      await this._start(options);
+    } finally {
 
-    const chunksStatus = this.chunks.map(chunk => chunk.status)
-    if (chunksStatus.every(status => status === 'paused' || status === 'pending')) {
-      this.status = 'paused'
-    } else if (chunksStatus.every(status => status === 'completed')) {
-      await this.mergeChunks(options)
-      this.chunks.length = 0
-      this.status = 'completed'
-    } else {
-      this.status = 'failed'
+      const chunksStatus = this.chunks.map(chunk => chunk.status)
+      if (this.status === 'downloading') {
+        if (chunksStatus.every(status => status === 'paused' || status === 'pending')) {
+          this.status = 'paused'
+        } else if (chunksStatus.every(status => status === 'completed')) {
+          await this.mergeChunks(options)
+          this.chunks.length = 0
+          this.status = 'completed'
+        } else {
+          this.status = 'failed'
+        }
+      }
     }
   }
 
