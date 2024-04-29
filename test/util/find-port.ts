@@ -1,6 +1,6 @@
 import net from 'net'
 
-export async function findPort(port, portRetryCount = 10) {
+export async function findPort(port, portRetryCount = 10): Promise<number> {
   return new Promise((resolve, reject) => {
     if (port === undefined) {
       port = 0
