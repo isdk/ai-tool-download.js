@@ -2,6 +2,13 @@
 
 The Large File Downloader for `ServerTools`
 
+此仓库提供了一个用于Node.js的服务器端文件下载工具，支持分块并发下载和断点续传。当前实现的主要功能包括：
+
+1. **ChunkDownload** 类：实现一个能够根据HTTP服务器range request特性进行指定范围内容的chunk下载并保存到文件的类。
+2. **BaseFileDownload** 抽象类：用于处理单文件的多块并发下载，要求HTTP服务器支持range request。
+3. **FileDownload** 类：基于`BaseFileDownload`实现一个异步多块并发下载工具，依赖ChunkDownload和p-limit库。
+4. **DownloadFunc（AI ResServerTool Func）**：提供文件下载管理RESTful API接口，支持配置服务器下载参数并获取下载状态。
+
 注意：仅当服务器支持range request，才支持分块并发下载和断点续传。
 当前只完成了ChunkDownload(单块下载), BaseFileDownload(抽象多块并发下载), FileDownload(异步多块并发下载).
 未实现ThreadFileDownload(多线程多块并发下载),用tinypool.

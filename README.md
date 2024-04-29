@@ -20,7 +20,43 @@ The current implementation includes the following features:
    - `cleanTempFile`: Whether to remove temporary files upon successful completion
    - `autoScaleDownloads`: If concurrency limit is reached, automatically stop an older download or report an error
 
-**Usage:**
+## Installation
+
+```bash
+npm install @isdk/ai-tool-download
+```
+or
+```bash
+yarn add @isdk/ai-tool-download
+```
+
+## Usage
+
+### ChunkDownload Usage
+
+```ts
+import { AbortErrorCode } from '@isdk/ai-tool'
+import { ChunkDownload } from '@isdk/ai-tool-download'
+const aborter = new AbortController()
+const chunk = new ChunkDownload({url: 'http://example.com/file.zip', filepath: '/tmp/file.zip', overwrite: false, index: 0, aborter, timeout:false})
+chunk.on('progress', ({percent, totalBytes, transferredBytes}, chunk: Uint8Array) => {
+  console.log('🚀 ~ onDownloadProgress ~ percent: %', percent, totalBytes, transferredBytes)
+})
+chunk.on('status', function(status: FileDownloadStatus) {
+  console.log(status)
+})
+try {
+  await chunk.start()
+} catch (error) {
+  if (error.code === AbortErrorCode) {
+    // the abort signal sended
+  } else {
+    throw error
+  }
+}
+```
+
+### FileDownload Usage
 
 ```ts
 import { AbortErrorCode } from '@isdk/ai-tool'
@@ -44,7 +80,9 @@ try {
 }
 ```
 
-## ChunkDownload
+## API
+
+### ChunkDownload
 
 **Overview:**
 
@@ -91,7 +129,7 @@ try {
 - `progress`: Emitted when download progress changes, providing information about the current percentage of completion and transferred bytes.
 - `status`: Provides detailed status updates during the download process, including file size, total downloaded bytes, etc.
 
-## BaseFileDownload
+### BaseFileDownload
 
 **Overview:**
 
@@ -127,7 +165,7 @@ const download = new BaseFileDownload({url: 'http://example.com/file.zip', filep
 2. **_start()**: Internal method to initiate the multi-threaded download process
 3. **_stop()**: Internal method to clean up resources and stop any ongoing downloads
 
-## FileDownload
+### FileDownload
 
 **Overview:**
 
@@ -157,7 +195,7 @@ const download = new FileDownload({url: 'http://example.com/file.zip', filepath:
 - `options.cleanTempFile` (default: true): Whether to remove temporary files upon successful completion
 - `options.overwrite` (default: false): Overwrite an existing file if it already exists
 
-## DownloadFunc
+### DownloadFunc
 
 **Overview:**
 
@@ -172,7 +210,7 @@ The `DownloadFunc` class is an interface that exposes RESTful API functions for 
 **Configuration:**
 
 1. `concurrency` (default: 3): Maximum number of concurrent downloads allowed
-2. `rootDir` (optional): Root directory where downloaded files will be stored
+2. `rootDir`(required): Root directory where downloaded files will be stored
 3. `autostartQueue` (default: true): Automatically start the next pending task in the queue after a file is completed
 4. `cleanTempFile` (default: true): Whether to remove temporary files upon successful completion
 5. `autoScaleDownloads` (default: false): If concurrency limit is reached, automatically stop an older download or report an error
