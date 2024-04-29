@@ -143,13 +143,10 @@ export class BaseFileDownload extends EventEmitter {
     const filepath = this.getAbsPath(options)
     const tempDirPath = filepath + '.temp'
 
-    const info = this.urlMetaInfo ?? (this.urlMetaInfo = await getUrlMetaInfo(options.url, options))
-    const totalSize = info.size
-
     if (!options.overwrite) {
       if (fs.existsSync(filepath)) {
         const stat = fs.statSync(filepath)
-        if ((!totalSize && stat.size > 0) || (totalSize === stat.size)) {
+        if (stat.size > 0) {
           this.status = 'completed'
           throw new AlreadyExistsError(filepath, 'BaseFileDownload.splitChunks')
         }
@@ -166,6 +163,9 @@ export class BaseFileDownload extends EventEmitter {
       this.emit('progress', progress, chunk, this.getIdInfo())
       if (options.onDownloadProgress) { options.onDownloadProgress.call(this, progress, chunk) }
     }
+
+    const info = this.urlMetaInfo ?? (this.urlMetaInfo = await getUrlMetaInfo(options.url, options))
+    const totalSize = info.size
 
     if (info.canRange && totalSize && totalSize > this.minSplitSizeInBytes) {
       // split to chunks
