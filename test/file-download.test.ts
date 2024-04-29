@@ -89,7 +89,7 @@ describe('FileDownload', () => {
       }
     }
 
-    const dn = new FileDownload({url: url+xyj, filepath: tmpFilePath, cleanTempFile: false, chunkSizeInBytes, onDownloadProgress})
+    let dn = new FileDownload({url: url+xyj, filepath: tmpFilePath, cleanTempFile: false, chunkSizeInBytes, onDownloadProgress})
     try {
       await dn.start()
     } catch (error) {
@@ -116,6 +116,15 @@ describe('FileDownload', () => {
     expect(compareStr(src, content)).toBeTruthy()
     expect(dn.status).toBe('completed')
     expect(fs.existsSync(tmpDir)).toBe(!(dn.options.cleanTempFile !== false))
+    // the overwrite defaults to false
+    // so the file already downloaded
+    dn = new FileDownload({url: url+xyj, filepath: tmpFilePath, chunkSizeInBytes})
+
+    expect(dn.start()).rejects.toThrow('already exists')
+    expect(dn.status).toBe('completed')
+    dn = new FileDownload({url: url+xyj, filepath: tmpFilePath, chunkSizeInBytes, overwrite: true})
+    await dn.start()
+    expect(dn.status).toBe('completed')
   });
 
 });
