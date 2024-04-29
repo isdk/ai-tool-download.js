@@ -1,8 +1,9 @@
 import { AbortErrorCode, throwError, wait } from "@isdk/ai-tool";
 import fs from "fs";
 import ky, { type Options } from 'ky';
-import { AlreadyDownloadErrCode, FileDownloadStatus, RangeRequestErrCode, createWritableStream, getUrlMetaInfo } from "./utils";
+import { EventEmitter } from 'events-ex';
 import type { MessagePort } from 'worker_threads'
+import { AlreadyDownloadErrCode, FileDownloadStatus, RangeRequestErrCode, createWritableStream, getUrlMetaInfo } from "./utils";
 
 export interface ChunkOptions extends Options {
   /**
@@ -34,16 +35,27 @@ export interface ChunkOptions extends Options {
   aborter?: AbortController
 }
 
-export class ChunkDownload {
+export class ChunkDownload extends EventEmitter {
   static nextId: number = 0
 
   options: ChunkOptions
   lastError?: Error;
-  status: FileDownloadStatus = 'pending'
+  _status: FileDownloadStatus = 'pending'
+
+  get status() {
+    return this._status
+  }
+  set status(value: FileDownloadStatus) {
+    if (this._status !== value) {
+      this._status = value
+      this.emit('status', value)
+    }
+  }
 
   constructor(
     options: ChunkOptions
   ) {
+    super()
     options = { ...options }
     if (options.index === undefined) { options.index = ChunkDownload.nextId++ }
 
@@ -141,6 +153,16 @@ export class ChunkDownload {
           return
         }
       }
+      options = {...options}
+      delete (options as any)._req
+      delete (options as any)._res
+      delete (options as any).skipCheck
+      const downloadProgress = options.onDownloadProgress
+      const onProgress: any = (progress: any, chunk: Uint8Array) => {
+        this.emit('progress', progress, chunk)
+        if (downloadProgress) { downloadProgress.call(this, progress, chunk) }
+      }
+      options.onDownloadProgress = onProgress
 
       const response = await ky.get(options.url, {
         ...options,
@@ -158,7 +180,7 @@ export class ChunkDownload {
       if (!body) { return }
 
       const writer = createWritableStream(options.filepath)
-      await body.pipeTo(writer);
+      await body.pipeTo(writer)
       this.status = 'completed'
     } catch (error: any) {
       if (error.code === AbortErrorCode) {
