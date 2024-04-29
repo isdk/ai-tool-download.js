@@ -20,11 +20,10 @@ import {
   EventClient,
 } from '@isdk/ai-tool'
 
-import { findPort } from './util/find-port'
+import { compareStr, findPort, rmFile } from '@isdk/ai-tool/test/util'
+
 import {DownloadFunc, DownloadName, DownloadProgressEventName, DownloadStatusEventName} from '../src/ai-tool-download'
 import { FileDownload } from '../src/file-download'
-import { compareStr } from './util/compare-str'
-import { rmFile } from './util/rm-file'
 import {EventEmitter} from 'events-ex'
 
 const chunkSizeInBytes = 1024 * 512; // 512KB

@@ -2,7 +2,7 @@ import path from 'path'
 // import { createServer } from 'http-server'
 import { fastify } from 'fastify';
 import { fastifyStatic } from '@fastify/static';
-import { findPort } from './util/find-port'
+import { findPort } from '@isdk/ai-tool/test/util'
 
 let server
 export async function setup({provide}) {

@@ -3,9 +3,9 @@ import fs from 'fs'
 import path from 'path'
 import { AbortErrorCode, wait } from '@isdk/ai-tool';
 
+import { compareStr, rmFile } from '@isdk/ai-tool/test/util'
+
 import { FileDownload } from '../src/file-download';
-import { compareStr } from './util/compare-str';
-import { rmFile } from './util/rm-file';
 
 const chunkSizeInBytes = 1024 * 512; // 512KB
 FileDownload.minSplitSizeInBytes = chunkSizeInBytes

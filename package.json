@@ -5,8 +5,7 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "exports": {
-    ".": "./dist/index.mjs",
-    "./test/util": "./dist/test/util/index.mjs"
+    ".": "./dist/index.mjs"
   },
   "scripts": {
     "build-fast": "tsup",

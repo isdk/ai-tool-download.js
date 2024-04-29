@@ -3,8 +3,9 @@ import path from 'path'
 import { inject } from 'vitest'
 
 import { AbortError, AbortErrorCode } from '@isdk/ai-tool'
+import { compareStr, rmFile } from '@isdk/ai-tool/test/util'
+
 import { ChunkDownload } from '../src/chunk-download'
-import { rmFile } from './util/rm-file'
 import { FileDownloadStatus } from '../src/utils'
 
 const Video200M = 'https://link.testfile.org/iK7sKT'
@@ -130,16 +131,4 @@ describe('ChunkDownload class', () => {
 
 async function sleep(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-function compareStr(src: Buffer, dest: Buffer) {
-  expect(src.length).toBeGreaterThanOrEqual(dest.length)
-
-  for (let i = 0; i < dest.length; i++) {
-    if (src[i] !== dest[i]) {
-      console.log('🚀 ~ compareStr ~ src[i]:', i, src[i], dest[i], dest.length)
-      return false
-    }
-  }
-  return true
 }
