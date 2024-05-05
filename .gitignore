@@ -16,6 +16,7 @@ dist-ssr
 docs/
 dev.md
 *.db
+.npmrc
 
 # Editor directories and files
 .vscode/*
