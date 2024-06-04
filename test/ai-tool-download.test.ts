@@ -6,9 +6,9 @@ import EventSource from 'eventsource'
 global.EventSource = EventSource as any
 
 import {
-  ResClientTools as ClientTools,
+  ResClientTools,
   type ResServerFuncParams,
-  ResServerTools as ToolFunc,
+  ResServerTools,
   wait,
   xxhashAsStr,
   event, // event bus for server
@@ -18,6 +18,10 @@ import {
   eventClient as eventOnClient,
   eventServer as eventOnServer,
   EventClient,
+  ClientTools,
+  ServerTools,
+  ToolFunc,
+  Funcs,
 } from '@isdk/ai-tool'
 
 import { compareStr, findPort, rmFile } from '@isdk/ai-tool/test/util'
@@ -39,13 +43,6 @@ const src = fs.readFileSync(path.join(__dirname, 'res', xyj))
 const totalBytes = src.length
 const eventBus4Client = new EventToolFunc(EventBusName)
 
-// the event-bus for server
-ToolFunc.register(event)
-// the event-bus for client
-ClientTools.register(eventBus4Client)
-backendEventable(ClientTools)
-backendEventable(ToolFunc)
-
 declare module 'vitest' {
   export interface ProvidedContext {
     'server-url': string
@@ -58,13 +55,28 @@ describe('Tool Download class', () => {
   const url: string = inject('server-url')
 
   beforeAll(async () => {
+    const ServerToolItems: {[name:string]: ServerTools|ToolFunc} = {}
+    Object.setPrototypeOf(ServerToolItems, ToolFunc.items)
+    ServerTools.items = ServerToolItems
+
+    const ClientToolItems: Funcs = {}
+    Object.setPrototypeOf(ClientToolItems, ToolFunc.items)
+    ClientTools.items = ClientToolItems
+
+    // the event-bus for server
+    ResServerTools.register(event)
+    // the event-bus for client
+    ResClientTools.register(eventBus4Client)
+    backendEventable(ResClientTools)
+    backendEventable(ResServerTools)
+
     server.get('/api', async function(request, reply){
-      reply.send(ToolFunc)
+      reply.send(ResServerTools)
     })
 
     server.all('/api/:toolId/:id?', async function(request, reply){
       const { toolId, id } = request.params as any;
-      const func = ToolFunc.get(toolId)
+      const func = ResServerTools.get(toolId)
       if (!func) {
         reply.code(404).send({error: toolId + ' Not Found', data: {what: toolId}})
       }
@@ -126,24 +138,26 @@ describe('Tool Download class', () => {
     apiRoot = `http://localhost:${port}/api`
 
 
-    ToolFunc.register(eventOnServer)
-    ToolFunc.setApiRoot(apiRoot)
+    ResServerTools.register(eventOnServer)
+    ResServerTools.setApiRoot(apiRoot)
     const res = new DownloadFunc(DownloadName)
     res.rootDir = '/tmp/'
     res.chunkSizeInBytes = chunkSizeInBytes
-    ToolFunc.register(res)
+    ResServerTools.register(res)
 
-    ClientTools.register(eventOnClient)
-    ClientTools.setApiRoot(apiRoot)
-    await ClientTools.loadFrom()
+    ResClientTools.register(eventOnClient)
+    ResClientTools.setApiRoot(apiRoot)
+    await ResClientTools.loadFrom()
   })
 
   afterAll(async () => {
     await server.close()
+    delete (ClientTools as any).items
+    delete (ServerTools as any).items
   })
 
   beforeEach(async () => {
-    const result = ClientTools.get(DownloadName)
+    const result = ResClientTools.get(DownloadName)
     // clean all completed tasks
     await result.clean()
     rmFile(tmpFilePath)
@@ -154,7 +168,7 @@ describe('Tool Download class', () => {
   })
 
   it('should list download tasks', async () => {
-    const result = ClientTools.get(DownloadName)
+    const result = ResClientTools.get(DownloadName)
     const xyjUrl = url + xyj
     const expectId = xxhashAsStr(xyjUrl)
     let res = await result.post({url: xyjUrl, start: true})
@@ -189,8 +203,8 @@ describe('Tool Download class', () => {
   })
 
   it('should download a short file', async () => {
-    const result = ClientTools.get(DownloadName)
-    expect(result).toBeInstanceOf(ClientTools)
+    const result = ResClientTools.get(DownloadName)
+    expect(result).toBeInstanceOf(ResClientTools)
     const cgtUrl = url + cgt
     const expectId = xxhashAsStr(cgtUrl)
     let res = await result.post({url: cgtUrl})
@@ -213,8 +227,8 @@ describe('Tool Download class', () => {
    });
 
    it('should download file', async () => {
-    const result = ClientTools.get(DownloadName)
-    expect(result).toBeInstanceOf(ClientTools)
+    const result = ResClientTools.get(DownloadName)
+    expect(result).toBeInstanceOf(ResClientTools)
     const xyjUrl = url + xyj
     const expectId = xxhashAsStr(xyjUrl)
     let res = await result.post({url: xyjUrl})
@@ -238,8 +252,8 @@ describe('Tool Download class', () => {
 
    it.skip('should download file from remote', async () => {
     rmFile('/tmp/tiny-random-bloomforcausallm.q2_k.gguf')
-    const result = ClientTools.get(DownloadName)
-    expect(result).toBeInstanceOf(ClientTools)
+    const result = ResClientTools.get(DownloadName)
+    expect(result).toBeInstanceOf(ResClientTools)
     const xyjUrl = 'https://huggingface.co/afrideva/tiny-random-BloomForCausalLM-GGUF/resolve/main/tiny-random-bloomforcausallm.q2_k.gguf'
     const expectId = xxhashAsStr(xyjUrl)
     let res = await result.post({url: xyjUrl})
@@ -268,7 +282,7 @@ describe('Tool Download class', () => {
    });
 
   it('should download file with resume', async () => {
-    const result = ClientTools.get(DownloadName)
+    const result = ResClientTools.get(DownloadName)
     const xyjUrl = url + xyj
     const expectId = xxhashAsStr(xyjUrl)
     let res = await result.post({url: xyjUrl, start: true})
@@ -297,7 +311,7 @@ describe('Tool Download class', () => {
   })
 
   it('should clean temp file after removing task ', async () => {
-    const result = ClientTools.get(DownloadName)
+    const result = ResClientTools.get(DownloadName)
     const xyjUrl = url + xyj
     const expectId = xxhashAsStr(xyjUrl)
     let res = await result.post({url: xyjUrl, start: true})
@@ -319,7 +333,7 @@ describe('Tool Download class', () => {
   })
 
   it('should config downloader', async () => {
-    const result = ClientTools.get(DownloadName)
+    const result = ResClientTools.get(DownloadName)
     const xyjUrl = url + xyj
     const expectId = xxhashAsStr(xyjUrl)
     const dnConfig = await result.config()
@@ -390,7 +404,7 @@ describe('Tool Download class', () => {
   })
 
   it('should use config autostart', async () => {
-    const result = ClientTools.get(DownloadName)
+    const result = ResClientTools.get(DownloadName)
     const xyjUrl = url + xyj
     const dnConfig = await result.config()
     try {
@@ -412,10 +426,10 @@ describe('Tool Download class', () => {
   })
 
   it('should use event', async () => {
-    const result = ClientTools.get(DownloadName)
+    const result = ResClientTools.get(DownloadName)
     const xyjUrl = url + xyj
     const expectId = xxhashAsStr(xyjUrl)
-    const event = ClientTools.get('event') as EventClient
+    const event = ResClientTools.get('event') as EventClient
     // await event.init([DownloadProgressEventName +':'+expectId, DownloadStatusEventName+':'+expectId])
     await event.subscribe([DownloadProgressEventName +':'+expectId, DownloadStatusEventName+':'+expectId])
     await wait(60)
