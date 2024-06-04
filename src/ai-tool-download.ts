@@ -197,12 +197,12 @@ export class DownloadFunc extends ResServerTools {
       if (status === 'completed' && id !== undefined) {
         this.onCompleted(id)
       }
-      eventBus.emit(eventType, 'Download', status)
+      eventBus.emit(eventType, 'Download', status, idInfo)
     })
     download.on('progress', (progress: {percent:number, totalBytes:number, transferredBytes:number}, chunk: Uint8Array, idInfo: {url: string, id?: string, filepath?: string}) => {
       const id = idInfo.id
       const eventType = id ? DownloadProgressEventName + ':' + id : DownloadProgressEventName
-      eventBus.emit(eventType, 'Download', progress)
+      eventBus.emit(eventType, 'Download', progress, idInfo)
       // if (progress.percent === 1 && id !== undefined) {
       //   eventBus.emit(DownloadStatusEventName + ':' + id, 'Download', 'completed')
       //   const dn = this.queue[id]
@@ -219,7 +219,7 @@ export class DownloadFunc extends ResServerTools {
   add(options: BaseFileDownloadOptions) {
     let filepath = options.filepath!
     if (filepath)  {
-      if (path.isAbsolute(filepath)) {throwError('filepath must be relative path:' + filepath, 'add', ErrorCode.InvalidArgument)}
+      if (path.isAbsolute(filepath) && this.rootDir && path.relative(this.rootDir, filepath)[0] === '.') {throwError('filepath must be relative path:' + filepath, 'add', ErrorCode.InvalidArgument)}
       if (!isValidFilepath(filepath)) {throwError('filepath must be valid path:' + filepath, 'add', ErrorCode.InvalidArgument)}
     } else if (!this.rootDir) {
       throwError('filepath must be provided', 'add', ErrorCode.InvalidArgument)
