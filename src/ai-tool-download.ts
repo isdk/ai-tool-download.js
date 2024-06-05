@@ -125,8 +125,8 @@ export class DownloadFunc extends ResServerTools {
     if (typeof options === 'string') {
       return options
     } else if (options) {
-      options = options.id || xxhashAsStr(options.url!)
-      return options as string
+      options = (options.id || xxhashAsStr(options.url!)) as string
+      return options
     }
   }
 
