@@ -29,7 +29,7 @@ describe('FileDownload', () => {
     rmFile(tmpDir)
   })
 
-  it('should download a file and abort it without cleanTempFile', async () => {
+  it('should download a file and abort it with cleanTempFile', async () => {
     let last: any = 0
     let reqAbort = true
 
@@ -40,6 +40,7 @@ describe('FileDownload', () => {
         // console.log(id, `🚀 ~ onDownloadProgress ~ percent: %${(p * 100)}, transferredBytes: ${transferredBytes}, totalBytes: ${totalBytes}`)
         last = percent
         if (reqAbort) {
+          console.log(id, `🚀 ~ onDownloadProgress ~ percent: %${(p * 100)}, transferredBytes: ${transferredBytes}, totalBytes: ${totalBytes}`)
           await this.stop({cleanTempFile: true})
         }
       } else if (percent === 100) {
@@ -58,7 +59,8 @@ describe('FileDownload', () => {
       }
     }
     expect(reqAbort).toBe(false)
-    expect(fs.existsSync(tmpDir)).toBeTruthy()
+    await wait(10)
+    expect(fs.existsSync(tmpDir)).toBeFalsy()
   })
 
   it('should download a file', async () => {
