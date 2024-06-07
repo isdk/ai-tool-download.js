@@ -2,6 +2,11 @@
   "name": "@isdk/ai-tool-download",
   "version": "0.0.1",
   "author": "Riceball LEE <snowyu.lee@gmail.com>",
+  "homepage": "https://github.com/isdk/ai-tool-download.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/isdk/ai-tool-download.js.git"
+  },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "exports": {
@@ -10,6 +15,7 @@
   "scripts": {
     "build-fast": "tsup",
     "build": "pnpm run build-fast --dts-resolve --dts && pnpm run doc:md",
+    "clean": "rm -fr web docs dist",
     "doc": "typedoc --plugin none --out web",
     "doc:md": "typedoc --plugin typedoc-plugin-markdown --out docs",
     "style": "pnpm run format -c && pnpm run lint",
@@ -19,8 +25,8 @@
     "lint": "eslint .",
     "lint:fix": "pnpm run lint --fix",
     "test": "vitest run",
-    "release": "bumpp package.json --commit --push --tag && pnpm publish --access public",
-    "prepublishOnly": "pnpm run build"
+    "release": "pnpm run clean && pnpm run build && git add -f docs && git ci -m 'docs: update API docs' && pnpm dlx commit-and-tag-version -s",
+    "release.alpha": "pnpm run release -- --prerelease alpha"
   },
   "dependencies": {
     "@isdk/ai-tool": "workspace:*",
