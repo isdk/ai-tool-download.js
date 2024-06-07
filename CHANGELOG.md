@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.3](https://github.com/isdk/ai-tool-download.js/compare/v0.0.2...v0.0.3) (2024-06-07)
+
+
+### Bug Fixes
+
+* **build:** the @isdk/ai-tool-download is not allowed by npmjs.org ([f1e296b](https://github.com/isdk/ai-tool-download.js/commit/f1e296b66d1f86f2ca75ad0b94aa574a888c7010))
+
 ## 0.0.2 (2024-06-07)
 
 
