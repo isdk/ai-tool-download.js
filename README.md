@@ -1,4 +1,4 @@
-# ai-tool-download
+# ai-tool-downloader
 
 The Large File Downloader for `ServerTools`
 
@@ -36,7 +36,7 @@ yarn add @isdk/ai-tool-download
 
 ```ts
 import { AbortErrorCode } from '@isdk/ai-tool'
-import { ChunkDownload } from '@isdk/ai-tool-download'
+import { ChunkDownload } from '@isdk/ai-tool-downloader'
 const aborter = new AbortController()
 const chunk = new ChunkDownload({url: 'http://example.com/file.zip', filepath: '/tmp/file.zip', overwrite: false, index: 0, aborter, timeout:false})
 chunk.on('progress', ({percent, totalBytes, transferredBytes}, chunk: Uint8Array) => {
@@ -60,7 +60,7 @@ try {
 
 ```ts
 import { AbortErrorCode } from '@isdk/ai-tool'
-import { FileDownload } from '@isdk/ai-tool-download'
+import { FileDownload } from '@isdk/ai-tool-downloader'
 const aborter = new AbortController()
 const download = new FileDownload({url: 'http://example.com/file.zip', filepath: '/tmp/file.zip', overwrite: false, index: 0, aborter, timeout:false})
 download.on('progress', ({percent, totalBytes, transferredBytes}, chunk: Uint8Array) => {
@@ -98,7 +98,7 @@ The `ChunkDownload` class is designed for downloading a file in chunks, supporti
 
 ```ts
 import { AbortErrorCode } from '@isdk/ai-tool'
-import { ChunkDownload } from '@isdk/ai-tool-download'
+import { ChunkDownload } from '@isdk/ai-tool-downloader'
 const aborter = new AbortController()
 const chunk = new ChunkDownload({url: 'http://example.com/file.zip', filepath: '/tmp/file.zip', overwrite: false, index: 0, aborter})
 chunk.on('progress', ({percent, totalBytes, transferredBytes}, chunkData) => {
@@ -144,7 +144,7 @@ The `BaseFileDownload` class is an abstract base for multi-block concurrent down
 **Usage:**
 
 ```ts
-import { FileDownload } from '@isdk/ai-tool-download'
+import { FileDownload } from '@isdk/ai-tool-downloader'
 const download = new BaseFileDownload({url: 'http://example.com/file.zip', filepath: '/tmp/file.zip'})
 // ...
 ```
@@ -180,7 +180,7 @@ The `FileDownload` class extends from `BaseFileDownload`, providing an asynchron
 **Usage:**
 
 ```ts
-import { FileDownload } from '@isdk/ai-tool-download'
+import { FileDownload } from '@isdk/ai-tool-downloader'
 const download = new FileDownload({url: 'http://example.com/file.zip', filepath: '/tmp/file.zip'})
 // ...
 ```

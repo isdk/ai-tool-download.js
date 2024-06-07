@@ -1,4 +1,4 @@
-# ai-tool-download
+# ai-tool-downloader
 
 The Large File Downloader for `ServerTools`
 
@@ -33,7 +33,7 @@ ChunkDownload 类, 实现一个供nodejs使用的文件下载器类, 它在http�
 
 ```ts
 import { AbortErrorCode } from '@isdk/ai-tool'
-import { ChunkDownload } from '@isdk/ai-tool-download'
+import { ChunkDownload } from '@isdk/ai-tool-downloader'
 const aborter = new AbortController()
 const chunk = new ChunkDownload({url: 'http://example.com/file.zip', filepath: '/tmp/file.zip', overwrite: false, index: 0, aborter, timeout:false})
 chunk.on('progress', ({percent, totalBytes, transferredBytes}, chunk: Uint8Array) => {
@@ -98,7 +98,7 @@ try {
 
 ```ts
 import { AbortErrorCode } from '@isdk/ai-tool'
-import { FileDownload } from '@isdk/ai-tool-download'
+import { FileDownload } from '@isdk/ai-tool-downloader'
 const aborter = new AbortController()
 const download = new FileDownload({url: 'http://example.com/file.zip', filepath: '/tmp/file.zip', overwrite: false, index: 0, aborter, timeout:false})
 download.on('progress', ({percent, totalBytes, transferredBytes}, chunk: Uint8Array) => {
