@@ -1,4 +1,4 @@
-[@isdk/ai-tool-download](../README.md) / [Exports](../modules.md) / ChunkOptions
+[@isdk/ai-tool-downloader](../README.md) / [Exports](../modules.md) / ChunkOptions
 
 # Interface: ChunkOptions
 
@@ -55,7 +55,7 @@
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L35)
+[packages/ai-tool-downloader/src/chunk-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L35)
 
 ___
 
@@ -115,7 +115,7 @@ The end byte of the chunk.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:28](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L28)
+[packages/ai-tool-downloader/src/chunk-download.ts:28](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L28)
 
 ___
 
@@ -178,7 +178,7 @@ save the content to the filePath
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:16](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L16)
+[packages/ai-tool-downloader/src/chunk-download.ts:16](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L16)
 
 ___
 
@@ -255,7 +255,7 @@ The index of the chunk.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:20](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L20)
+[packages/ai-tool-downloader/src/chunk-download.ts:20](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L20)
 
 ___
 
@@ -397,7 +397,7 @@ overwrite the existing file.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:32](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L32)
+[packages/ai-tool-downloader/src/chunk-download.ts:32](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L32)
 
 ___
 
@@ -458,7 +458,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L34)
+[packages/ai-tool-downloader/src/chunk-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L34)
 
 ___
 
@@ -638,7 +638,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L33)
+[packages/ai-tool-downloader/src/chunk-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L33)
 
 ___
 
@@ -650,7 +650,7 @@ The start byte of the chunk.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:24](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L24)
+[packages/ai-tool-downloader/src/chunk-download.ts:24](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L24)
 
 ___
 
@@ -767,7 +767,7 @@ download the url content
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:12](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L12)
+[packages/ai-tool-downloader/src/chunk-download.ts:12](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L12)
 
 ___
 

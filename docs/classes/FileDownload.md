@@ -1,4 +1,4 @@
-[@isdk/ai-tool-download](../README.md) / [Exports](../modules.md) / FileDownload
+[@isdk/ai-tool-downloader](../README.md) / [Exports](../modules.md) / FileDownload
 
 # Class: FileDownload
 
@@ -82,7 +82,7 @@ BaseFileDownload.constructor
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:58](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L58)
+[packages/ai-tool-downloader/src/base-file-download.ts:58](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L58)
 
 ## Properties
 
@@ -96,7 +96,7 @@ BaseFileDownload.\_status
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:54](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L54)
+[packages/ai-tool-downloader/src/base-file-download.ts:54](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L54)
 
 ___
 
@@ -110,7 +110,7 @@ BaseFileDownload.chunks
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:53](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L53)
+[packages/ai-tool-downloader/src/base-file-download.ts:53](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L53)
 
 ___
 
@@ -124,7 +124,7 @@ BaseFileDownload.id
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:49](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L49)
+[packages/ai-tool-downloader/src/base-file-download.ts:49](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L49)
 
 ___
 
@@ -138,7 +138,7 @@ BaseFileDownload.manager
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:51](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L51)
+[packages/ai-tool-downloader/src/base-file-download.ts:51](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L51)
 
 ___
 
@@ -152,7 +152,7 @@ BaseFileDownload.options
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:52](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L52)
+[packages/ai-tool-downloader/src/base-file-download.ts:52](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L52)
 
 ___
 
@@ -166,7 +166,7 @@ BaseFileDownload.order
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:50](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L50)
+[packages/ai-tool-downloader/src/base-file-download.ts:50](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L50)
 
 ___
 
@@ -180,7 +180,7 @@ BaseFileDownload.transferredBytes
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:55](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L55)
+[packages/ai-tool-downloader/src/base-file-download.ts:55](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L55)
 
 ___
 
@@ -194,7 +194,7 @@ BaseFileDownload.urlMetaInfo
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:56](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L56)
+[packages/ai-tool-downloader/src/base-file-download.ts:56](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L56)
 
 ___
 
@@ -208,7 +208,7 @@ BaseFileDownload.defaultChunkSizeInBytes
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:46](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L46)
+[packages/ai-tool-downloader/src/base-file-download.ts:46](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L46)
 
 ___
 
@@ -222,7 +222,7 @@ BaseFileDownload.defaultConcurrency
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L47)
+[packages/ai-tool-downloader/src/base-file-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L47)
 
 ___
 
@@ -250,7 +250,7 @@ BaseFileDownload.minSplitSizeInBytes
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L45)
+[packages/ai-tool-downloader/src/base-file-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L45)
 
 ## Accessors
 
@@ -268,7 +268,7 @@ BaseFileDownload.minSplitSizeInBytes
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:80](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L80)
+[packages/ai-tool-downloader/src/base-file-download.ts:80](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L80)
 
 ___
 
@@ -286,7 +286,7 @@ BaseFileDownload.status
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:84](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L84)
+[packages/ai-tool-downloader/src/base-file-download.ts:84](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L84)
 
 • `set` **status**(`value`): `void`
 
@@ -306,7 +306,7 @@ BaseFileDownload.status
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:87](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L87)
+[packages/ai-tool-downloader/src/base-file-download.ts:87](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L87)
 
 ## Methods
 
@@ -330,7 +330,7 @@ BaseFileDownload.\_start
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/file-download.ts:23](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/file-download.ts#L23)
+[packages/ai-tool-downloader/src/file-download.ts:23](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/file-download.ts#L23)
 
 ___
 
@@ -354,7 +354,7 @@ BaseFileDownload.\_stop
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/file-download.ts:30](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/file-download.ts#L30)
+[packages/ai-tool-downloader/src/file-download.ts:30](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/file-download.ts#L30)
 
 ___
 
@@ -378,7 +378,7 @@ BaseFileDownload.cleanTemp
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:270](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L270)
+[packages/ai-tool-downloader/src/base-file-download.ts:270](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L270)
 
 ___
 
@@ -402,7 +402,7 @@ BaseFileDownload.createChunk
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/file-download.ts:11](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/file-download.ts#L11)
+[packages/ai-tool-downloader/src/file-download.ts:11](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/file-download.ts#L11)
 
 ___
 
@@ -484,7 +484,7 @@ BaseFileDownload.getAbsPath
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:102](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L102)
+[packages/ai-tool-downloader/src/base-file-download.ts:102](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L102)
 
 ___
 
@@ -508,7 +508,7 @@ BaseFileDownload.getIdInfo
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:95](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L95)
+[packages/ai-tool-downloader/src/base-file-download.ts:95](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L95)
 
 ___
 
@@ -588,7 +588,7 @@ BaseFileDownload.mergeChunks
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:128](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L128)
+[packages/ai-tool-downloader/src/base-file-download.ts:128](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L128)
 
 ___
 
@@ -739,7 +739,7 @@ BaseFileDownload.resolveOptions
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/file-download.ts:15](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/file-download.ts#L15)
+[packages/ai-tool-downloader/src/file-download.ts:15](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/file-download.ts#L15)
 
 ___
 
@@ -787,7 +787,7 @@ BaseFileDownload.splitChunks
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:142](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L142)
+[packages/ai-tool-downloader/src/base-file-download.ts:142](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L142)
 
 ___
 
@@ -811,7 +811,7 @@ BaseFileDownload.start
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:220](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L220)
+[packages/ai-tool-downloader/src/base-file-download.ts:220](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L220)
 
 ___
 
@@ -835,7 +835,7 @@ BaseFileDownload.stop
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:253](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L253)
+[packages/ai-tool-downloader/src/base-file-download.ts:253](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L253)
 
 ___
 
@@ -853,7 +853,7 @@ BaseFileDownload.toJSON
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:277](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/base-file-download.ts#L277)
+[packages/ai-tool-downloader/src/base-file-download.ts:277](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/base-file-download.ts#L277)
 
 ___
 

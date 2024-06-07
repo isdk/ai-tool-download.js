@@ -1,4 +1,4 @@
-@isdk/ai-tool-download / [Exports](modules.md)
+@isdk/ai-tool-downloader / [Exports](modules.md)
 
 # ai-tool-download
 

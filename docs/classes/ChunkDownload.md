@@ -1,4 +1,4 @@
-[@isdk/ai-tool-download](../README.md) / [Exports](../modules.md) / ChunkDownload
+[@isdk/ai-tool-downloader](../README.md) / [Exports](../modules.md) / ChunkDownload
 
 # Class: ChunkDownload
 
@@ -64,7 +64,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:55](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L55)
+[packages/ai-tool-downloader/src/chunk-download.ts:55](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L55)
 
 ## Properties
 
@@ -74,7 +74,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:43](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L43)
+[packages/ai-tool-downloader/src/chunk-download.ts:43](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L43)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:42](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L42)
+[packages/ai-tool-downloader/src/chunk-download.ts:42](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L42)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:41](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L41)
+[packages/ai-tool-downloader/src/chunk-download.ts:41](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L41)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:39](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L39)
+[packages/ai-tool-downloader/src/chunk-download.ts:39](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L39)
 
 ## Accessors
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L45)
+[packages/ai-tool-downloader/src/chunk-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L45)
 
 • `set` **status**(`value`): `void`
 
@@ -148,7 +148,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:48](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L48)
+[packages/ai-tool-downloader/src/chunk-download.ts:48](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L48)
 
 ## Methods
 
@@ -433,7 +433,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:69](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L69)
+[packages/ai-tool-downloader/src/chunk-download.ts:69](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L69)
 
 ___
 
@@ -453,7 +453,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:196](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L196)
+[packages/ai-tool-downloader/src/chunk-download.ts:196](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L196)
 
 ___
 
@@ -467,7 +467,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:209](https://github.com/isdk/ai-tool-download.js/blob/fd42dcbc922160f5c34af8916368ec6c48b47e5a/src/chunk-download.ts#L209)
+[packages/ai-tool-downloader/src/chunk-download.ts:209](https://github.com/isdk/ai-tool-download.js/blob/f1e296b66d1f86f2ca75ad0b94aa574a888c7010/src/chunk-download.ts#L209)
 
 ___
 
