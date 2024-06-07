@@ -29,7 +29,7 @@ describe('FileDownload', () => {
     rmFile(tmpDir)
   })
 
-  it('should download a file and abort it with cleanTempFile', async () => {
+  it('should download a file and abort it without cleanTempFile', async () => {
     let last: any = 0
     let reqAbort = true
 
