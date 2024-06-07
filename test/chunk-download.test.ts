@@ -14,7 +14,7 @@ const Video11M = 'https://link.testfile.org/bNYZFw'
 const text = 'https://www.gutenberg.org/ebooks/1513.txt.utf-8'
 const xyj  = 'xyj.txt'
 
-const tmpFilePath = '/tmp/files-5GB.test'
+const tmpFilePath = '/tmp/files-5GB.txt'
 
 declare module 'vitest' {
   export interface ProvidedContext {

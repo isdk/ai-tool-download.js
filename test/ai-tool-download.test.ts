@@ -450,11 +450,11 @@ describe('Tool Download class', () => {
       await wait(5)
       expect(c).toStrictEqual(1)
       expect(typ).toStrictEqual(DownloadStatusEventName+':'+expectId)
-      expect(data).toStrictEqual([ 'Download', 'downloading' ])
+      expect(data).toStrictEqual([ 'Download', 'downloading', {filepath: 'xyj.txt',  id: expectId, url: xyjUrl } ])
       await result.stop({url: xyjUrl})
       await wait(5)
       expect(c).toStrictEqual(3)
-      expect(data).toStrictEqual([ 'Download', 'paused' ])
+      expect(data).toStrictEqual([ 'Download', 'paused', {filepath: 'xyj.txt',  id: expectId, url: xyjUrl } ])
     } finally {
       event.active = false
     }

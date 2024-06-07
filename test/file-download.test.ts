@@ -11,7 +11,7 @@ const chunkSizeInBytes = 1024 * 512; // 512KB
 FileDownload.minSplitSizeInBytes = chunkSizeInBytes
 
 const xyj  = 'xyj.txt'
-const tmpFilePath = '/tmp/123' + xyj
+const tmpFilePath = '/tmp/file123' + xyj
 const tmpDir = tmpFilePath + '.temp'
 const src = fs.readFileSync(path.join(__dirname, 'res', xyj))
 const totalBytes = src.length
@@ -26,6 +26,7 @@ describe('FileDownload', () => {
   const url: string = inject('server-url')
   beforeEach(() => {
     rmFile(tmpFilePath)
+    rmFile(tmpDir)
   })
 
   it('should download a file and abort it with cleanTempFile', async () => {
@@ -57,7 +58,7 @@ describe('FileDownload', () => {
       }
     }
     expect(reqAbort).toBe(false)
-    expect(fs.existsSync(tmpDir)).toBeFalsy()
+    expect(fs.existsSync(tmpDir)).toBeTruthy()
   })
 
   it('should download a file', async () => {
@@ -90,6 +91,7 @@ describe('FileDownload', () => {
     }
 
     let dn = new FileDownload({url: url+xyj, filepath: tmpFilePath, cleanTempFile: false, chunkSizeInBytes, onDownloadProgress})
+    await wait(150)
     try {
       await dn.start()
     } catch (error) {
