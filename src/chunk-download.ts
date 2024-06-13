@@ -1,6 +1,7 @@
 import { AbortErrorCode, throwError, wait } from "@isdk/ai-tool";
 import fs from "fs";
 import ky, { type Options } from 'ky';
+
 import { EventEmitter } from 'events-ex';
 import type { MessagePort } from 'worker_threads'
 import { AlreadyDownloadErrCode, FileDownloadStatus, RangeRequestErrCode, createWritableStream, getUrlMetaInfo } from "./utils";
@@ -33,6 +34,7 @@ export interface ChunkOptions extends Options {
   skipCheck?: Headers
   port?: MessagePort
   aborter?: AbortController
+  agent?: any
 }
 
 export class ChunkDownload extends EventEmitter {
@@ -62,7 +64,7 @@ export class ChunkDownload extends EventEmitter {
     if (!options.aborter) {
       options.aborter = new AbortController()
     }
-    if (options.onDownloadProgress) options.onDownloadProgress = options.onDownloadProgress.bind(this)
+    if (options.onDownloadProgress) {options.onDownloadProgress = options.onDownloadProgress.bind(this)}
     this.options = options
   }
 
@@ -77,6 +79,7 @@ export class ChunkDownload extends EventEmitter {
     else {
       if (!options.aborter) {options.aborter = new AbortController()}
       if (options.skipCheck === undefined) { options.skipCheck = this.options.skipCheck }
+      if (!options.agent) {options.agent = this.options.agent}
     }
 
     options.signal = options.aborter!.signal

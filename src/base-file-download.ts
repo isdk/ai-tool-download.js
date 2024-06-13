@@ -34,6 +34,7 @@ export interface CustomBaseFileDownloadOptions extends Options {
   cleanTempFile?: boolean
   aborter?: AbortController
   overwrite?: boolean
+  agent?: any
   [name: string]: any
 }
 
