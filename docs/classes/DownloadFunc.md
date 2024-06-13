@@ -243,7 +243,7 @@ If set to `false`, an error message "Concurrency limit reached" will be reported
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:89](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L89)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:89](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L89)
 
 ___
 
@@ -258,7 +258,7 @@ download task finishes successfully. If set to `false`, manual intervention will
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:75](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L75)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:75](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L75)
 
 ___
 
@@ -268,7 +268,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:83](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L83)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:83](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L83)
 
 ___
 
@@ -282,7 +282,7 @@ If set to `false`, temporary files will not be deleted.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:82](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L82)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:82](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L82)
 
 ___
 
@@ -292,7 +292,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:68](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L68)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:68](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L68)
 
 ___
 
@@ -347,7 +347,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:91](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L91)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:91](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L91)
 
 ___
 
@@ -371,7 +371,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:65](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L65)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:65](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L65)
 
 ___
 
@@ -409,7 +409,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:67](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L67)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:67](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L67)
 
 ___
 
@@ -449,7 +449,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:64](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L64)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:64](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L64)
 
 ___
 
@@ -473,7 +473,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:66](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L66)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:66](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L66)
 
 ___
 
@@ -613,7 +613,7 @@ packages/ai-tool/dist/index-D4KjfAKl.d.ts:403
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:319](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L319)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:319](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L319)
 
 ___
 
@@ -642,7 +642,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:349](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L349)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:349](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L349)
 
 ___
 
@@ -662,7 +662,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:284](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L284)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:284](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L284)
 
 ___
 
@@ -682,7 +682,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:299](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L299)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:299](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L299)
 
 ___
 
@@ -702,7 +702,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:238](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L238)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:238](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L238)
 
 ___
 
@@ -722,7 +722,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:219](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L219)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:219](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L219)
 
 ___
 
@@ -1001,7 +1001,7 @@ ResServerTools.delete
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:453](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L453)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:453](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L453)
 
 ___
 
@@ -1015,7 +1015,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:113](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L113)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:113](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L113)
 
 ___
 
@@ -1092,7 +1092,7 @@ ResServerTools.get
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:416](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L416)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:416](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L416)
 
 ___
 
@@ -1113,7 +1113,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:143](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L143)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:143](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L143)
 
 ___
 
@@ -1181,7 +1181,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:124](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L124)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:124](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L124)
 
 ___
 
@@ -1201,7 +1201,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:276](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L276)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:276](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L276)
 
 ___
 
@@ -1295,7 +1295,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:104](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L104)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:104](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L104)
 
 ___
 
@@ -1424,7 +1424,7 @@ ResServerTools.list
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:434](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L434)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:434](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L434)
 
 ___
 
@@ -1474,7 +1474,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:184](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L184)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:184](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L184)
 
 ___
 
@@ -1518,7 +1518,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:133](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L133)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:133](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L133)
 
 ___
 
@@ -1542,7 +1542,7 @@ ResServerTools.post
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:380](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L380)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:380](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L380)
 
 ___
 
@@ -1592,7 +1592,7 @@ ResServerTools.put
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:396](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L396)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:396](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L396)
 
 ___
 
@@ -1826,7 +1826,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:254](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L254)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:254](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L254)
 
 ___
 
@@ -1840,7 +1840,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:153](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L153)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:153](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L153)
 
 ___
 
@@ -1854,7 +1854,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:174](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/ai-tool-download.ts#L174)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:174](https://github.com/isdk/ai-tool-download.js/blob/a3cf67df9542fe0b26fecf9fe44a85096ea3b426/src/ai-tool-download.ts#L174)
 
 ___
 
