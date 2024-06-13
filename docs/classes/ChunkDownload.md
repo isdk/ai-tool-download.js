@@ -64,7 +64,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:55](https://github.com/isdk/ai-tool-download.js/blob/3ee6d97e40e4a734d6ddce3f12caf4d01277a3df/src/chunk-download.ts#L55)
+[packages/ai-tool-downloader/src/chunk-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/chunk-download.ts#L57)
 
 ## Properties
 
@@ -74,7 +74,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:43](https://github.com/isdk/ai-tool-download.js/blob/3ee6d97e40e4a734d6ddce3f12caf4d01277a3df/src/chunk-download.ts#L43)
+[packages/ai-tool-downloader/src/chunk-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/chunk-download.ts#L45)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:42](https://github.com/isdk/ai-tool-download.js/blob/3ee6d97e40e4a734d6ddce3f12caf4d01277a3df/src/chunk-download.ts#L42)
+[packages/ai-tool-downloader/src/chunk-download.ts:44](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/chunk-download.ts#L44)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:41](https://github.com/isdk/ai-tool-download.js/blob/3ee6d97e40e4a734d6ddce3f12caf4d01277a3df/src/chunk-download.ts#L41)
+[packages/ai-tool-downloader/src/chunk-download.ts:43](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/chunk-download.ts#L43)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:39](https://github.com/isdk/ai-tool-download.js/blob/3ee6d97e40e4a734d6ddce3f12caf4d01277a3df/src/chunk-download.ts#L39)
+[packages/ai-tool-downloader/src/chunk-download.ts:41](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/chunk-download.ts#L41)
 
 ## Accessors
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/3ee6d97e40e4a734d6ddce3f12caf4d01277a3df/src/chunk-download.ts#L45)
+[packages/ai-tool-downloader/src/chunk-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/chunk-download.ts#L47)
 
 • `set` **status**(`value`): `void`
 
@@ -148,7 +148,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:48](https://github.com/isdk/ai-tool-download.js/blob/3ee6d97e40e4a734d6ddce3f12caf4d01277a3df/src/chunk-download.ts#L48)
+[packages/ai-tool-downloader/src/chunk-download.ts:50](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/chunk-download.ts#L50)
 
 ## Methods
 
@@ -433,7 +433,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:69](https://github.com/isdk/ai-tool-download.js/blob/3ee6d97e40e4a734d6ddce3f12caf4d01277a3df/src/chunk-download.ts#L69)
+[packages/ai-tool-downloader/src/chunk-download.ts:71](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/chunk-download.ts#L71)
 
 ___
 
@@ -453,7 +453,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:196](https://github.com/isdk/ai-tool-download.js/blob/3ee6d97e40e4a734d6ddce3f12caf4d01277a3df/src/chunk-download.ts#L196)
+[packages/ai-tool-downloader/src/chunk-download.ts:199](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/chunk-download.ts#L199)
 
 ___
 
@@ -467,7 +467,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:209](https://github.com/isdk/ai-tool-download.js/blob/3ee6d97e40e4a734d6ddce3f12caf4d01277a3df/src/chunk-download.ts#L209)
+[packages/ai-tool-downloader/src/chunk-download.ts:212](https://github.com/isdk/ai-tool-download.js/blob/0c0b4cff51ad45952c8912b531b0f346fb0d92c6/src/chunk-download.ts#L212)
 
 ___
 
