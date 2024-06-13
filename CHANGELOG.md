@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.6](https://github.com/isdk/ai-tool-download.js/compare/v0.0.5...v0.0.6) (2024-06-13)
+
+
+### Features
+
+* add agent option ([0c0b4cf](https://github.com/isdk/ai-tool-download.js/commit/0c0b4cff51ad45952c8912b531b0f346fb0d92c6))
+
 ## [0.0.5](https://github.com/isdk/ai-tool-download.js/compare/v0.0.4...v0.0.5) (2024-06-11)
 
 ## [0.0.4](https://github.com/isdk/ai-tool-download.js/compare/v0.0.3...v0.0.4) (2024-06-09)
