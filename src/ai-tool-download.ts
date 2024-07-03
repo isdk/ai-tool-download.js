@@ -57,8 +57,8 @@ export const DownloadStatusEventName   = DownloadName + ':status'
 export const DownloadErrorEventName   = DownloadName + ':error'
 
 /**
- * 服务器端下载管理工具,管理文件下载队列,通过SSE事件通知进度.
- * 需要持久化保存下载队列
+ * Server-side download management utility that handles a file download queue and notifies progress via SSE events.
+ * Requires persistent storage of the download queue.
  */
 export class DownloadFunc extends ResServerTools {
   queue: DownloadItems = {};
