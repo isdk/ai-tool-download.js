@@ -175,7 +175,7 @@ export class BaseFileDownload extends EventEmitter {
       const totalChunks = Math.ceil(totalSize / chunkSizeInBytes)
 
       for (let i = 0; i < totalChunks; i++) {
-        const onDownloadProgress = ((id: number, totalSize: number) => {
+        const onDownloadProgress = ((id: number, _totalSize: number) => {
           return ({percent, totalBytes, transferredBytes}: any, chunk: Uint8Array) => {
             this.transferredBytes += chunk.length
             onProgress.call(this, {
@@ -212,6 +212,8 @@ export class BaseFileDownload extends EventEmitter {
       })
       this.chunks.push(chunk)
     }
+
+    this.transferredBytes = this.chunks.reduce((acc, chunk) => acc + getFileSize(chunk.options.filepath), 0)
   }
 
   async _start(options: CustomBaseFileDownloadOptions): Promise<any> {
@@ -282,4 +284,15 @@ export class BaseFileDownload extends EventEmitter {
     return result
   }
 
+}
+
+function getFileSize(filepath: string) {
+  let result= 0
+  if (fs.existsSync(filepath)) {
+    const stat = fs.statSync(filepath)
+    if (stat.size > 0) {
+      result = stat.size
+    }
+  }
+  return result
 }
