@@ -81,6 +81,7 @@ Requires persistent storage of the download queue.
 - [getItem](DownloadFunc.md#getitem)
 - [getMethodFromParams](DownloadFunc.md#getmethodfromparams)
 - [getProperties](DownloadFunc.md#getproperties)
+- [hasAsyncFeature](DownloadFunc.md#hasasyncfeature)
 - [hasOwnProperty](DownloadFunc.md#hasownproperty)
 - [importQueue](DownloadFunc.md#importqueue)
 - [initialize](DownloadFunc.md#initialize)
@@ -131,6 +132,7 @@ Requires persistent storage of the download queue.
 - [getOwnPropertySymbols](DownloadFunc.md#getownpropertysymbols)
 - [getProperties](DownloadFunc.md#getproperties-1)
 - [getPrototypeOf](DownloadFunc.md#getprototypeof)
+- [hasAsyncFeature](DownloadFunc.md#hasasyncfeature-1)
 - [is](DownloadFunc.md#is)
 - [isExtensible](DownloadFunc.md#isextensible)
 - [isFrozen](DownloadFunc.md#isfrozen)
@@ -173,7 +175,7 @@ ResServerTools.constructor
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:541
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:567
 
 ## Properties
 
@@ -201,7 +203,7 @@ ResServerTools.action
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:539
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:565
 
 ___
 
@@ -215,7 +217,7 @@ ResServerTools.allowExportFunc
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:396
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:422
 
 ___
 
@@ -229,7 +231,7 @@ ResServerTools.apiRoot
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:130
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:154
 
 ___
 
@@ -243,7 +245,7 @@ If set to `false`, an error message "Concurrency limit reached" will be reported
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:89](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L89)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:89](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L89)
 
 ___
 
@@ -258,7 +260,7 @@ download task finishes successfully. If set to `false`, manual intervention will
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:75](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L75)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:75](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L75)
 
 ___
 
@@ -268,7 +270,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:83](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L83)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:83](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L83)
 
 ___
 
@@ -282,7 +284,7 @@ If set to `false`, temporary files will not be deleted.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:82](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L82)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:82](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L82)
 
 ___
 
@@ -292,7 +294,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:68](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L68)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:68](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L68)
 
 ___
 
@@ -347,7 +349,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:91](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L91)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:91](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L91)
 
 ___
 
@@ -361,7 +363,7 @@ ResServerTools.fetchOptions
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:132
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:156
 
 ___
 
@@ -371,7 +373,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:65](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L65)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:65](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L65)
 
 ___
 
@@ -385,7 +387,7 @@ ResServerTools.methods
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:531
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:557
 
 ___
 
@@ -399,7 +401,7 @@ ResServerTools.name
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:22
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:36
 
 ___
 
@@ -409,7 +411,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:67](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L67)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:67](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L67)
 
 ___
 
@@ -439,7 +441,7 @@ ResServerTools.params
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:540
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:566
 
 ___
 
@@ -449,7 +451,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:64](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L64)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:64](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L64)
 
 ___
 
@@ -463,7 +465,7 @@ ResServerTools.result
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:24
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:38
 
 ___
 
@@ -473,7 +475,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:66](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L66)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:66](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L66)
 
 ___
 
@@ -487,7 +489,7 @@ ResServerTools.scope
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:25
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:39
 
 ___
 
@@ -516,7 +518,7 @@ ResServerTools.setup
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:27
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:41
 
 ___
 
@@ -530,7 +532,7 @@ ResServerTools.stream
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:133
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:157
 
 ___
 
@@ -544,7 +546,7 @@ ResServerTools.tags
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:26
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:40
 
 ___
 
@@ -558,7 +560,7 @@ ResServerTools.dataPath
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:43
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:62
 
 ___
 
@@ -572,7 +574,7 @@ ResServerTools.items
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:42
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:61
 
 ## Accessors
 
@@ -590,7 +592,7 @@ ResServerTools.apiRoot
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:403
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:429
 
 ## Methods
 
@@ -613,7 +615,7 @@ packages/ai-tool/dist/index-japi6bEq.d.ts:403
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:319](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L319)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:319](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L319)
 
 ___
 
@@ -642,7 +644,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:349](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L349)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:349](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L349)
 
 ___
 
@@ -662,7 +664,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:284](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L284)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:284](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L284)
 
 ___
 
@@ -682,7 +684,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:299](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L299)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:299](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L299)
 
 ___
 
@@ -702,7 +704,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:238](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L238)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:238](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L238)
 
 ___
 
@@ -722,7 +724,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:219](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L219)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:219](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L219)
 
 ___
 
@@ -746,7 +748,7 @@ ResServerTools.arr2ObjParams
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:61
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:81
 
 ___
 
@@ -892,7 +894,7 @@ ResServerTools.cast
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:542
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:568
 
 ___
 
@@ -1001,7 +1003,7 @@ ResServerTools.delete
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:453](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L453)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:453](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L453)
 
 ___
 
@@ -1015,7 +1017,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:113](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L113)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:113](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L113)
 
 ___
 
@@ -1068,7 +1070,7 @@ ResServerTools.func
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:544
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:570
 
 ___
 
@@ -1092,7 +1094,7 @@ ResServerTools.get
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:416](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L416)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:416](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L416)
 
 ___
 
@@ -1113,7 +1115,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:143](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L143)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:143](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L143)
 
 ___
 
@@ -1137,7 +1139,7 @@ ResServerTools.getFunc
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:67
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:87
 
 ___
 
@@ -1161,7 +1163,7 @@ ResServerTools.getFuncWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:72
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:92
 
 ___
 
@@ -1181,7 +1183,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:124](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L124)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:124](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L124)
 
 ___
 
@@ -1201,7 +1203,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:276](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L276)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:276](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L276)
 
 ___
 
@@ -1225,7 +1227,7 @@ ResServerTools.getMethodFromParams
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:543
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:569
 
 ___
 
@@ -1250,6 +1252,30 @@ ResServerTools.getProperties
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:98
+
+___
+
+### hasAsyncFeature
+
+▸ **hasAsyncFeature**(`feature`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `feature` | `AsyncFeatureBits` |
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+ResServerTools.hasAsyncFeature
+
+#### Defined in
+
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:93
 
 ___
 
@@ -1295,7 +1321,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:104](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L104)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:104](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L104)
 
 ___
 
@@ -1400,7 +1426,7 @@ ResServerTools.isStream
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:408
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:434
 
 ___
 
@@ -1424,7 +1450,7 @@ ResServerTools.list
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:434](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L434)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:434](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L434)
 
 ___
 
@@ -1474,7 +1500,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:184](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L184)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:184](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L184)
 
 ___
 
@@ -1498,7 +1524,7 @@ ResServerTools.obj2ArrParams
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:62
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:82
 
 ___
 
@@ -1518,7 +1544,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:133](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L133)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:133](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L133)
 
 ___
 
@@ -1542,7 +1568,7 @@ ResServerTools.post
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:380](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L380)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:380](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L380)
 
 ___
 
@@ -1592,7 +1618,7 @@ ResServerTools.put
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:396](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L396)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:396](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L396)
 
 ___
 
@@ -1610,7 +1636,7 @@ ResServerTools.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:59
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:79
 
 ___
 
@@ -1634,7 +1660,7 @@ ResServerTools.run
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:64
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:84
 
 ___
 
@@ -1659,7 +1685,7 @@ ResServerTools.runAs
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:65
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:85
 
 ___
 
@@ -1684,7 +1710,7 @@ ResServerTools.runAsSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:66
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:86
 
 ___
 
@@ -1708,7 +1734,7 @@ ResServerTools.runSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:63
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:83
 
 ___
 
@@ -1732,7 +1758,7 @@ ResServerTools.runWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:70
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:90
 
 ___
 
@@ -1757,7 +1783,7 @@ ResServerTools.runWithPosAs
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:71
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:91
 
 ___
 
@@ -1782,7 +1808,7 @@ ResServerTools.runWithPosAsSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:69
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:89
 
 ___
 
@@ -1806,7 +1832,7 @@ ResServerTools.runWithPosSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:68
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:88
 
 ___
 
@@ -1826,7 +1852,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:254](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L254)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:254](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L254)
 
 ___
 
@@ -1840,7 +1866,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:153](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L153)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:153](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L153)
 
 ___
 
@@ -1854,7 +1880,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:174](https://github.com/isdk/ai-tool-download.js/blob/67020f0250ac54d42d6a4d228f4735a0fb4cf74f/src/ai-tool-download.ts#L174)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:174](https://github.com/isdk/ai-tool-download.js/blob/03ff6071b313e3d31a2310fb16090a157933fafb/src/ai-tool-download.ts#L174)
 
 ___
 
@@ -1958,7 +1984,7 @@ ResServerTools.unregister
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:60
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:80
 
 ___
 
@@ -2435,7 +2461,7 @@ ResServerTools.get
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:44
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:63
 
 ___
 
@@ -2459,7 +2485,7 @@ ResServerTools.getAllByTag
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:47
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:66
 
 ___
 
@@ -2483,7 +2509,7 @@ ResServerTools.getByTag
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:46
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:65
 
 ___
 
@@ -2507,7 +2533,7 @@ ResServerTools.getFunc
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:50
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:70
 
 ___
 
@@ -2531,7 +2557,7 @@ ResServerTools.getFuncWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:53
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:73
 
 ___
 
@@ -2691,6 +2717,30 @@ ResServerTools.getPrototypeOf
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:167
+
+___
+
+### hasAsyncFeature
+
+▸ **hasAsyncFeature**(`feature`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `feature` | `AsyncFeatureBits` |
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+ResServerTools.hasAsyncFeature
+
+#### Defined in
+
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:67
 
 ___
 
@@ -2861,7 +2911,7 @@ ResServerTools.list
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:45
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:64
 
 ___
 
@@ -2918,7 +2968,7 @@ ResServerTools.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:54
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:74
 
 ▸ **register**(`func`, `options`): `boolean` \| `ToolFunc`
 
@@ -2939,7 +2989,7 @@ ResServerTools.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:55
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:75
 
 ▸ **register**(`name`, `options?`): `boolean` \| `ToolFunc`
 
@@ -2960,7 +3010,7 @@ ResServerTools.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:56
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:76
 
 ___
 
@@ -2985,7 +3035,7 @@ ResServerTools.run
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:48
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:68
 
 ___
 
@@ -3010,7 +3060,7 @@ ResServerTools.runSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:49
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:69
 
 ___
 
@@ -3035,7 +3085,7 @@ ResServerTools.runWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:51
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:71
 
 ___
 
@@ -3060,7 +3110,7 @@ ResServerTools.runWithPosSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:52
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:72
 
 ___
 
@@ -3116,7 +3166,7 @@ ResServerTools.setApiRoot
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:404
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:430
 
 ___
 
@@ -3161,7 +3211,7 @@ ResServerTools.toJSON
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:405
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:431
 
 ___
 
@@ -3185,7 +3235,7 @@ ResServerTools.unregister
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:57
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:77
 
 ___
 
