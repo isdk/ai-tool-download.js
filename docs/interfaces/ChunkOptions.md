@@ -56,7 +56,7 @@
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/fb2891c5a272bcc9af729d9a3df681b624068998/src/chunk-download.ts#L36)
+[packages/ai-tool-downloader/src/chunk-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L36)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/fb2891c5a272bcc9af729d9a3df681b624068998/src/chunk-download.ts#L37)
+[packages/ai-tool-downloader/src/chunk-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L37)
 
 ___
 
@@ -126,7 +126,7 @@ The end byte of the chunk.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/fb2891c5a272bcc9af729d9a3df681b624068998/src/chunk-download.ts#L29)
+[packages/ai-tool-downloader/src/chunk-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L29)
 
 ___
 
@@ -189,7 +189,7 @@ save the content to the filePath
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:17](https://github.com/isdk/ai-tool-download.js/blob/fb2891c5a272bcc9af729d9a3df681b624068998/src/chunk-download.ts#L17)
+[packages/ai-tool-downloader/src/chunk-download.ts:17](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L17)
 
 ___
 
@@ -266,7 +266,7 @@ The index of the chunk.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/fb2891c5a272bcc9af729d9a3df681b624068998/src/chunk-download.ts#L21)
+[packages/ai-tool-downloader/src/chunk-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L21)
 
 ___
 
@@ -408,7 +408,7 @@ overwrite the existing file.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/fb2891c5a272bcc9af729d9a3df681b624068998/src/chunk-download.ts#L33)
+[packages/ai-tool-downloader/src/chunk-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L33)
 
 ___
 
@@ -469,7 +469,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/fb2891c5a272bcc9af729d9a3df681b624068998/src/chunk-download.ts#L35)
+[packages/ai-tool-downloader/src/chunk-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L35)
 
 ___
 
@@ -649,7 +649,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/fb2891c5a272bcc9af729d9a3df681b624068998/src/chunk-download.ts#L34)
+[packages/ai-tool-downloader/src/chunk-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L34)
 
 ___
 
@@ -661,7 +661,7 @@ The start byte of the chunk.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/fb2891c5a272bcc9af729d9a3df681b624068998/src/chunk-download.ts#L25)
+[packages/ai-tool-downloader/src/chunk-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L25)
 
 ___
 
@@ -778,7 +778,7 @@ download the url content
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:13](https://github.com/isdk/ai-tool-download.js/blob/fb2891c5a272bcc9af729d9a3df681b624068998/src/chunk-download.ts#L13)
+[packages/ai-tool-downloader/src/chunk-download.ts:13](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L13)
 
 ___
 
