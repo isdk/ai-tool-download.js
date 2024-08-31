@@ -64,7 +64,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L57)
+[packages/ai-tool-downloader/src/chunk-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/a4b015c46d5706b8adf3745becdfaed90ec445bf/src/chunk-download.ts#L57)
 
 ## Properties
 
@@ -74,7 +74,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L45)
+[packages/ai-tool-downloader/src/chunk-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/a4b015c46d5706b8adf3745becdfaed90ec445bf/src/chunk-download.ts#L45)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:44](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L44)
+[packages/ai-tool-downloader/src/chunk-download.ts:44](https://github.com/isdk/ai-tool-download.js/blob/a4b015c46d5706b8adf3745becdfaed90ec445bf/src/chunk-download.ts#L44)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:43](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L43)
+[packages/ai-tool-downloader/src/chunk-download.ts:43](https://github.com/isdk/ai-tool-download.js/blob/a4b015c46d5706b8adf3745becdfaed90ec445bf/src/chunk-download.ts#L43)
 
 ___
 
@@ -108,7 +108,7 @@ EventEmitter.defaultMaxListeners
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0-alpha.15/node_modules/events-ex/lib/event-emitter.d.ts:7
+node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:7
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:41](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L41)
+[packages/ai-tool-downloader/src/chunk-download.ts:41](https://github.com/isdk/ai-tool-download.js/blob/a4b015c46d5706b8adf3745becdfaed90ec445bf/src/chunk-download.ts#L41)
 
 ## Accessors
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L47)
+[packages/ai-tool-downloader/src/chunk-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/a4b015c46d5706b8adf3745becdfaed90ec445bf/src/chunk-download.ts#L47)
 
 • `set` **status**(`value`): `void`
 
@@ -148,7 +148,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:50](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L50)
+[packages/ai-tool-downloader/src/chunk-download.ts:50](https://github.com/isdk/ai-tool-download.js/blob/a4b015c46d5706b8adf3745becdfaed90ec445bf/src/chunk-download.ts#L50)
 
 ## Methods
 
@@ -177,7 +177,7 @@ EventEmitter.emit
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0-alpha.15/node_modules/events-ex/lib/event-emitter.d.ts:38
+node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:38
 
 ___
 
@@ -206,7 +206,7 @@ EventEmitter.emitAsync
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0-alpha.15/node_modules/events-ex/lib/event-emitter.d.ts:44
+node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:44
 
 ___
 
@@ -234,7 +234,7 @@ EventEmitter.listenerCount
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0-alpha.15/node_modules/events-ex/lib/event-emitter.d.ts:66
+node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:66
 
 ___
 
@@ -262,7 +262,7 @@ EventEmitter.listeners
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0-alpha.15/node_modules/events-ex/lib/event-emitter.d.ts:59
+node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:59
 
 ___
 
@@ -295,7 +295,7 @@ EventEmitter.off
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0-alpha.15/node_modules/events-ex/lib/event-emitter.d.ts:32
+node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:32
 
 ___
 
@@ -328,7 +328,7 @@ EventEmitter.on
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0-alpha.15/node_modules/events-ex/lib/event-emitter.d.ts:16
+node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:16
 
 ___
 
@@ -361,7 +361,7 @@ EventEmitter.once
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0-alpha.15/node_modules/events-ex/lib/event-emitter.d.ts:24
+node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:24
 
 ___
 
@@ -389,7 +389,7 @@ EventEmitter.removeAllListeners
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0-alpha.15/node_modules/events-ex/lib/event-emitter.d.ts:51
+node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:51
 
 ___
 
@@ -413,7 +413,7 @@ EventEmitter.setMaxListeners
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0-alpha.15/node_modules/events-ex/lib/event-emitter.d.ts:52
+node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:52
 
 ___
 
@@ -433,7 +433,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:71](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L71)
+[packages/ai-tool-downloader/src/chunk-download.ts:71](https://github.com/isdk/ai-tool-download.js/blob/a4b015c46d5706b8adf3745becdfaed90ec445bf/src/chunk-download.ts#L71)
 
 ___
 
@@ -453,7 +453,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:199](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L199)
+[packages/ai-tool-downloader/src/chunk-download.ts:199](https://github.com/isdk/ai-tool-download.js/blob/a4b015c46d5706b8adf3745becdfaed90ec445bf/src/chunk-download.ts#L199)
 
 ___
 
@@ -467,7 +467,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:212](https://github.com/isdk/ai-tool-download.js/blob/fd60b50c36cc85929c633027197d581c724c6c17/src/chunk-download.ts#L212)
+[packages/ai-tool-downloader/src/chunk-download.ts:212](https://github.com/isdk/ai-tool-download.js/blob/a4b015c46d5706b8adf3745becdfaed90ec445bf/src/chunk-download.ts#L212)
 
 ___
 
@@ -498,4 +498,4 @@ EventEmitter.listenerCount
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0-alpha.15/node_modules/events-ex/lib/event-emitter.d.ts:74
+node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:74
