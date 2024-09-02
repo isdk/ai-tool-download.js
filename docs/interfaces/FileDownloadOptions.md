@@ -59,7 +59,7 @@ CustomBaseFileDownloadOptions.aborter
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/a4a50ff6b371284795601f2cffda8e1218e537c3/src/base-file-download.ts#L35)
+[packages/ai-tool-downloader/src/base-file-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/ce968668e90f55f38c8faa7714b11a27e4ddea3e/src/base-file-download.ts#L35)
 
 ___
 
@@ -73,7 +73,7 @@ CustomBaseFileDownloadOptions.agent
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/a4a50ff6b371284795601f2cffda8e1218e537c3/src/base-file-download.ts#L37)
+[packages/ai-tool-downloader/src/base-file-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/ce968668e90f55f38c8faa7714b11a27e4ddea3e/src/base-file-download.ts#L37)
 
 ___
 
@@ -121,7 +121,7 @@ CustomBaseFileDownloadOptions.chunkSizeInBytes
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/a4a50ff6b371284795601f2cffda8e1218e537c3/src/base-file-download.ts#L29)
+[packages/ai-tool-downloader/src/base-file-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/ce968668e90f55f38c8faa7714b11a27e4ddea3e/src/base-file-download.ts#L29)
 
 ___
 
@@ -135,7 +135,7 @@ CustomBaseFileDownloadOptions.cleanTempFile
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/a4a50ff6b371284795601f2cffda8e1218e537c3/src/base-file-download.ts#L34)
+[packages/ai-tool-downloader/src/base-file-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/ce968668e90f55f38c8faa7714b11a27e4ddea3e/src/base-file-download.ts#L34)
 
 ___
 
@@ -151,7 +151,7 @@ CustomBaseFileDownloadOptions.concurrency
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/a4a50ff6b371284795601f2cffda8e1218e537c3/src/base-file-download.ts#L25)
+[packages/ai-tool-downloader/src/base-file-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/ce968668e90f55f38c8faa7714b11a27e4ddea3e/src/base-file-download.ts#L25)
 
 ___
 
@@ -183,7 +183,7 @@ CustomBaseFileDownloadOptions.destinationFolder
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/a4a50ff6b371284795601f2cffda8e1218e537c3/src/base-file-download.ts#L33)
+[packages/ai-tool-downloader/src/base-file-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/ce968668e90f55f38c8faa7714b11a27e4ddea3e/src/base-file-download.ts#L33)
 
 ___
 
@@ -248,7 +248,7 @@ CustomBaseFileDownloadOptions.filepath
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/a4a50ff6b371284795601f2cffda8e1218e537c3/src/base-file-download.ts#L21)
+[packages/ai-tool-downloader/src/base-file-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/ce968668e90f55f38c8faa7714b11a27e4ddea3e/src/base-file-download.ts#L21)
 
 ___
 
@@ -373,7 +373,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/file-download.ts:6](https://github.com/isdk/ai-tool-download.js/blob/a4a50ff6b371284795601f2cffda8e1218e537c3/src/file-download.ts#L6)
+[packages/ai-tool-downloader/src/file-download.ts:6](https://github.com/isdk/ai-tool-download.js/blob/ce968668e90f55f38c8faa7714b11a27e4ddea3e/src/file-download.ts#L6)
 
 ___
 
@@ -467,7 +467,7 @@ CustomBaseFileDownloadOptions.overwrite
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/a4a50ff6b371284795601f2cffda8e1218e537c3/src/base-file-download.ts#L36)
+[packages/ai-tool-downloader/src/base-file-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/ce968668e90f55f38c8faa7714b11a27e4ddea3e/src/base-file-download.ts#L36)
 
 ___
 
