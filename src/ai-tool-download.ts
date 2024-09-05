@@ -24,6 +24,7 @@ import { FileDownloadStatus, defaultChunkSizeInBytes, defaultConcurrency } from 
 
 interface DownloadFuncParams extends BaseFileDownloadOptions, ResServerFuncParams {
   autostart?: boolean
+  waitForCompletion?: boolean
 }
 
 export interface DownloadConfiguration {
@@ -267,7 +268,11 @@ export class DownloadFunc extends ResServerTools {
               throwError('Concurrency limit reached', 'start', ErrorCode.NotAcceptable)
             }
           }
-          setImmediate(async () => await this._start(id))
+          if (options && typeof options !== 'string' && options.waitForCompletion) {
+            await this._start(id)
+          } else {
+            setImmediate(async () => await this._start(id))
+          }
         }
       }
     }
