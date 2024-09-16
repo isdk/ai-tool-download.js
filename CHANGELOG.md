@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.0](https://github.com/isdk/ai-tool-download.js/compare/v0.0.18...v0.1.0) (2024-09-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* add waitForCompletion option
+
+### Features
+
+* add waitForCompletion option ([c919e17](https://github.com/isdk/ai-tool-download.js/commit/c919e17ce54509d2fa99fa359cd46320295cc012))
+
 ## [0.0.18](https://github.com/isdk/ai-tool-download.js/compare/v0.0.17...v0.0.18) (2024-09-02)
 
 ## [0.0.17](https://github.com/isdk/ai-tool-download.js/compare/v0.0.16...v0.0.17) (2024-09-02)
