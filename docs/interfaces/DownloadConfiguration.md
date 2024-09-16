@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/ce968668e90f55f38c8faa7714b11a27e4ddea3e/src/ai-tool-download.ts#L35)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L36)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:32](https://github.com/isdk/ai-tool-download.js/blob/ce968668e90f55f38c8faa7714b11a27e4ddea3e/src/ai-tool-download.ts#L32)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L33)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/ce968668e90f55f38c8faa7714b11a27e4ddea3e/src/ai-tool-download.ts#L34)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L35)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/ce968668e90f55f38c8faa7714b11a27e4ddea3e/src/ai-tool-download.ts#L33)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L34)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:30](https://github.com/isdk/ai-tool-download.js/blob/ce968668e90f55f38c8faa7714b11a27e4ddea3e/src/ai-tool-download.ts#L30)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:31](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L31)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:31](https://github.com/isdk/ai-tool-download.js/blob/ce968668e90f55f38c8faa7714b11a27e4ddea3e/src/ai-tool-download.ts#L31)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:32](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L32)
