@@ -185,7 +185,7 @@ export class DownloadFunc extends ResServerTools {
   newDownload(options: BaseFileDownloadOptions, id: string) {
     // , onDownloadProgress: DownloadFunc.onDownloadProgress
     const download = new FileDownload({...options,
-      destinationFolder: this.rootDir,
+      destinationFolder: this.rootDir || '.',
       chunkSizeInBytes: this.chunkSizeInBytes,
       cleanTempFile: this.cleanTempFile,
     })
@@ -392,7 +392,7 @@ export class DownloadFunc extends ResServerTools {
       }
       const hashId = this.add(options)
       if (options.start) {
-        await this.start(id)
+        await this.start({...options, id})
       }
       return {id: hashId}
     }
