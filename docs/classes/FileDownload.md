@@ -1,76 +1,26 @@
-[@isdk/ai-tool-downloader](../README.md) / [Exports](../modules.md) / FileDownload
+[**@isdk/ai-tool-downloader**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-downloader](../globals.md) / FileDownload
 
 # Class: FileDownload
 
-## Hierarchy
+## Extends
 
 - `BaseFileDownload`
 
-  ↳ **`FileDownload`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](FileDownload.md#constructor)
-
-### Properties
-
-- [\_status](FileDownload.md#_status)
-- [chunks](FileDownload.md#chunks)
-- [id](FileDownload.md#id)
-- [manager](FileDownload.md#manager)
-- [options](FileDownload.md#options)
-- [order](FileDownload.md#order)
-- [transferredBytes](FileDownload.md#transferredbytes)
-- [urlMetaInfo](FileDownload.md#urlmetainfo)
-- [defaultChunkSizeInBytes](FileDownload.md#defaultchunksizeinbytes)
-- [defaultConcurrency](FileDownload.md#defaultconcurrency)
-- [defaultMaxListeners](FileDownload.md#defaultmaxlisteners)
-- [minSplitSizeInBytes](FileDownload.md#minsplitsizeinbytes)
-
-### Accessors
-
-- [minSplitSizeInBytes](FileDownload.md#minsplitsizeinbytes-1)
-- [status](FileDownload.md#status)
-
-### Methods
-
-- [\_start](FileDownload.md#_start)
-- [\_stop](FileDownload.md#_stop)
-- [cleanTemp](FileDownload.md#cleantemp)
-- [createChunk](FileDownload.md#createchunk)
-- [emit](FileDownload.md#emit)
-- [emitAsync](FileDownload.md#emitasync)
-- [getAbsPath](FileDownload.md#getabspath)
-- [getIdInfo](FileDownload.md#getidinfo)
-- [listenerCount](FileDownload.md#listenercount)
-- [listeners](FileDownload.md#listeners)
-- [mergeChunks](FileDownload.md#mergechunks)
-- [off](FileDownload.md#off)
-- [on](FileDownload.md#on)
-- [once](FileDownload.md#once)
-- [removeAllListeners](FileDownload.md#removealllisteners)
-- [resolveOptions](FileDownload.md#resolveoptions)
-- [setMaxListeners](FileDownload.md#setmaxlisteners)
-- [splitChunks](FileDownload.md#splitchunks)
-- [start](FileDownload.md#start)
-- [stop](FileDownload.md#stop)
-- [toJSON](FileDownload.md#tojson)
-- [listenerCount](FileDownload.md#listenercount-1)
-
 ## Constructors
 
-### constructor
+### new FileDownload()
 
-• **new FileDownload**(`url`, `options?`): [`FileDownload`](FileDownload.md)
+> **new FileDownload**(`url`, `options`?): [`FileDownload`](FileDownload.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `url` | `string` \| `BaseFileDownloadOptions` |
-| `options?` | `BaseFileDownloadOptions` |
+• **url**: `string` \| `BaseFileDownloadOptions`
+
+• **options?**: `BaseFileDownloadOptions`
 
 #### Returns
 
@@ -78,185 +28,185 @@
 
 #### Inherited from
 
-BaseFileDownload.constructor
+`BaseFileDownload.constructor`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:59](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L59)
+[packages/ai-tool-downloader/src/base-file-download.ts:59](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L59)
 
 ## Properties
 
 ### \_status
 
-• **\_status**: [`FileDownloadStatus`](../modules.md#filedownloadstatus) = `'pending'`
+> **\_status**: [`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md) = `'pending'`
 
 #### Inherited from
 
-BaseFileDownload.\_status
+`BaseFileDownload._status`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:55](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L55)
+[packages/ai-tool-downloader/src/base-file-download.ts:55](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L55)
 
-___
+***
 
 ### chunks
 
-• **chunks**: [`ChunkDownload`](ChunkDownload.md)[] = `[]`
+> **chunks**: [`ChunkDownload`](ChunkDownload.md)[] = `[]`
 
 #### Inherited from
 
-BaseFileDownload.chunks
+`BaseFileDownload.chunks`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:54](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L54)
+[packages/ai-tool-downloader/src/base-file-download.ts:54](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L54)
 
-___
+***
 
-### id
+### id?
 
-• `Optional` **id**: `string`
+> `optional` **id**: `string`
 
 #### Inherited from
 
-BaseFileDownload.id
+`BaseFileDownload.id`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:50](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L50)
+[packages/ai-tool-downloader/src/base-file-download.ts:50](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L50)
 
-___
+***
 
-### manager
+### manager?
 
-• `Optional` **manager**: `any`
+> `optional` **manager**: `any`
 
 #### Inherited from
 
-BaseFileDownload.manager
+`BaseFileDownload.manager`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:52](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L52)
+[packages/ai-tool-downloader/src/base-file-download.ts:52](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L52)
 
-___
+***
 
 ### options
 
-• **options**: `BaseFileDownloadOptions`
+> **options**: `BaseFileDownloadOptions`
 
 #### Inherited from
 
-BaseFileDownload.options
+`BaseFileDownload.options`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:53](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L53)
+[packages/ai-tool-downloader/src/base-file-download.ts:53](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L53)
 
-___
+***
 
-### order
+### order?
 
-• `Optional` **order**: `number`
+> `optional` **order**: `number`
 
 #### Inherited from
 
-BaseFileDownload.order
+`BaseFileDownload.order`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:51](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L51)
+[packages/ai-tool-downloader/src/base-file-download.ts:51](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L51)
 
-___
+***
 
 ### transferredBytes
 
-• **transferredBytes**: `number` = `0`
+> **transferredBytes**: `number` = `0`
 
 #### Inherited from
 
-BaseFileDownload.transferredBytes
+`BaseFileDownload.transferredBytes`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:56](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L56)
+[packages/ai-tool-downloader/src/base-file-download.ts:56](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L56)
 
-___
+***
 
-### urlMetaInfo
+### urlMetaInfo?
 
-• `Protected` `Optional` **urlMetaInfo**: [`UrlMetaInfo`](../interfaces/UrlMetaInfo.md)
+> `protected` `optional` **urlMetaInfo**: [`UrlMetaInfo`](../interfaces/UrlMetaInfo.md)
 
 #### Inherited from
 
-BaseFileDownload.urlMetaInfo
+`BaseFileDownload.urlMetaInfo`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L57)
+[packages/ai-tool-downloader/src/base-file-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L57)
 
-___
+***
 
 ### defaultChunkSizeInBytes
 
-▪ `Static` **defaultChunkSizeInBytes**: `number` = `defaultChunkSizeInBytes`
+> `static` **defaultChunkSizeInBytes**: `number`
 
 #### Inherited from
 
-BaseFileDownload.defaultChunkSizeInBytes
+`BaseFileDownload.defaultChunkSizeInBytes`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L47)
+[packages/ai-tool-downloader/src/base-file-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L47)
 
-___
+***
 
 ### defaultConcurrency
 
-▪ `Static` **defaultConcurrency**: `number` = `defaultConcurrency`
+> `static` **defaultConcurrency**: `number`
 
 #### Inherited from
 
-BaseFileDownload.defaultConcurrency
+`BaseFileDownload.defaultConcurrency`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:48](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L48)
+[packages/ai-tool-downloader/src/base-file-download.ts:48](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L48)
 
-___
+***
 
 ### defaultMaxListeners
 
-▪ `Static` **defaultMaxListeners**: `number`
+> `static` **defaultMaxListeners**: `number`
 
 #### Inherited from
 
-BaseFileDownload.defaultMaxListeners
+`BaseFileDownload.defaultMaxListeners`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:7
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:7
 
-___
+***
 
 ### minSplitSizeInBytes
 
-▪ `Static` **minSplitSizeInBytes**: `number` = `minSplitSizeInBytes`
+> `static` **minSplitSizeInBytes**: `number`
 
 #### Inherited from
 
-BaseFileDownload.minSplitSizeInBytes
+`BaseFileDownload.minSplitSizeInBytes`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:46](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L46)
+[packages/ai-tool-downloader/src/base-file-download.ts:46](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L46)
 
 ## Accessors
 
 ### minSplitSizeInBytes
 
-• `get` **minSplitSizeInBytes**(): `any`
+> `get` **minSplitSizeInBytes**(): `any`
 
 #### Returns
 
@@ -264,61 +214,45 @@ BaseFileDownload.minSplitSizeInBytes
 
 #### Inherited from
 
-BaseFileDownload.minSplitSizeInBytes
+`BaseFileDownload.minSplitSizeInBytes`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:81](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L81)
+[packages/ai-tool-downloader/src/base-file-download.ts:81](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L81)
 
-___
+***
 
 ### status
 
-• `get` **status**(): [`FileDownloadStatus`](../modules.md#filedownloadstatus)
+> `get` **status**(): [`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md)
 
-#### Returns
-
-[`FileDownloadStatus`](../modules.md#filedownloadstatus)
-
-#### Inherited from
-
-BaseFileDownload.status
-
-#### Defined in
-
-[packages/ai-tool-downloader/src/base-file-download.ts:85](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L85)
-
-• `set` **status**(`value`): `void`
+> `set` **status**(`value`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | [`FileDownloadStatus`](../modules.md#filedownloadstatus) |
+• **value**: [`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md)
 
 #### Returns
 
-`void`
+[`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md)
 
 #### Inherited from
 
-BaseFileDownload.status
+`BaseFileDownload.status`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:88](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L88)
+[packages/ai-tool-downloader/src/base-file-download.ts:85](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L85)
 
 ## Methods
 
-### \_start
+### \_start()
 
-▸ **_start**(`options`): `Promise`\<`void`[]\>
+> **\_start**(`options`): `Promise`\<`void`[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`FileDownloadOptions`](../interfaces/FileDownloadOptions.md) |
+• **options**: [`FileDownloadOptions`](../interfaces/FileDownloadOptions.md)
 
 #### Returns
 
@@ -326,23 +260,21 @@ BaseFileDownload.status
 
 #### Overrides
 
-BaseFileDownload.\_start
+`BaseFileDownload._start`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/file-download.ts:23](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/file-download.ts#L23)
+[packages/ai-tool-downloader/src/file-download.ts:23](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/file-download.ts#L23)
 
-___
+***
 
-### \_stop
+### \_stop()
 
-▸ **_stop**(`options`): `Promise`\<`void`\>
+> **\_stop**(`options`): `Promise`\<`void`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`FileDownloadOptions`](../interfaces/FileDownloadOptions.md) |
+• **options**: [`FileDownloadOptions`](../interfaces/FileDownloadOptions.md)
 
 #### Returns
 
@@ -350,23 +282,21 @@ ___
 
 #### Overrides
 
-BaseFileDownload.\_stop
+`BaseFileDownload._stop`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/file-download.ts:30](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/file-download.ts#L30)
+[packages/ai-tool-downloader/src/file-download.ts:30](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/file-download.ts#L30)
 
-___
+***
 
-### cleanTemp
+### cleanTemp()
 
-▸ **cleanTemp**(`options?`): `void`
+> **cleanTemp**(`options`?): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `CustomBaseFileDownloadOptions` |
+• **options?**: `CustomBaseFileDownloadOptions`
 
 #### Returns
 
@@ -374,23 +304,21 @@ ___
 
 #### Inherited from
 
-BaseFileDownload.cleanTemp
+`BaseFileDownload.cleanTemp`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:273](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L273)
+[packages/ai-tool-downloader/src/base-file-download.ts:273](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L273)
 
-___
+***
 
-### createChunk
+### createChunk()
 
-▸ **createChunk**(`options`): [`ChunkDownload`](ChunkDownload.md)
+> **createChunk**(`options`): [`ChunkDownload`](ChunkDownload.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`ChunkOptions`](../interfaces/ChunkOptions.md) |
+• **options**: [`ChunkOptions`](../interfaces/ChunkOptions.md)
 
 #### Returns
 
@@ -398,26 +326,27 @@ ___
 
 #### Overrides
 
-BaseFileDownload.createChunk
+`BaseFileDownload.createChunk`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/file-download.ts:11](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/file-download.ts#L11)
+[packages/ai-tool-downloader/src/file-download.ts:11](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/file-download.ts#L11)
 
-___
+***
 
-### emit
+### emit()
 
-▸ **emit**(`eventName`, `...args`): `any`
+> **emit**(`eventName`, ...`args`): `any`
 
 Emits the specified event type with the given arguments.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` | - |
-| `...args` | `any`[] | The event type followed by any number of arguments to be passed to the listener functions. |
+• **eventName**: `string`
+
+• ...**args**: `any`[]
+
+The event type followed by any number of arguments to be passed to the listener functions.
 
 #### Returns
 
@@ -427,26 +356,27 @@ The result of the event.
 
 #### Inherited from
 
-BaseFileDownload.emit
+`BaseFileDownload.emit`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:38
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:38
 
-___
+***
 
-### emitAsync
+### emitAsync()
 
-▸ **emitAsync**(`eventName`, `...args`): `Promise`\<`any`\>
+> **emitAsync**(`eventName`, ...`args`): `Promise`\<`any`\>
 
 Asynchronously emits the specified event type with the given arguments.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` | - |
-| `...args` | `any`[] | The event type followed by any number of arguments to be passed to the listener functions. |
+• **eventName**: `string`
+
+• ...**args**: `any`[]
+
+The event type followed by any number of arguments to be passed to the listener functions.
 
 #### Returns
 
@@ -456,23 +386,21 @@ A promise that resolves with the result of the event.
 
 #### Inherited from
 
-BaseFileDownload.emitAsync
+`BaseFileDownload.emitAsync`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:44
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:44
 
-___
+***
 
-### getAbsPath
+### getAbsPath()
 
-▸ **getAbsPath**(`options`): `string`
+> **getAbsPath**(`options`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `CustomBaseFileDownloadOptions` |
+• **options**: `CustomBaseFileDownloadOptions`
 
 #### Returns
 
@@ -480,49 +408,55 @@ ___
 
 #### Inherited from
 
-BaseFileDownload.getAbsPath
+`BaseFileDownload.getAbsPath`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:103](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L103)
+[packages/ai-tool-downloader/src/base-file-download.ts:103](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L103)
 
-___
+***
 
-### getIdInfo
+### getIdInfo()
 
-▸ **getIdInfo**(): `Object`
+> **getIdInfo**(): `object`
 
 #### Returns
 
-`Object`
+`object`
 
-| Name | Type |
-| :------ | :------ |
-| `filepath?` | `string` |
-| `id?` | `string` |
-| `url` | `string` |
+##### filepath?
+
+> `optional` **filepath**: `string`
+
+##### id?
+
+> `optional` **id**: `string`
+
+##### url
+
+> **url**: `string`
 
 #### Inherited from
 
-BaseFileDownload.getIdInfo
+`BaseFileDownload.getIdInfo`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:96](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L96)
+[packages/ai-tool-downloader/src/base-file-download.ts:96](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L96)
 
-___
+***
 
-### listenerCount
+### listenerCount()
 
-▸ **listenerCount**(`eventName`): `number`
+> **listenerCount**(`eventName`): `number`
 
 Returns the count of listeners that are registered to listen for the specified event.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `RegExp` | The name of the event to get the listeners for. |
+• **eventName**: `string` \| `RegExp`
+
+The name of the event to get the listeners for.
 
 #### Returns
 
@@ -532,25 +466,25 @@ Returns the count of listeners that are registered to listen for the specified e
 
 #### Inherited from
 
-BaseFileDownload.listenerCount
+`BaseFileDownload.listenerCount`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:66
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:66
 
-___
+***
 
-### listeners
+### listeners()
 
-▸ **listeners**(`eventName`): `Function`[]
+> **listeners**(`eventName`): `Function`[]
 
 Returns an array of functions that are registered to listen for the specified event.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `RegExp` | The name of the event to get the listeners for. |
+• **eventName**: `string` \| `RegExp`
+
+The name of the event to get the listeners for.
 
 #### Returns
 
@@ -560,23 +494,21 @@ Returns an array of functions that are registered to listen for the specified ev
 
 #### Inherited from
 
-BaseFileDownload.listeners
+`BaseFileDownload.listeners`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:59
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:59
 
-___
+***
 
-### mergeChunks
+### mergeChunks()
 
-▸ **mergeChunks**(`options`): `Promise`\<`void`\>
+> **mergeChunks**(`options`): `Promise`\<`void`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `CustomBaseFileDownloadOptions` |
+• **options**: `CustomBaseFileDownloadOptions`
 
 #### Returns
 
@@ -584,26 +516,27 @@ ___
 
 #### Inherited from
 
-BaseFileDownload.mergeChunks
+`BaseFileDownload.mergeChunks`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:129](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L129)
+[packages/ai-tool-downloader/src/base-file-download.ts:129](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L129)
 
-___
+***
 
-### off
+### off()
 
-▸ **off**(`eventName`, `listener`): `EventEmitter`
+> **off**(`eventName`, `listener`): `EventEmitter`
 
 Removes a listener function from the specified event type.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `RegExp` | - |
-| `listener` | `Function` | The listener function to be removed. |
+• **eventName**: `string` \| `RegExp`
+
+• **listener**: `Function`
+
+The listener function to be removed.
 
 #### Returns
 
@@ -611,32 +544,33 @@ Removes a listener function from the specified event type.
 
 The EventEmitter instance to allow chaining.
 
-**`Throws`**
+#### Throws
 
 If the listener is not a function.
 
 #### Inherited from
 
-BaseFileDownload.off
+`BaseFileDownload.off`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:32
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:32
 
-___
+***
 
-### on
+### on()
 
-▸ **on**(`eventName`, `listener`): `EventEmitter`
+> **on**(`eventName`, `listener`): `EventEmitter`
 
 Adds a listener function to the specified event type.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `RegExp` | - |
-| `listener` | `Function` | The listener function to be called when the event is emitted. |
+• **eventName**: `string` \| `RegExp`
+
+• **listener**: `Function`
+
+The listener function to be called when the event is emitted.
 
 #### Returns
 
@@ -644,32 +578,33 @@ Adds a listener function to the specified event type.
 
 The EventEmitter instance to allow chaining.
 
-**`Throws`**
+#### Throws
 
 If the listener is not a function.
 
 #### Inherited from
 
-BaseFileDownload.on
+`BaseFileDownload.on`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:16
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:16
 
-___
+***
 
-### once
+### once()
 
-▸ **once**(`eventName`, `listener`): `EventEmitter`
+> **once**(`eventName`, `listener`): `EventEmitter`
 
 Adds a one-time listener function to the specified event type.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `RegExp` | - |
-| `listener` | `Function` | The listener function to be called once when the event is emitted. |
+• **eventName**: `string` \| `RegExp`
+
+• **listener**: `Function`
+
+The listener function to be called once when the event is emitted.
 
 #### Returns
 
@@ -677,31 +612,31 @@ Adds a one-time listener function to the specified event type.
 
 The EventEmitter instance to allow chaining.
 
-**`Throws`**
+#### Throws
 
 If the listener is not a function.
 
 #### Inherited from
 
-BaseFileDownload.once
+`BaseFileDownload.once`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:24
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:24
 
-___
+***
 
-### removeAllListeners
+### removeAllListeners()
 
-▸ **removeAllListeners**(`eventName?`): `EventEmitter`
+> **removeAllListeners**(`eventName`?): `EventEmitter`
 
 Removes all listeners for a specific event or all events from an event emitter.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName?` | `string` \| `RegExp` | The event to remove listeners for. If not provided, all listeners for all events will be removed. |
+• **eventName?**: `string` \| `RegExp`
+
+The event to remove listeners for. If not provided, all listeners for all events will be removed.
 
 #### Returns
 
@@ -711,23 +646,21 @@ Removes all listeners for a specific event or all events from an event emitter.
 
 #### Inherited from
 
-BaseFileDownload.removeAllListeners
+`BaseFileDownload.removeAllListeners`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:51
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:51
 
-___
+***
 
-### resolveOptions
+### resolveOptions()
 
-▸ **resolveOptions**(`options?`): [`FileDownloadOptions`](../interfaces/FileDownloadOptions.md)
+> **resolveOptions**(`options`?): [`FileDownloadOptions`](../interfaces/FileDownloadOptions.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`FileDownloadOptions`](../interfaces/FileDownloadOptions.md) |
+• **options?**: [`FileDownloadOptions`](../interfaces/FileDownloadOptions.md)
 
 #### Returns
 
@@ -735,23 +668,21 @@ ___
 
 #### Overrides
 
-BaseFileDownload.resolveOptions
+`BaseFileDownload.resolveOptions`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/file-download.ts:15](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/file-download.ts#L15)
+[packages/ai-tool-downloader/src/file-download.ts:15](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/file-download.ts#L15)
 
-___
+***
 
-### setMaxListeners
+### setMaxListeners()
 
-▸ **setMaxListeners**(`n`): `EventEmitter`
+> **setMaxListeners**(`n`): `EventEmitter`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `n` | `number` |
+• **n**: `number`
 
 #### Returns
 
@@ -759,23 +690,21 @@ ___
 
 #### Inherited from
 
-BaseFileDownload.setMaxListeners
+`BaseFileDownload.setMaxListeners`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:52
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:52
 
-___
+***
 
-### splitChunks
+### splitChunks()
 
-▸ **splitChunks**(`options`): `Promise`\<`void`\>
+> **splitChunks**(`options`): `Promise`\<`void`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `CustomBaseFileDownloadOptions` |
+• **options**: `CustomBaseFileDownloadOptions`
 
 #### Returns
 
@@ -783,23 +712,21 @@ ___
 
 #### Inherited from
 
-BaseFileDownload.splitChunks
+`BaseFileDownload.splitChunks`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:143](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L143)
+[packages/ai-tool-downloader/src/base-file-download.ts:143](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L143)
 
-___
+***
 
-### start
+### start()
 
-▸ **start**(`options?`): `Promise`\<`void`\>
+> **start**(`options`?): `Promise`\<`void`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `CustomBaseFileDownloadOptions` |
+• **options?**: `CustomBaseFileDownloadOptions`
 
 #### Returns
 
@@ -807,23 +734,21 @@ ___
 
 #### Inherited from
 
-BaseFileDownload.start
+`BaseFileDownload.start`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:223](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L223)
+[packages/ai-tool-downloader/src/base-file-download.ts:223](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L223)
 
-___
+***
 
-### stop
+### stop()
 
-▸ **stop**(`options?`): `Promise`\<`void`\>
+> **stop**(`options`?): `Promise`\<`void`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `CustomBaseFileDownloadOptions` |
+• **options?**: `CustomBaseFileDownloadOptions`
 
 #### Returns
 
@@ -831,17 +756,17 @@ ___
 
 #### Inherited from
 
-BaseFileDownload.stop
+`BaseFileDownload.stop`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:256](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L256)
+[packages/ai-tool-downloader/src/base-file-download.ts:256](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L256)
 
-___
+***
 
-### toJSON
+### toJSON()
 
-▸ **toJSON**(): `any`
+> **toJSON**(): `any`
 
 #### Returns
 
@@ -849,39 +774,38 @@ ___
 
 #### Inherited from
 
-BaseFileDownload.toJSON
+`BaseFileDownload.toJSON`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:280](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L280)
+[packages/ai-tool-downloader/src/base-file-download.ts:280](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L280)
 
-___
+***
 
-### listenerCount
+### ~~listenerCount()~~
 
-▸ **listenerCount**(`emitter`, `eventName`): `number`
+> `static` **listenerCount**(`emitter`, `eventName`): `number`
 
 Returns the count of listeners that are registered to listen for the specified event.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `emitter` | `EventEmitter` |
-| `eventName` | `string` \| `RegExp` |
+• **emitter**: `EventEmitter`
+
+• **eventName**: `string` \| `RegExp`
 
 #### Returns
 
 `number`
 
-**`Deprecated`**
+#### Deprecated
 
 use emitter.listenerCount instead
 
 #### Inherited from
 
-BaseFileDownload.listenerCount
+`BaseFileDownload.listenerCount`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:74
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:74

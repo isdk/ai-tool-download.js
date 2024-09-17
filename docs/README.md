@@ -1,4 +1,6 @@
-@isdk/ai-tool-downloader / [Exports](modules.md)
+**@isdk/ai-tool-downloader** • [**Docs**](globals.md)
+
+***
 
 # ai-tool-downloader
 

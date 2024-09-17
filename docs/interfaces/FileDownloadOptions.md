@@ -1,195 +1,158 @@
-[@isdk/ai-tool-downloader](../README.md) / [Exports](../modules.md) / FileDownloadOptions
+[**@isdk/ai-tool-downloader**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-downloader](../globals.md) / FileDownloadOptions
 
 # Interface: FileDownloadOptions
 
-## Hierarchy
+## Extends
 
 - `CustomBaseFileDownloadOptions`
 
-  ↳ **`FileDownloadOptions`**
-
-## Table of contents
-
-### Properties
-
-- [aborter](FileDownloadOptions.md#aborter)
-- [agent](FileDownloadOptions.md#agent)
-- [body](FileDownloadOptions.md#body)
-- [cache](FileDownloadOptions.md#cache)
-- [chunkSizeInBytes](FileDownloadOptions.md#chunksizeinbytes)
-- [cleanTempFile](FileDownloadOptions.md#cleantempfile)
-- [concurrency](FileDownloadOptions.md#concurrency)
-- [credentials](FileDownloadOptions.md#credentials)
-- [destinationFolder](FileDownloadOptions.md#destinationfolder)
-- [fetch](FileDownloadOptions.md#fetch)
-- [filepath](FileDownloadOptions.md#filepath)
-- [headers](FileDownloadOptions.md#headers)
-- [hooks](FileDownloadOptions.md#hooks)
-- [integrity](FileDownloadOptions.md#integrity)
-- [json](FileDownloadOptions.md#json)
-- [keepalive](FileDownloadOptions.md#keepalive)
-- [limit](FileDownloadOptions.md#limit)
-- [method](FileDownloadOptions.md#method)
-- [mode](FileDownloadOptions.md#mode)
-- [onDownloadProgress](FileDownloadOptions.md#ondownloadprogress)
-- [overwrite](FileDownloadOptions.md#overwrite)
-- [parseJson](FileDownloadOptions.md#parsejson)
-- [prefixUrl](FileDownloadOptions.md#prefixurl)
-- [priority](FileDownloadOptions.md#priority)
-- [redirect](FileDownloadOptions.md#redirect)
-- [referrer](FileDownloadOptions.md#referrer)
-- [referrerPolicy](FileDownloadOptions.md#referrerpolicy)
-- [retry](FileDownloadOptions.md#retry)
-- [searchParams](FileDownloadOptions.md#searchparams)
-- [signal](FileDownloadOptions.md#signal)
-- [stringifyJson](FileDownloadOptions.md#stringifyjson)
-- [throwHttpErrors](FileDownloadOptions.md#throwhttperrors)
-- [timeout](FileDownloadOptions.md#timeout)
-- [window](FileDownloadOptions.md#window)
-
 ## Properties
 
-### aborter
+### aborter?
 
-• `Optional` **aborter**: `AbortController`
-
-#### Inherited from
-
-CustomBaseFileDownloadOptions.aborter
-
-#### Defined in
-
-[packages/ai-tool-downloader/src/base-file-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L35)
-
-___
-
-### agent
-
-• `Optional` **agent**: `any`
+> `optional` **aborter**: `AbortController`
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.agent
+`CustomBaseFileDownloadOptions.aborter`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L37)
+[packages/ai-tool-downloader/src/base-file-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L35)
 
-___
+***
 
-### body
+### agent?
 
-• `Optional` **body**: ``null`` \| `BodyInit`
+> `optional` **agent**: `any`
+
+#### Inherited from
+
+`CustomBaseFileDownloadOptions.agent`
+
+#### Defined in
+
+[packages/ai-tool-downloader/src/base-file-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L37)
+
+***
+
+### body?
+
+> `optional` **body**: `null` \| `BodyInit`
 
 A BodyInit object or null to set request's body.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.body
+`CustomBaseFileDownloadOptions.body`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.dom.d.ts:1673
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1694
 
-___
+***
 
-### cache
+### cache?
 
-• `Optional` **cache**: `RequestCache`
+> `optional` **cache**: `RequestCache`
 
 A string indicating how the request will interact with the browser's cache to set request's cache.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.cache
+`CustomBaseFileDownloadOptions.cache`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.dom.d.ts:1675
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1696
 
-___
+***
 
-### chunkSizeInBytes
+### chunkSizeInBytes?
 
-• `Optional` **chunkSizeInBytes**: `number`
+> `optional` **chunkSizeInBytes**: `number`
 
 The size of each chunk.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.chunkSizeInBytes
+`CustomBaseFileDownloadOptions.chunkSizeInBytes`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L29)
+[packages/ai-tool-downloader/src/base-file-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L29)
 
-___
+***
 
-### cleanTempFile
+### cleanTempFile?
 
-• `Optional` **cleanTempFile**: `boolean`
+> `optional` **cleanTempFile**: `boolean`
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.cleanTempFile
+`CustomBaseFileDownloadOptions.cleanTempFile`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L34)
+[packages/ai-tool-downloader/src/base-file-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L34)
 
-___
+***
 
-### concurrency
+### concurrency?
 
-• `Optional` **concurrency**: `number`
+> `optional` **concurrency**: `number`
 
 The number of concurrent chunk downloads.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.concurrency
+`CustomBaseFileDownloadOptions.concurrency`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L25)
+[packages/ai-tool-downloader/src/base-file-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L25)
 
-___
+***
 
-### credentials
+### credentials?
 
-• `Optional` **credentials**: `RequestCredentials`
+> `optional` **credentials**: `RequestCredentials`
 
 A string indicating whether credentials will be sent with the request always, never, or only when sent to a same-origin URL. Sets request's credentials.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.credentials
+`CustomBaseFileDownloadOptions.credentials`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.dom.d.ts:1677
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1698
 
-___
+***
 
-### destinationFolder
+### destinationFolder?
 
-• `Optional` **destinationFolder**: `string`
+> `optional` **destinationFolder**: `string`
 
 The folder where the downloaded file will be saved.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.destinationFolder
+`CustomBaseFileDownloadOptions.destinationFolder`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L33)
+[packages/ai-tool-downloader/src/base-file-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L33)
 
-___
+***
 
-### fetch
+### fetch()?
 
-• `Optional` **fetch**: (`input`: `Input`, `init?`: `RequestInit`) => `Promise`\<`Response`\>
+> `optional` **fetch**: (`input`, `init`?) => `Promise`\<`Response`\>
 
 User-defined `fetch` function.
 Has to be fully compatible with the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) standard.
@@ -198,13 +161,23 @@ Use-cases:
 1. Use custom `fetch` implementations like [`isomorphic-unfetch`](https://www.npmjs.com/package/isomorphic-unfetch).
 2. Use the `fetch` wrapper function provided by some frameworks that use server-side rendering (SSR).
 
-**`Default`**
+#### Parameters
+
+• **input**: `Input`
+
+• **init?**: `RequestInit`
+
+#### Returns
+
+`Promise`\<`Response`\>
+
+#### Default
 
 ```ts
 fetch
 ```
 
-**`Example`**
+#### Example
 
 ```
 import ky from 'ky';
@@ -213,48 +186,33 @@ import fetch from 'isomorphic-unfetch';
 const json = await ky('https://example.com', {fetch}).json();
 ```
 
-#### Type declaration
-
-▸ (`input`, `init?`): `Promise`\<`Response`\>
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `input` | `Input` |
-| `init?` | `RequestInit` |
-
-##### Returns
-
-`Promise`\<`Response`\>
-
 #### Inherited from
 
-CustomBaseFileDownloadOptions.fetch
+`CustomBaseFileDownloadOptions.fetch`
 
 #### Defined in
 
-node_modules/.pnpm/ky@1.3.0/node_modules/ky/distribution/types/options.d.ts:185
+node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:187
 
-___
+***
 
-### filepath
+### filepath?
 
-• `Optional` **filepath**: `string`
+> `optional` **filepath**: `string`
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.filepath
+`CustomBaseFileDownloadOptions.filepath`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L21)
+[packages/ai-tool-downloader/src/base-file-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L21)
 
-___
+***
 
-### headers
+### headers?
 
-• `Optional` **headers**: `KyHeadersInit`
+> `optional` **headers**: `KyHeadersInit`
 
 HTTP headers used to make the request.
 
@@ -262,7 +220,7 @@ You can pass a `Headers` instance or a plain object.
 
 You can remove a header with `.extend()` by passing the header with an `undefined` value.
 
-**`Example`**
+#### Example
 
 ```
 import ky from 'ky';
@@ -293,49 +251,49 @@ console.log('unicorn' in response);
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.headers
+`CustomBaseFileDownloadOptions.headers`
 
 #### Defined in
 
-node_modules/.pnpm/ky@1.3.0/node_modules/ky/distribution/types/options.d.ts:240
+node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:242
 
-___
+***
 
-### hooks
+### hooks?
 
-• `Optional` **hooks**: `Hooks`
+> `optional` **hooks**: `Hooks`
 
 Hooks allow modifications during the request lifecycle. Hook functions may be async and are run serially.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.hooks
+`CustomBaseFileDownloadOptions.hooks`
 
 #### Defined in
 
-node_modules/.pnpm/ky@1.3.0/node_modules/ky/distribution/types/options.d.ts:136
+node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:138
 
-___
+***
 
-### integrity
+### integrity?
 
-• `Optional` **integrity**: `string`
+> `optional` **integrity**: `string`
 
 A cryptographic hash of the resource to be fetched by request. Sets request's integrity.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.integrity
+`CustomBaseFileDownloadOptions.integrity`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.dom.d.ts:1681
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1702
 
-___
+***
 
-### json
+### json?
 
-• `Optional` **json**: `unknown`
+> `optional` **json**: `unknown`
 
 Shortcut for sending JSON. Use this instead of the `body` option.
 
@@ -343,43 +301,43 @@ Accepts any plain object or value, which will be `JSON.stringify()`'d and sent i
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.json
+`CustomBaseFileDownloadOptions.json`
 
 #### Defined in
 
-node_modules/.pnpm/ky@1.3.0/node_modules/ky/distribution/types/options.d.ts:26
+node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:26
 
-___
+***
 
-### keepalive
+### keepalive?
 
-• `Optional` **keepalive**: `boolean`
+> `optional` **keepalive**: `boolean`
 
 A boolean to set request's keepalive.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.keepalive
+`CustomBaseFileDownloadOptions.keepalive`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.dom.d.ts:1683
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1704
 
-___
+***
 
-### limit
+### limit?
 
-• `Optional` **limit**: `LimitFunction`
+> `optional` **limit**: `LimitFunction`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/file-download.ts:6](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/file-download.ts#L6)
+[packages/ai-tool-downloader/src/file-download.ts:6](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/file-download.ts#L6)
 
-___
+***
 
-### method
+### method?
 
-• `Optional` **method**: `LiteralUnion`\<`HttpMethod`, `string`\>
+> `optional` **method**: `LiteralUnion`\<`HttpMethod`, `string`\>
 
 HTTP method used to make the request.
 
@@ -387,37 +345,49 @@ Internally, the standard methods (`GET`, `POST`, `PUT`, `PATCH`, `HEAD` and `DEL
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.method
+`CustomBaseFileDownloadOptions.method`
 
 #### Defined in
 
-node_modules/.pnpm/ky@1.3.0/node_modules/ky/distribution/types/options.d.ts:204
+node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:206
 
-___
+***
 
-### mode
+### mode?
 
-• `Optional` **mode**: `RequestMode`
+> `optional` **mode**: `RequestMode`
 
 A string to indicate whether the request will use CORS, or will be restricted to same-origin URLs. Sets request's mode.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.mode
+`CustomBaseFileDownloadOptions.mode`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.dom.d.ts:1687
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1708
 
-___
+***
 
-### onDownloadProgress
+### onDownloadProgress()?
 
-• `Optional` **onDownloadProgress**: (`progress`: `DownloadProgress`, `chunk`: `Uint8Array`) => `void`
+> `optional` **onDownloadProgress**: (`progress`, `chunk`) => `void`
 
 Download progress event handler.
 
-**`Example`**
+#### Parameters
+
+• **progress**: `DownloadProgress`
+
+• **chunk**: `Uint8Array`
+
+Note: It's empty for the first call.
+
+#### Returns
+
+`void`
+
+#### Example
 
 ```
 import ky from 'ky';
@@ -432,48 +402,33 @@ const response = await ky('https://example.com', {
 });
 ```
 
-#### Type declaration
-
-▸ (`progress`, `chunk`): `void`
-
-##### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `progress` | `DownloadProgress` | - |
-| `chunk` | `Uint8Array` | Note: It's empty for the first call. |
-
-##### Returns
-
-`void`
-
 #### Inherited from
 
-CustomBaseFileDownloadOptions.onDownloadProgress
+`CustomBaseFileDownloadOptions.onDownloadProgress`
 
 #### Defined in
 
-node_modules/.pnpm/ky@1.3.0/node_modules/ky/distribution/types/options.d.ts:166
+node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:168
 
-___
+***
 
-### overwrite
+### overwrite?
 
-• `Optional` **overwrite**: `boolean`
+> `optional` **overwrite**: `boolean`
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.overwrite
+`CustomBaseFileDownloadOptions.overwrite`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/base-file-download.ts#L36)
+[packages/ai-tool-downloader/src/base-file-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/base-file-download.ts#L36)
 
-___
+***
 
-### parseJson
+### parseJson()?
 
-• `Optional` **parseJson**: (`text`: `string`) => `unknown`
+> `optional` **parseJson**: (`text`) => `unknown`
 
 User-defined JSON-parsing function.
 
@@ -481,13 +436,21 @@ Use-cases:
 1. Parse JSON via the [`bourne` package](https://github.com/hapijs/bourne) to protect from prototype pollution.
 2. Parse JSON with [`reviver` option of `JSON.parse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse).
 
-**`Default`**
+#### Parameters
+
+• **text**: `string`
+
+#### Returns
+
+`unknown`
+
+#### Default
 
 ```ts
 JSON.parse()
 ```
 
-**`Example`**
+#### Example
 
 ```
 import ky from 'ky';
@@ -498,33 +461,19 @@ const json = await ky('https://example.com', {
 }).json();
 ```
 
-#### Type declaration
-
-▸ (`text`): `unknown`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `text` | `string` |
-
-##### Returns
-
-`unknown`
-
 #### Inherited from
 
-CustomBaseFileDownloadOptions.parseJson
+`CustomBaseFileDownloadOptions.parseJson`
 
 #### Defined in
 
-node_modules/.pnpm/ky@1.3.0/node_modules/ky/distribution/types/options.d.ts:46
+node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:46
 
-___
+***
 
-### prefixUrl
+### prefixUrl?
 
-• `Optional` **prefixUrl**: `string` \| `URL`
+> `optional` **prefixUrl**: `string` \| `URL`
 
 A prefix to prepend to the `input` URL when making the request. It can be any valid URL, either relative or absolute. A trailing slash `/` is optional and will be added automatically, if needed, when it is joined with `input`. Only takes effect when `input` is a string. The `input` argument cannot start with a slash `/` when using this option.
 
@@ -534,7 +483,7 @@ Notes:
  - After `prefixUrl` and `input` are joined, the result is resolved against the [base URL](https://developer.mozilla.org/en-US/docs/Web/API/Node/baseURI) of the page (if any).
  - Leading slashes in `input` are disallowed when using this option to enforce consistency and avoid confusion about how the `input` URL is handled, given that `input` will not follow the normal URL resolution rules when `prefixUrl` is being used, which changes the meaning of a leading slash.
 
-**`Example`**
+#### Example
 
 ```
 import ky from 'ky';
@@ -550,83 +499,85 @@ const response = await ky('unicorn', {prefixUrl: 'https://cats.com'});
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.prefixUrl
+`CustomBaseFileDownloadOptions.prefixUrl`
 
 #### Defined in
 
-node_modules/.pnpm/ky@1.3.0/node_modules/ky/distribution/types/options.d.ts:100
+node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:100
 
-___
+***
 
-### priority
+### priority?
 
-• `Optional` **priority**: `RequestPriority`
+> `optional` **priority**: `RequestPriority`
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.priority
+`CustomBaseFileDownloadOptions.priority`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.dom.d.ts:1688
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1709
 
-___
+***
 
-### redirect
+### redirect?
 
-• `Optional` **redirect**: `RequestRedirect`
+> `optional` **redirect**: `RequestRedirect`
 
 A string indicating whether request follows redirects, results in an error upon encountering a redirect, or returns the redirect (in an opaque fashion). Sets request's redirect.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.redirect
+`CustomBaseFileDownloadOptions.redirect`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.dom.d.ts:1690
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1711
 
-___
+***
 
-### referrer
+### referrer?
 
-• `Optional` **referrer**: `string`
+> `optional` **referrer**: `string`
 
 A string whose value is a same-origin URL, "about:client", or the empty string, to set request's referrer.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.referrer
+`CustomBaseFileDownloadOptions.referrer`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.dom.d.ts:1692
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1713
 
-___
+***
 
-### referrerPolicy
+### referrerPolicy?
 
-• `Optional` **referrerPolicy**: `ReferrerPolicy`
+> `optional` **referrerPolicy**: `ReferrerPolicy`
 
 A referrer policy to set request's referrerPolicy.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.referrerPolicy
+`CustomBaseFileDownloadOptions.referrerPolicy`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.dom.d.ts:1694
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1715
 
-___
+***
 
-### retry
+### retry?
 
-• `Optional` **retry**: `number` \| `RetryOptions`
+> `optional` **retry**: `number` \| `RetryOptions`
 
-An object representing `limit`, `methods`, `statusCodes` and `maxRetryAfter` fields for maximum retry count, allowed methods, allowed status codes and maximum [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) time.
+An object representing `limit`, `methods`, `statusCodes`, `afterStatusCodes`, and `maxRetryAfter` fields for maximum retry count, allowed methods, allowed status codes, status codes allowed to use the [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) time, and maximum [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) time.
 
 If `retry` is a number, it will be used as `limit` and other defaults will remain in place.
+
+If the response provides an HTTP status contained in `afterStatusCodes`, Ky will wait until the date or timeout given in the [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) header has passed to retry the request. If `Retry-After` is missing, the non-standard [`RateLimit-Reset`](https://www.ietf.org/archive/id/draft-polli-ratelimit-headers-02.html#section-3.3) header is used in its place as a fallback. If the provided status code is not in the list, the [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) header will be ignored.
 
 If `maxRetryAfter` is set to `undefined`, it will use `options.timeout`. If [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) header is greater than `maxRetryAfter`, it will cancel the request.
 
@@ -634,7 +585,7 @@ By default, delays between retries are calculated with the function `0.3 * (2 **
 
 Retries are not triggered following a timeout.
 
-**`Example`**
+#### Example
 
 ```
 import ky from 'ky';
@@ -650,17 +601,17 @@ const json = await ky('https://example.com', {
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.retry
+`CustomBaseFileDownloadOptions.retry`
 
 #### Defined in
 
-node_modules/.pnpm/ky@1.3.0/node_modules/ky/distribution/types/options.d.ts:125
+node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:127
 
-___
+***
 
-### searchParams
+### searchParams?
 
-• `Optional` **searchParams**: `SearchParamsOption`
+> `optional` **searchParams**: `SearchParamsOption`
 
 Search parameters to include in the request URL. Setting this will override all existing search parameters in the input URL.
 
@@ -668,46 +619,54 @@ Accepts any value supported by [`URLSearchParams()`](https://developer.mozilla.o
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.searchParams
+`CustomBaseFileDownloadOptions.searchParams`
 
 #### Defined in
 
-node_modules/.pnpm/ky@1.3.0/node_modules/ky/distribution/types/options.d.ts:77
+node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:77
 
-___
+***
 
-### signal
+### signal?
 
-• `Optional` **signal**: ``null`` \| `AbortSignal`
+> `optional` **signal**: `null` \| `AbortSignal`
 
 An AbortSignal to set request's signal.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.signal
+`CustomBaseFileDownloadOptions.signal`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.dom.d.ts:1696
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1717
 
-___
+***
 
-### stringifyJson
+### stringifyJson()?
 
-• `Optional` **stringifyJson**: (`data`: `unknown`) => `string`
+> `optional` **stringifyJson**: (`data`) => `string`
 
 User-defined JSON-stringifying function.
 
 Use-cases:
 1. Stringify JSON with a custom `replacer` function.
 
-**`Default`**
+#### Parameters
+
+• **data**: `unknown`
+
+#### Returns
+
+`string`
+
+#### Default
 
 ```ts
 JSON.stringify()
 ```
 
-**`Example`**
+#### Example
 
 ```
 import ky from 'ky';
@@ -724,33 +683,19 @@ const json = await ky('https://example.com', {
 }).json();
 ```
 
-#### Type declaration
-
-▸ (`data`): `string`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `unknown` |
-
-##### Returns
-
-`string`
-
 #### Inherited from
 
-CustomBaseFileDownloadOptions.stringifyJson
+`CustomBaseFileDownloadOptions.stringifyJson`
 
 #### Defined in
 
-node_modules/.pnpm/ky@1.3.0/node_modules/ky/distribution/types/options.d.ts:71
+node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:71
 
-___
+***
 
-### throwHttpErrors
+### throwHttpErrors?
 
-• `Optional` **throwHttpErrors**: `boolean`
+> `optional` **throwHttpErrors**: `boolean`
 
 Throw an `HTTPError` when, after following redirects, the response has a non-2xx status code. To also throw for redirects instead of following them, set the [`redirect`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters) option to `'manual'`.
 
@@ -758,7 +703,7 @@ Setting this to `false` may be useful if you are checking for resource availabil
 
 Note: If `false`, error responses are considered successful and the request will not be retried.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -766,22 +711,22 @@ true
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.throwHttpErrors
+`CustomBaseFileDownloadOptions.throwHttpErrors`
 
 #### Defined in
 
-node_modules/.pnpm/ky@1.3.0/node_modules/ky/distribution/types/options.d.ts:146
+node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:148
 
-___
+***
 
-### timeout
+### timeout?
 
-• `Optional` **timeout**: `number` \| ``false``
+> `optional` **timeout**: `number` \| `false`
 
 Timeout in milliseconds for getting a response, including any retries. Can not be greater than 2147483647.
 If set to `false`, there will be no timeout.
 
-**`Default`**
+#### Default
 
 ```ts
 10000
@@ -789,24 +734,24 @@ If set to `false`, there will be no timeout.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.timeout
+`CustomBaseFileDownloadOptions.timeout`
 
 #### Defined in
 
-node_modules/.pnpm/ky@1.3.0/node_modules/ky/distribution/types/options.d.ts:132
+node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:134
 
-___
+***
 
-### window
+### window?
 
-• `Optional` **window**: ``null``
+> `optional` **window**: `null`
 
 Can only be null. Used to disassociate request from any Window.
 
 #### Inherited from
 
-CustomBaseFileDownloadOptions.window
+`CustomBaseFileDownloadOptions.window`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.dom.d.ts:1698
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1719

@@ -1,174 +1,29 @@
-[@isdk/ai-tool-downloader](../README.md) / [Exports](../modules.md) / DownloadFunc
+[**@isdk/ai-tool-downloader**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-downloader](../globals.md) / DownloadFunc
 
 # Class: DownloadFunc
 
 Server-side download management utility that handles a file download queue and notifies progress via SSE events.
 Requires persistent storage of the download queue.
 
-## Hierarchy
+## Extends
 
 - `ResServerTools`
 
-  ↳ **`DownloadFunc`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](DownloadFunc.md#constructor)
-
-### Properties
-
-- [$attributes](DownloadFunc.md#$attributes)
-- [action](DownloadFunc.md#action)
-- [allowExportFunc](DownloadFunc.md#allowexportfunc)
-- [apiRoot](DownloadFunc.md#apiroot)
-- [autoScaleDownloads](DownloadFunc.md#autoscaledownloads)
-- [autostartQueue](DownloadFunc.md#autostartqueue)
-- [chunkSizeInBytes](DownloadFunc.md#chunksizeinbytes)
-- [cleanTempFile](DownloadFunc.md#cleantempfile)
-- [concurrency](DownloadFunc.md#concurrency)
-- [constructor](DownloadFunc.md#constructor-1)
-- [defaultOptions](DownloadFunc.md#defaultoptions)
-- [depends](DownloadFunc.md#depends)
-- [fetchOptions](DownloadFunc.md#fetchoptions)
-- [finished](DownloadFunc.md#finished)
-- [isApi](DownloadFunc.md#isapi)
-- [methods](DownloadFunc.md#methods)
-- [name](DownloadFunc.md#name)
-- [nextOrder](DownloadFunc.md#nextorder)
-- [nonExported1stChar](DownloadFunc.md#nonexported1stchar)
-- [params](DownloadFunc.md#params)
-- [queue](DownloadFunc.md#queue)
-- [result](DownloadFunc.md#result)
-- [rootDir](DownloadFunc.md#rootdir)
-- [scope](DownloadFunc.md#scope)
-- [setup](DownloadFunc.md#setup)
-- [stream](DownloadFunc.md#stream)
-- [tags](DownloadFunc.md#tags)
-- [SpecialRpcMethodNames](DownloadFunc.md#specialrpcmethodnames)
-- [dataPath](DownloadFunc.md#datapath)
-- [items](DownloadFunc.md#items)
-
-### Accessors
-
-- [SpecialRpcMethodNames](DownloadFunc.md#specialrpcmethodnames-1)
-- [apiRoot](DownloadFunc.md#apiroot-1)
-
-### Methods
-
-- [$clean](DownloadFunc.md#$clean)
-- [$config](DownloadFunc.md#$config)
-- [$start](DownloadFunc.md#$start)
-- [$stop](DownloadFunc.md#$stop)
-- [\_start](DownloadFunc.md#_start)
-- [add](DownloadFunc.md#add)
-- [arr2ObjParams](DownloadFunc.md#arr2objparams)
-- [assign](DownloadFunc.md#assign)
-- [assignProperty](DownloadFunc.md#assignproperty)
-- [assignPropertyTo](DownloadFunc.md#assignpropertyto)
-- [assignTo](DownloadFunc.md#assignto)
-- [cast](DownloadFunc.md#cast)
-- [castParams](DownloadFunc.md#castparams)
-- [clone](DownloadFunc.md#clone)
-- [cloneTo](DownloadFunc.md#cloneto)
-- [defineProperties](DownloadFunc.md#defineproperties)
-- [delete](DownloadFunc.md#delete)
-- [exportQueue](DownloadFunc.md#exportqueue)
-- [exportTo](DownloadFunc.md#exportto)
-- [func](DownloadFunc.md#func)
-- [get](DownloadFunc.md#get)
-- [getDownloadsInQueue](DownloadFunc.md#getdownloadsinqueue)
-- [getFunc](DownloadFunc.md#getfunc)
-- [getFuncWithPos](DownloadFunc.md#getfuncwithpos)
-- [getId](DownloadFunc.md#getid)
-- [getItem](DownloadFunc.md#getitem)
-- [getMethodFromParams](DownloadFunc.md#getmethodfromparams)
-- [getProperties](DownloadFunc.md#getproperties)
-- [hasAsyncFeature](DownloadFunc.md#hasasyncfeature)
-- [hasOwnProperty](DownloadFunc.md#hasownproperty)
-- [importQueue](DownloadFunc.md#importqueue)
-- [initRpcMethods](DownloadFunc.md#initrpcmethods)
-- [initialize](DownloadFunc.md#initialize)
-- [isPrototypeOf](DownloadFunc.md#isprototypeof)
-- [isSame](DownloadFunc.md#issame)
-- [isStream](DownloadFunc.md#isstream)
-- [list](DownloadFunc.md#list)
-- [mergeTo](DownloadFunc.md#mergeto)
-- [newDownload](DownloadFunc.md#newdownload)
-- [obj2ArrParams](DownloadFunc.md#obj2arrparams)
-- [onCompleted](DownloadFunc.md#oncompleted)
-- [post](DownloadFunc.md#post)
-- [propertyIsEnumerable](DownloadFunc.md#propertyisenumerable)
-- [put](DownloadFunc.md#put)
-- [register](DownloadFunc.md#register)
-- [run](DownloadFunc.md#run)
-- [runAs](DownloadFunc.md#runas)
-- [runAsSync](DownloadFunc.md#runassync)
-- [runSync](DownloadFunc.md#runsync)
-- [runWithPos](DownloadFunc.md#runwithpos)
-- [runWithPosAs](DownloadFunc.md#runwithposas)
-- [runWithPosAsSync](DownloadFunc.md#runwithposassync)
-- [runWithPosSync](DownloadFunc.md#runwithpossync)
-- [start](DownloadFunc.md#start)
-- [startAll](DownloadFunc.md#startall)
-- [stopAll](DownloadFunc.md#stopall)
-- [toJSON](DownloadFunc.md#tojson)
-- [toLocaleString](DownloadFunc.md#tolocalestring)
-- [toObject](DownloadFunc.md#toobject)
-- [toString](DownloadFunc.md#tostring)
-- [unregister](DownloadFunc.md#unregister)
-- [valueOf](DownloadFunc.md#valueof)
-- [assign](DownloadFunc.md#assign-1)
-- [create](DownloadFunc.md#create)
-- [defineProperties](DownloadFunc.md#defineproperties-1)
-- [defineProperty](DownloadFunc.md#defineproperty)
-- [entries](DownloadFunc.md#entries)
-- [freeze](DownloadFunc.md#freeze)
-- [fromEntries](DownloadFunc.md#fromentries)
-- [get](DownloadFunc.md#get-1)
-- [getAllByTag](DownloadFunc.md#getallbytag)
-- [getByTag](DownloadFunc.md#getbytag)
-- [getFunc](DownloadFunc.md#getfunc-1)
-- [getFuncWithPos](DownloadFunc.md#getfuncwithpos-1)
-- [getOwnPropertyDescriptor](DownloadFunc.md#getownpropertydescriptor)
-- [getOwnPropertyDescriptors](DownloadFunc.md#getownpropertydescriptors)
-- [getOwnPropertyNames](DownloadFunc.md#getownpropertynames)
-- [getOwnPropertySymbols](DownloadFunc.md#getownpropertysymbols)
-- [getProperties](DownloadFunc.md#getproperties-1)
-- [getPrototypeOf](DownloadFunc.md#getprototypeof)
-- [hasAsyncFeature](DownloadFunc.md#hasasyncfeature-1)
-- [is](DownloadFunc.md#is)
-- [isExtensible](DownloadFunc.md#isextensible)
-- [isFrozen](DownloadFunc.md#isfrozen)
-- [isSealed](DownloadFunc.md#issealed)
-- [keys](DownloadFunc.md#keys)
-- [list](DownloadFunc.md#list-1)
-- [preventExtensions](DownloadFunc.md#preventextensions)
-- [register](DownloadFunc.md#register-1)
-- [run](DownloadFunc.md#run-1)
-- [runSync](DownloadFunc.md#runsync-1)
-- [runWithPos](DownloadFunc.md#runwithpos-1)
-- [runWithPosSync](DownloadFunc.md#runwithpossync-1)
-- [seal](DownloadFunc.md#seal)
-- [setApiRoot](DownloadFunc.md#setapiroot)
-- [setPrototypeOf](DownloadFunc.md#setprototypeof)
-- [toJSON](DownloadFunc.md#tojson-1)
-- [unregister](DownloadFunc.md#unregister-1)
-- [values](DownloadFunc.md#values)
-
 ## Constructors
 
-### constructor
+### new DownloadFunc()
 
-• **new DownloadFunc**(`name`, `options?`): [`DownloadFunc`](DownloadFunc.md)
+> **new DownloadFunc**(`name`, `options`?): [`DownloadFunc`](DownloadFunc.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` \| `Function` \| `FuncItem` |
-| `options?` | `any` |
+• **name**: `string` \| `Function` \| `FuncItem`
+
+• **options?**: `any`
 
 #### Returns
 
@@ -176,73 +31,73 @@ Requires persistent storage of the download queue.
 
 #### Inherited from
 
-ResServerTools.constructor
+`ResServerTools.constructor`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:433
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:433
 
 ## Properties
 
 ### $attributes
 
-• **$attributes**: `Properties`
+> **$attributes**: `Properties`
 
 #### Inherited from
 
-ResServerTools.$attributes
+`ResServerTools.$attributes`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:5
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:5
 
-___
+***
 
 ### action
 
-• **action**: ``"get"`` \| ``"post"`` \| ``"put"`` \| ``"patch"`` \| ``"delete"`` \| ``"list"`` \| ``"res"``
+> **action**: `"get"` \| `"post"` \| `"put"` \| `"patch"` \| `"delete"` \| `"list"` \| `"res"`
 
 #### Inherited from
 
-ResServerTools.action
+`ResServerTools.action`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:431
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:431
 
-___
+***
 
-### allowExportFunc
+### allowExportFunc?
 
-• `Optional` **allowExportFunc**: `boolean`
+> `optional` **allowExportFunc**: `boolean`
 
 #### Inherited from
 
-ResServerTools.allowExportFunc
+`ResServerTools.allowExportFunc`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:276
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:276
 
-___
+***
 
-### apiRoot
+### apiRoot?
 
-• `Optional` **apiRoot**: `string`
+> `optional` **apiRoot**: `string`
 
 #### Inherited from
 
-ResServerTools.apiRoot
+`ResServerTools.apiRoot`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:160
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:160
 
-___
+***
 
 ### autoScaleDownloads
 
-• **autoScaleDownloads**: `undefined` \| `boolean`
+> **autoScaleDownloads**: `undefined` \| `boolean`
 
 Determines whether to automatically scale downloads when the concurrency limit is reached.
 If set to `true`, the system will automatically stop existing download tasks to start new ones when the concurrency limit is reached.
@@ -250,13 +105,13 @@ If set to `false`, an error message "Concurrency limit reached" will be reported
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:90](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L90)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:90](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L90)
 
-___
+***
 
 ### autostartQueue
 
-• **autostartQueue**: `undefined` \| `boolean`
+> **autostartQueue**: `undefined` \| `boolean`
 
 Indicates whether the download queue should automatically start processing the next task upon completion of the current one.
 
@@ -265,23 +120,23 @@ download task finishes successfully. If set to `false`, manual intervention will
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:76](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L76)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:76](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L76)
 
-___
+***
 
 ### chunkSizeInBytes
 
-• **chunkSizeInBytes**: `number` = `defaultChunkSizeInBytes`
+> **chunkSizeInBytes**: `number` = `defaultChunkSizeInBytes`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:84](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L84)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:84](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L84)
 
-___
+***
 
 ### cleanTempFile
 
-• **cleanTempFile**: `boolean` = `true`
+> **cleanTempFile**: `boolean` = `true`
 
 Determines whether to clean up temporary files when a downloading or paused task is removed.
 If set to `true`, temporary files will be deleted when a downloading or paused task is removed.
@@ -289,331 +144,325 @@ If set to `false`, temporary files will not be deleted.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:83](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L83)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:83](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L83)
 
-___
+***
 
 ### concurrency
 
-• **concurrency**: `number` = `defaultConcurrency`
+> **concurrency**: `number` = `defaultConcurrency`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:69](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L69)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:69](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L69)
 
-___
+***
 
 ### constructor
 
-• **constructor**: `Function`
+> **constructor**: `Function`
 
 The initial value of Object.prototype.constructor is the standard built-in Object constructor.
 
 #### Inherited from
 
-ResServerTools.constructor
+`ResServerTools.constructor`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:125
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:125
 
-___
+***
 
 ### defaultOptions
 
-• **defaultOptions**: `Object`
+> **defaultOptions**: `object`
 
 The default options for export and assign
 
-#### Type declaration
+#### assign?
 
-| Name | Type |
-| :------ | :------ |
-| `assign?` | `IMergeOptions` |
-| `export?` | `IMergeOptions` |
+> `optional` **assign**: `IMergeOptions`
+
+#### export?
+
+> `optional` **export**: `IMergeOptions`
 
 #### Inherited from
 
-ResServerTools.defaultOptions
+`ResServerTools.defaultOptions`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:74
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:74
 
-___
+***
 
 ### depends
 
-• **depends**: `Object`
+> **depends**: `object`
 
-#### Type declaration
+#### event
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `EventServer` |
+> **event**: `EventServer` = `eventServer`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:92](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L92)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:92](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L92)
 
-___
+***
 
-### fetchOptions
+### fetchOptions?
 
-• `Optional` **fetchOptions**: `any`
+> `optional` **fetchOptions**: `any`
 
 #### Inherited from
 
-ResServerTools.fetchOptions
+`ResServerTools.fetchOptions`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:162
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:162
 
-___
+***
 
 ### finished
 
-• **finished**: `DownloadItems` = `{}`
+> **finished**: `DownloadItems` = `{}`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:66](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L66)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:66](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L66)
 
-___
+***
 
-### isApi
+### isApi?
 
-• `Optional` **isApi**: `boolean`
+> `optional` **isApi**: `boolean`
 
 #### Inherited from
 
-ResServerTools.isApi
+`ResServerTools.isApi`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:42
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:42
 
-___
+***
 
 ### methods
 
-• **methods**: `string`[]
+> **methods**: `string`[]
 
 #### Inherited from
 
-ResServerTools.methods
+`ResServerTools.methods`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:404
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:404
 
-___
+***
 
-### name
+### name?
 
-• `Optional` **name**: `string`
+> `optional` **name**: `string`
 
 #### Inherited from
 
-ResServerTools.name
+`ResServerTools.name`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:36
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:36
 
-___
+***
 
 ### nextOrder
 
-• **nextOrder**: `number` = `0`
+> **nextOrder**: `number` = `0`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:68](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L68)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:68](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L68)
 
-___
+***
 
 ### nonExported1stChar
 
-• **nonExported1stChar**: `string`
+> **nonExported1stChar**: `string`
 
 the property with the default prefix '$' will not be exported.
 
 #### Inherited from
 
-ResServerTools.nonExported1stChar
+`ResServerTools.nonExported1stChar`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:78
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:78
 
-___
+***
 
 ### params
 
-• **params**: `FuncParams`
+> **params**: `FuncParams`
 
 #### Inherited from
 
-ResServerTools.params
+`ResServerTools.params`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:432
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:432
 
-___
+***
 
 ### queue
 
-• **queue**: `DownloadItems` = `{}`
+> **queue**: `DownloadItems` = `{}`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:65](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L65)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:65](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L65)
 
-___
+***
 
-### result
+### result?
 
-• `Optional` **result**: `string`
+> `optional` **result**: `string`
 
 #### Inherited from
 
-ResServerTools.result
+`ResServerTools.result`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:38
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:38
 
-___
+***
 
 ### rootDir
 
-• **rootDir**: `undefined` \| `string`
+> **rootDir**: `undefined` \| `string`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:67](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L67)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:67](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L67)
 
-___
+***
 
-### scope
+### scope?
 
-• `Optional` **scope**: `any`
+> `optional` **scope**: `any`
 
 #### Inherited from
 
-ResServerTools.scope
+`ResServerTools.scope`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:39
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:39
 
-___
+***
 
-### setup
+### setup()?
 
-• `Optional` **setup**: (`this`: `ToolFunc`, `options?`: `FuncItem`) => `void`
+> `optional` **setup**: (`this`, `options`?) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`this`, `options?`): `void`
+• **this**: `ToolFunc`
 
-##### Parameters
+• **options?**: `FuncItem`
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `ToolFunc` |
-| `options?` | `FuncItem` |
-
-##### Returns
+#### Returns
 
 `void`
 
 #### Inherited from
 
-ResServerTools.setup
+`ResServerTools.setup`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:41
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:41
 
-___
+***
 
-### stream
+### stream?
 
-• `Optional` **stream**: `boolean`
+> `optional` **stream**: `boolean`
 
 #### Inherited from
 
-ResServerTools.stream
+`ResServerTools.stream`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:43
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:43
 
-___
+***
 
-### tags
+### tags?
 
-• `Optional` **tags**: `string` \| `string`[]
+> `optional` **tags**: `string` \| `string`[]
 
 #### Inherited from
 
-ResServerTools.tags
+`ResServerTools.tags`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:40
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:40
 
-___
-
-### SpecialRpcMethodNames
-
-▪ `Static` **SpecialRpcMethodNames**: `any`
-
-#### Inherited from
-
-ResServerTools.SpecialRpcMethodNames
-
-#### Defined in
-
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:430
-
-___
+***
 
 ### dataPath
 
-▪ `Static` **dataPath**: `string`
+> `static` **dataPath**: `string`
 
 #### Inherited from
 
-ResServerTools.dataPath
+`ResServerTools.dataPath`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:64
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:64
 
-___
+***
 
 ### items
 
-▪ `Static` **items**: `Funcs`
+> `static` **items**: `Funcs`
 
 #### Inherited from
 
-ResServerTools.items
+`ResServerTools.items`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:63
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:63
+
+***
+
+### SpecialRpcMethodNames
+
+> `static` **SpecialRpcMethodNames**: `any`
+
+#### Inherited from
+
+`ResServerTools.SpecialRpcMethodNames`
+
+#### Defined in
+
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:430
 
 ## Accessors
 
 ### SpecialRpcMethodNames
 
-• `get` **SpecialRpcMethodNames**(): `any`
+> `get` **SpecialRpcMethodNames**(): `any`
 
 #### Returns
 
@@ -621,17 +470,17 @@ packages/ai-tool/dist/index-nP9lSU6E.d.ts:63
 
 #### Inherited from
 
-ResServerTools.SpecialRpcMethodNames
+`ResServerTools.SpecialRpcMethodNames`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:409
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:409
 
-___
+***
 
 ### apiRoot
 
-• `get` **apiRoot**(): `undefined` \| `string`
+> `get` `static` **apiRoot**(): `undefined` \| `string`
 
 #### Returns
 
@@ -639,115 +488,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.apiRoot
+`ResServerTools.apiRoot`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:283
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:283
 
 ## Methods
 
-### $clean
+### \_start()
 
-▸ **$clean**(`options`): `Promise`\<`any`[]\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options` | `Object` |
-| `options.completed?` | `boolean` |
-| `options.downloading?` | `boolean` |
-| `options.paused?` | `boolean` |
-
-#### Returns
-
-`Promise`\<`any`[]\>
-
-#### Defined in
-
-[packages/ai-tool-downloader/src/ai-tool-download.ts:324](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L324)
-
-___
-
-### $config
-
-▸ **$config**(`options?`): `Object`
+> **\_start**(`options`): `Promise`\<`void`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`DownloadConfiguration`](../interfaces/DownloadConfiguration.md) |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `autoScaleDownloads` | `boolean` |
-| `autostartQueue` | `boolean` |
-| `chunkSizeInBytes` | `number` |
-| `cleanTempFile` | `boolean` |
-| `concurrency` | `number` |
-| `rootDir` | `undefined` \| `string` |
-
-#### Defined in
-
-[packages/ai-tool-downloader/src/ai-tool-download.ts:354](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L354)
-
-___
-
-### $start
-
-▸ **$start**(`options`): `Promise`\<`undefined` \| \{ `id`: `string`  }\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options` | `DownloadFuncParams` |
-
-#### Returns
-
-`Promise`\<`undefined` \| \{ `id`: `string`  }\>
-
-#### Defined in
-
-[packages/ai-tool-downloader/src/ai-tool-download.ts:289](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L289)
-
-___
-
-### $stop
-
-▸ **$stop**(`options`): `Promise`\<\{ `id`: `string` ; `status`: [`FileDownloadStatus`](../modules.md#filedownloadstatus) = download.status; `url`: `string` = download.options.url } \| \{ `id`: `undefined` ; `status`: `string` = 'paused'; `url?`: `undefined` = download.options.url }\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options` | `string` \| `DownloadFuncParams` |
-
-#### Returns
-
-`Promise`\<\{ `id`: `string` ; `status`: [`FileDownloadStatus`](../modules.md#filedownloadstatus) = download.status; `url`: `string` = download.options.url } \| \{ `id`: `undefined` ; `status`: `string` = 'paused'; `url?`: `undefined` = download.options.url }\>
-
-#### Defined in
-
-[packages/ai-tool-downloader/src/ai-tool-download.ts:304](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L304)
-
-___
-
-### \_start
-
-▸ **_start**(`options`): `Promise`\<`void`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options` | `string` \| `DownloadFuncParams` |
+• **options**: `string` \| `DownloadFuncParams`
 
 #### Returns
 
@@ -755,19 +510,119 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:239](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L239)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:239](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L239)
 
-___
+***
 
-### add
+### $clean()
 
-▸ **add**(`options`): `string`
+> **$clean**(`options`): `Promise`\<`any`[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `BaseFileDownloadOptions` |
+• **options**
+
+• **options.completed?**: `boolean`
+
+• **options.downloading?**: `boolean`
+
+• **options.paused?**: `boolean`
+
+#### Returns
+
+`Promise`\<`any`[]\>
+
+#### Defined in
+
+[packages/ai-tool-downloader/src/ai-tool-download.ts:324](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L324)
+
+***
+
+### $config()
+
+> **$config**(`options`?): `object`
+
+#### Parameters
+
+• **options?**: [`DownloadConfiguration`](../interfaces/DownloadConfiguration.md)
+
+#### Returns
+
+`object`
+
+##### autoScaleDownloads
+
+> **autoScaleDownloads**: `boolean`
+
+##### autostartQueue
+
+> **autostartQueue**: `boolean`
+
+##### chunkSizeInBytes
+
+> **chunkSizeInBytes**: `number`
+
+##### cleanTempFile
+
+> **cleanTempFile**: `boolean`
+
+##### concurrency
+
+> **concurrency**: `number`
+
+##### rootDir
+
+> **rootDir**: `undefined` \| `string`
+
+#### Defined in
+
+[packages/ai-tool-downloader/src/ai-tool-download.ts:354](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L354)
+
+***
+
+### $start()
+
+> **$start**(`options`): `Promise`\<`undefined` \| `object`\>
+
+#### Parameters
+
+• **options**: `DownloadFuncParams`
+
+#### Returns
+
+`Promise`\<`undefined` \| `object`\>
+
+#### Defined in
+
+[packages/ai-tool-downloader/src/ai-tool-download.ts:289](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L289)
+
+***
+
+### $stop()
+
+> **$stop**(`options`): `Promise`\<`object` \| `object`\>
+
+#### Parameters
+
+• **options**: `string` \| `DownloadFuncParams`
+
+#### Returns
+
+`Promise`\<`object` \| `object`\>
+
+#### Defined in
+
+[packages/ai-tool-downloader/src/ai-tool-download.ts:304](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L304)
+
+***
+
+### add()
+
+> **add**(`options`): `string`
+
+#### Parameters
+
+• **options**: `BaseFileDownloadOptions`
 
 #### Returns
 
@@ -775,19 +630,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:220](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L220)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:220](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L220)
 
-___
+***
 
-### arr2ObjParams
+### arr2ObjParams()
 
-▸ **arr2ObjParams**(`params`): `any`[]
+> **arr2ObjParams**(`params`): `any`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `any`[] |
+• **params**: `any`[]
 
 #### Returns
 
@@ -795,26 +648,27 @@ ___
 
 #### Inherited from
 
-ResServerTools.arr2ObjParams
+`ResServerTools.arr2ObjParams`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:83
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:83
 
-___
+***
 
-### assign
+### assign()
 
-▸ **assign**(`src`, `options?`): `this`
+> **assign**(`src`, `options`?): `this`
 
 Assign the values from the src object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | `any` | the source object |
-| `options?` | `IMergeOptions` | - |
+• **src**: `any`
+
+the source object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -824,29 +678,39 @@ this object
 
 #### Inherited from
 
-ResServerTools.assign
+`ResServerTools.assign`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:106
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:106
 
-___
+***
 
-### assignProperty
+### assignProperty()
 
-▸ **assignProperty**(`src`, `name`, `value`, `attrs?`, `options?`): `void`
+> **assignProperty**(`src`, `name`, `value`, `attrs`?, `options`?): `void`
 
 Assign a property of src to this object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | `any` | the src object |
-| `name` | `string` | the property name to assign |
-| `value` | `any` | the property value to assign |
-| `attrs?` | `any` | the attributes object |
-| `options?` | `IMergeOptions` |  |
+• **src**: `any`
+
+the src object
+
+• **name**: `string`
+
+the property name to assign
+
+• **value**: `any`
+
+the property value to assign
+
+• **attrs?**: `any`
+
+the attributes object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -854,59 +718,71 @@ Assign a property of src to this object.
 
 #### Inherited from
 
-ResServerTools.assignProperty
+`ResServerTools.assignProperty`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:117
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:117
 
-___
+***
 
-### assignPropertyTo
+### assignPropertyTo()
 
-▸ **assignPropertyTo**(`dest`, `src`, `name`, `value`, `attrs?`, `options?`): `void`
+> `abstract` **assignPropertyTo**(`dest`, `src`, `name`, `value`, `attrs`?, `options`?): `void`
 
 Assign the property value from the src to destination object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | The destination object |
-| `src` | `any` | The src object |
-| `name` | `string` | The property name |
-| `value` | `any` | The property value |
-| `attrs?` | `any` | The attributes object of the property |
-| `options?` | `IMergeOptions` |  |
+• **dest**: `any`
+
+The destination object
+
+• **src**: `any`
+
+The src object
+
+• **name**: `string`
+
+The property name
+
+• **value**: `any`
+
+The property value
+
+• **attrs?**: `any`
+
+The attributes object of the property
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
 `void`
 
-**`Abstract`**
-
 #### Inherited from
 
-ResServerTools.assignPropertyTo
+`ResServerTools.assignPropertyTo`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:131
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:131
 
-___
+***
 
-### assignTo
+### assignTo()
 
-▸ **assignTo**(`dest?`, `options?`): `any`
+> **assignTo**(`dest`?, `options`?): `any`
 
 Assign this attributes to the dest object
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest?` | `any` | the destination object |
-| `options?` | `IMergeOptions` | - |
+• **dest?**: `any`
+
+the destination object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -916,24 +792,23 @@ the dest object
 
 #### Inherited from
 
-ResServerTools.assignTo
+`ResServerTools.assignTo`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:191
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:191
 
-___
+***
 
-### cast
+### cast()
 
-▸ **cast**(`key`, `value`): `any`
+> **cast**(`key`, `value`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `key` | `string` |
-| `value` | `any` |
+• **key**: `string`
+
+• **value**: `any`
 
 #### Returns
 
@@ -941,23 +816,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.cast
+`ResServerTools.cast`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:412
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:412
 
-___
+***
 
-### castParams
+### castParams()
 
-▸ **castParams**(`params`): `RpcMethodsServerFuncParams`
+> **castParams**(`params`): `RpcMethodsServerFuncParams`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `RpcMethodsServerFuncParams` |
+• **params**: `RpcMethodsServerFuncParams`
 
 #### Returns
 
@@ -965,25 +838,23 @@ ___
 
 #### Inherited from
 
-ResServerTools.castParams
+`ResServerTools.castParams`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:435
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:435
 
-___
+***
 
-### clone
+### clone()
 
-▸ **clone**(`options?`): `any`
+> **clone**(`options`?): `any`
 
 Create a new object with the same values of attributes.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `IMergeOptions` |
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -993,26 +864,27 @@ the new object
 
 #### Inherited from
 
-ResServerTools.clone
+`ResServerTools.clone`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:155
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:155
 
-___
+***
 
-### cloneTo
+### cloneTo()
 
-▸ **cloneTo**(`dest`, `options?`): `any`
+> **cloneTo**(`dest`, `options`?): `any`
 
 Create and assign the values to the destination object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | the destination object |
-| `options?` | `IMergeOptions` |  |
+• **dest**: `any`
+
+the destination object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -1022,69 +894,65 @@ the new dest object
 
 #### Inherited from
 
-ResServerTools.cloneTo
+`ResServerTools.cloneTo`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:148
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:148
 
-___
+***
 
-### defineProperties
+### defineProperties()
 
-▸ **defineProperties**(`aProperties`): `any`
+> `abstract` **defineProperties**(`aProperties`): `any`
 
 Define the attributes of this object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `aProperties` | `SimplePropDescriptors` | the defined attributes of the object |
+• **aProperties**: `SimplePropDescriptors`
+
+the defined attributes of the object
 
 #### Returns
 
 `any`
 
-**`Abstract`**
-
 #### Inherited from
 
-ResServerTools.defineProperties
+`ResServerTools.defineProperties`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:89
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:89
 
-___
+***
 
-### delete
+### delete()
 
-▸ **delete**(`options`): `Promise`\<`undefined` \| \{ `filepath`: `undefined` \| `string` = download.options.filepath; `id`: `string` ; `status`: [`FileDownloadStatus`](../modules.md#filedownloadstatus) = download.status; `url`: `string` = download.options.url }\>
+> **delete**(`options`): `Promise`\<`undefined` \| `object`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `DownloadFuncParams` |
+• **options**: `DownloadFuncParams`
 
 #### Returns
 
-`Promise`\<`undefined` \| \{ `filepath`: `undefined` \| `string` = download.options.filepath; `id`: `string` ; `status`: [`FileDownloadStatus`](../modules.md#filedownloadstatus) = download.status; `url`: `string` = download.options.url }\>
+`Promise`\<`undefined` \| `object`\>
 
 #### Overrides
 
-ResServerTools.delete
+`ResServerTools.delete`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:458](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L458)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:458](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L458)
 
-___
+***
 
-### exportQueue
+### exportQueue()
 
-▸ **exportQueue**(): `DownloadOptionsItems`
+> **exportQueue**(): `DownloadOptionsItems`
 
 #### Returns
 
@@ -1092,22 +960,23 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:114](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L114)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:114](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L114)
 
-___
+***
 
-### exportTo
+### exportTo()
 
-▸ **exportTo**(`dest`, `options?`): `any`
+> **exportTo**(`dest`, `options`?): `any`
 
 Export attributes to the dest json object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | the destination object |
-| `options?` | `IExportOptions` | - |
+• **dest**: `any`
+
+the destination object
+
+• **options?**: `IExportOptions`
 
 #### Returns
 
@@ -1117,23 +986,21 @@ the dest object.
 
 #### Inherited from
 
-ResServerTools.exportTo
+`ResServerTools.exportTo`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:173
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:173
 
-___
+***
 
-### func
+### func()
 
-▸ **func**(`params`): `any`
+> **func**(`params`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `RpcMethodsServerFuncParams` |
+• **params**: `RpcMethodsServerFuncParams`
 
 #### Returns
 
@@ -1141,23 +1008,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.func
+`ResServerTools.func`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:415
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:415
 
-___
+***
 
-### get
+### get()
 
-▸ **get**(`options`): `any`
+> **get**(`options`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `DownloadFuncParams` |
+• **options**: `DownloadFuncParams`
 
 #### Returns
 
@@ -1165,24 +1030,23 @@ ___
 
 #### Overrides
 
-ResServerTools.get
+`ResServerTools.get`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:421](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L421)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:421](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L421)
 
-___
+***
 
-### getDownloadsInQueue
+### getDownloadsInQueue()
 
-▸ **getDownloadsInQueue**(`status?`, `isNot?`): [`FileDownload`](FileDownload.md)[]
+> **getDownloadsInQueue**(`status`?, `isNot`?): [`FileDownload`](FileDownload.md)[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `status?` | [`FileDownloadStatus`](../modules.md#filedownloadstatus) |
-| `isNot?` | `boolean` |
+• **status?**: [`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md)
+
+• **isNot?**: `boolean`
 
 #### Returns
 
@@ -1190,19 +1054,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:144](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L144)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:144](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L144)
 
-___
+***
 
-### getFunc
+### getFunc()
 
-▸ **getFunc**(`name?`): `any`
+> **getFunc**(`name`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name?` | `string` |
+• **name?**: `string`
 
 #### Returns
 
@@ -1210,23 +1072,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.getFunc
+`ResServerTools.getFunc`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:89
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:89
 
-___
+***
 
-### getFuncWithPos
+### getFuncWithPos()
 
-▸ **getFuncWithPos**(`name?`): `any`
+> **getFuncWithPos**(`name`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name?` | `string` |
+• **name?**: `string`
 
 #### Returns
 
@@ -1234,23 +1094,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.getFuncWithPos
+`ResServerTools.getFuncWithPos`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:94
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:94
 
-___
+***
 
-### getId
+### getId()
 
-▸ **getId**(`options`): `undefined` \| `string`
+> **getId**(`options`): `undefined` \| `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `string` \| `DownloadFuncParams` |
+• **options**: `string` \| `DownloadFuncParams`
 
 #### Returns
 
@@ -1258,19 +1116,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:125](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L125)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:125](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L125)
 
-___
+***
 
-### getItem
+### getItem()
 
-▸ **getItem**(`options`): `undefined` \| [`FileDownload`](FileDownload.md)
+> **getItem**(`options`): `undefined` \| [`FileDownload`](FileDownload.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `string` \| `DownloadFuncParams` |
+• **options**: `string` \| `DownloadFuncParams`
 
 #### Returns
 
@@ -1278,19 +1134,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:281](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L281)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:281](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L281)
 
-___
+***
 
-### getMethodFromParams
+### getMethodFromParams()
 
-▸ **getMethodFromParams**(`params`): `undefined` \| `string`
+> **getMethodFromParams**(`params`): `undefined` \| `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `ResServerFuncParams` |
+• **params**: `ResServerFuncParams`
 
 #### Returns
 
@@ -1298,17 +1152,17 @@ ___
 
 #### Inherited from
 
-ResServerTools.getMethodFromParams
+`ResServerTools.getMethodFromParams`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:434
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:434
 
-___
+***
 
-### getProperties
+### getProperties()
 
-▸ **getProperties**(): `PropDescriptors`
+> `abstract` **getProperties**(): `PropDescriptors`
 
 Get the defined attributes.
 
@@ -1318,27 +1172,23 @@ Get the defined attributes.
 
 the descriptors of properties object
 
-**`Abstract`**
-
 #### Inherited from
 
-ResServerTools.getProperties
+`ResServerTools.getProperties`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:98
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:98
 
-___
+***
 
-### hasAsyncFeature
+### hasAsyncFeature()
 
-▸ **hasAsyncFeature**(`feature`): `boolean`
+> **hasAsyncFeature**(`feature`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `feature` | `AsyncFeatureBits` |
+• **feature**: `AsyncFeatureBits`
 
 #### Returns
 
@@ -1346,25 +1196,25 @@ ___
 
 #### Inherited from
 
-ResServerTools.hasAsyncFeature
+`ResServerTools.hasAsyncFeature`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:95
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:95
 
-___
+***
 
-### hasOwnProperty
+### hasOwnProperty()
 
-▸ **hasOwnProperty**(`v`): `boolean`
+> **hasOwnProperty**(`v`): `boolean`
 
 Determines whether an object has a property with the specified name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `v` | `PropertyKey` | A property name. |
+• **v**: `PropertyKey`
+
+A property name.
 
 #### Returns
 
@@ -1372,23 +1222,21 @@ Determines whether an object has a property with the specified name.
 
 #### Inherited from
 
-ResServerTools.hasOwnProperty
+`ResServerTools.hasOwnProperty`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:140
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:140
 
-___
+***
 
-### importQueue
+### importQueue()
 
-▸ **importQueue**(`queue`): `void`
+> **importQueue**(`queue`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `queue` | `DownloadOptionsItems` |
+• **queue**: `DownloadOptionsItems`
 
 #### Returns
 
@@ -1396,45 +1244,19 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:105](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L105)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:105](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L105)
 
-___
+***
 
-### initRpcMethods
+### initialize()
 
-▸ **initRpcMethods**(`methods?`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `methods?` | `string`[] |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-ResServerTools.initRpcMethods
-
-#### Defined in
-
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:410
-
-___
-
-### initialize
-
-▸ **initialize**(`src?`): `this`
+> **initialize**(`src`?): `this`
 
 Initialize object and assign attribute values from src if src exists.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `src?` | `any` |
+• **src?**: `any`
 
 #### Returns
 
@@ -1444,25 +1266,47 @@ this object.
 
 #### Inherited from
 
-ResServerTools.initialize
+`ResServerTools.initialize`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:139
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:139
 
-___
+***
 
-### isPrototypeOf
+### initRpcMethods()
 
-▸ **isPrototypeOf**(`v`): `boolean`
+> **initRpcMethods**(`methods`?): `void`
+
+#### Parameters
+
+• **methods?**: `string`[]
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+`ResServerTools.initRpcMethods`
+
+#### Defined in
+
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:410
+
+***
+
+### isPrototypeOf()
+
+> **isPrototypeOf**(`v`): `boolean`
 
 Determines whether an object exists in another object's prototype chain.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `v` | `Object` | Another object whose prototype chain is to be checked. |
+• **v**: `Object`
+
+Another object whose prototype chain is to be checked.
 
 #### Returns
 
@@ -1470,26 +1314,27 @@ Determines whether an object exists in another object's prototype chain.
 
 #### Inherited from
 
-ResServerTools.isPrototypeOf
+`ResServerTools.isPrototypeOf`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:146
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:146
 
-___
+***
 
-### isSame
+### isSame()
 
-▸ **isSame**(`src`, `options?`): `boolean`
+> **isSame**(`src`, `options`?): `boolean`
 
 Check the src object whether “equals” this object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | `any` | The source object |
-| `options?` | `IMergeOptions` | - |
+• **src**: `any`
+
+The source object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -1497,23 +1342,21 @@ Check the src object whether “equals” this object.
 
 #### Inherited from
 
-ResServerTools.isSame
+`ResServerTools.isSame`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:200
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:200
 
-___
+***
 
-### isStream
+### isStream()
 
-▸ **isStream**(`params`): `undefined` \| `boolean`
+> **isStream**(`params`): `undefined` \| `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `any` |
+• **params**: `any`
 
 #### Returns
 
@@ -1521,23 +1364,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.isStream
+`ResServerTools.isStream`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:96
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:96
 
-___
+***
 
-### list
+### list()
 
-▸ **list**(`options`): `string`[]
+> **list**(`options`): `string`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `DownloadFuncParams` |
+• **options**: `DownloadFuncParams`
 
 #### Returns
 
@@ -1545,26 +1386,27 @@ ___
 
 #### Overrides
 
-ResServerTools.list
+`ResServerTools.list`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:439](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L439)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:439](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L439)
 
-___
+***
 
-### mergeTo
+### mergeTo()
 
-▸ **mergeTo**(`dest`, `options?`): `any`
+> **mergeTo**(`dest`, `options`?): `any`
 
 Merge this attributes to dest object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | The destination object |
-| `options?` | `IMergeOptions` | - |
+• **dest**: `any`
+
+The destination object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -1574,24 +1416,23 @@ the dest object.
 
 #### Inherited from
 
-ResServerTools.mergeTo
+`ResServerTools.mergeTo`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:164
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:164
 
-___
+***
 
-### newDownload
+### newDownload()
 
-▸ **newDownload**(`options`, `id`): [`FileDownload`](FileDownload.md)
+> **newDownload**(`options`, `id`): [`FileDownload`](FileDownload.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `BaseFileDownloadOptions` |
-| `id` | `string` |
+• **options**: `BaseFileDownloadOptions`
+
+• **id**: `string`
 
 #### Returns
 
@@ -1599,19 +1440,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:185](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L185)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:185](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L185)
 
-___
+***
 
-### obj2ArrParams
+### obj2ArrParams()
 
-▸ **obj2ArrParams**(`params?`): `any`[]
+> **obj2ArrParams**(`params`?): `any`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params?` | `any` |
+• **params?**: `any`
 
 #### Returns
 
@@ -1619,23 +1458,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.obj2ArrParams
+`ResServerTools.obj2ArrParams`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:84
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:84
 
-___
+***
 
-### onCompleted
+### onCompleted()
 
-▸ **onCompleted**(`id`): `void`
+> **onCompleted**(`id`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
+• **id**: `string`
 
 #### Returns
 
@@ -1643,45 +1480,43 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:134](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L134)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:134](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L134)
 
-___
+***
 
-### post
+### post()
 
-▸ **post**(`options`): `Promise`\<`undefined` \| \{ `id`: `string` = hashId }\>
+> **post**(`options`): `Promise`\<`undefined` \| `object`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `DownloadFuncParams` |
+• **options**: `DownloadFuncParams`
 
 #### Returns
 
-`Promise`\<`undefined` \| \{ `id`: `string` = hashId }\>
+`Promise`\<`undefined` \| `object`\>
 
 #### Overrides
 
-ResServerTools.post
+`ResServerTools.post`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:385](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L385)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:385](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L385)
 
-___
+***
 
-### propertyIsEnumerable
+### propertyIsEnumerable()
 
-▸ **propertyIsEnumerable**(`v`): `boolean`
+> **propertyIsEnumerable**(`v`): `boolean`
 
 Determines whether a specified property is enumerable.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `v` | `PropertyKey` | A property name. |
+• **v**: `PropertyKey`
+
+A property name.
 
 #### Returns
 
@@ -1689,41 +1524,39 @@ Determines whether a specified property is enumerable.
 
 #### Inherited from
 
-ResServerTools.propertyIsEnumerable
+`ResServerTools.propertyIsEnumerable`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:152
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:152
 
-___
+***
 
-### put
+### put()
 
-▸ **put**(`options`): `undefined` \| \{ `id`: `string`  }
+> **put**(`options`): `undefined` \| `object`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `DownloadFuncParams` |
+• **options**: `DownloadFuncParams`
 
 #### Returns
 
-`undefined` \| \{ `id`: `string`  }
+`undefined` \| `object`
 
 #### Overrides
 
-ResServerTools.put
+`ResServerTools.put`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:401](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L401)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:401](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L401)
 
-___
+***
 
-### register
+### register()
 
-▸ **register**(): `boolean` \| `ToolFunc`
+> **register**(): `boolean` \| `ToolFunc`
 
 #### Returns
 
@@ -1731,23 +1564,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.register
+`ResServerTools.register`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:81
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:81
 
-___
+***
 
-### run
+### run()
 
-▸ **run**(`params?`): `Promise`\<`any`\>
+> **run**(`params`?): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params?` | `any` |
+• **params?**: `any`
 
 #### Returns
 
@@ -1755,24 +1586,23 @@ ___
 
 #### Inherited from
 
-ResServerTools.run
+`ResServerTools.run`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:86
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:86
 
-___
+***
 
-### runAs
+### runAs()
 
-▸ **runAs**(`name`, `params?`): `Promise`\<`any`\>
+> **runAs**(`name`, `params`?): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -1780,24 +1610,23 @@ ___
 
 #### Inherited from
 
-ResServerTools.runAs
+`ResServerTools.runAs`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:87
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:87
 
-___
+***
 
-### runAsSync
+### runAsSync()
 
-▸ **runAsSync**(`name`, `params?`): `any`
+> **runAsSync**(`name`, `params`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -1805,23 +1634,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.runAsSync
+`ResServerTools.runAsSync`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:88
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:88
 
-___
+***
 
-### runSync
+### runSync()
 
-▸ **runSync**(`params?`): `any`
+> **runSync**(`params`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params?` | `any` |
+• **params?**: `any`
 
 #### Returns
 
@@ -1829,23 +1656,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.runSync
+`ResServerTools.runSync`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:85
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:85
 
-___
+***
 
-### runWithPos
+### runWithPos()
 
-▸ **runWithPos**(`...params`): `Promise`\<`any`\>
+> **runWithPos**(...`params`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...params` | `any`[] |
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1853,24 +1678,23 @@ ___
 
 #### Inherited from
 
-ResServerTools.runWithPos
+`ResServerTools.runWithPos`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:92
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:92
 
-___
+***
 
-### runWithPosAs
+### runWithPosAs()
 
-▸ **runWithPosAs**(`name`, `...params`): `Promise`\<`any`\>
+> **runWithPosAs**(`name`, ...`params`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1878,24 +1702,23 @@ ___
 
 #### Inherited from
 
-ResServerTools.runWithPosAs
+`ResServerTools.runWithPosAs`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:93
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:93
 
-___
+***
 
-### runWithPosAsSync
+### runWithPosAsSync()
 
-▸ **runWithPosAsSync**(`name`, `...params`): `any`
+> **runWithPosAsSync**(`name`, ...`params`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1903,23 +1726,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.runWithPosAsSync
+`ResServerTools.runWithPosAsSync`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:91
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:91
 
-___
+***
 
-### runWithPosSync
+### runWithPosSync()
 
-▸ **runWithPosSync**(`...params`): `any`
+> **runWithPosSync**(...`params`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...params` | `any`[] |
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1927,23 +1748,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.runWithPosSync
+`ResServerTools.runWithPosSync`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:90
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:90
 
-___
+***
 
-### start
+### start()
 
-▸ **start**(`options`): `Promise`\<`void`\>
+> **start**(`options`): `Promise`\<`void`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `string` \| `DownloadFuncParams` |
+• **options**: `string` \| `DownloadFuncParams`
 
 #### Returns
 
@@ -1951,13 +1770,13 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:255](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L255)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:255](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L255)
 
-___
+***
 
-### startAll
+### startAll()
 
-▸ **startAll**(): `void`
+> **startAll**(): `void`
 
 #### Returns
 
@@ -1965,13 +1784,13 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:154](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L154)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:154](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L154)
 
-___
+***
 
-### stopAll
+### stopAll()
 
-▸ **stopAll**(): `Promise`\<`void`\>
+> **stopAll**(): `Promise`\<`void`\>
 
 #### Returns
 
@@ -1979,13 +1798,13 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:175](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/ai-tool-download.ts#L175)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:175](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/ai-tool-download.ts#L175)
 
-___
+***
 
-### toJSON
+### toJSON()
 
-▸ **toJSON**(): `any`
+> **toJSON**(): `any`
 
 #### Returns
 
@@ -1993,17 +1812,17 @@ ___
 
 #### Inherited from
 
-ResServerTools.toJSON
+`ResServerTools.toJSON`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:182
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:182
 
-___
+***
 
-### toLocaleString
+### toLocaleString()
 
-▸ **toLocaleString**(): `string`
+> **toLocaleString**(): `string`
 
 Returns a date converted to a string using the current locale.
 
@@ -2013,25 +1832,23 @@ Returns a date converted to a string using the current locale.
 
 #### Inherited from
 
-ResServerTools.toLocaleString
+`ResServerTools.toLocaleString`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:131
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:131
 
-___
+***
 
-### toObject
+### toObject()
 
-▸ **toObject**(`options?`): `any`
+> **toObject**(`options`?): `any`
 
 Convert the attributes to the json object
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `any` |
+• **options?**: `any`
 
 #### Returns
 
@@ -2041,17 +1858,17 @@ the json object.
 
 #### Inherited from
 
-ResServerTools.toObject
+`ResServerTools.toObject`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:181
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:181
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of an object.
 
@@ -2061,17 +1878,17 @@ Returns a string representation of an object.
 
 #### Inherited from
 
-ResServerTools.toString
+`ResServerTools.toString`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:128
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:128
 
-___
+***
 
-### unregister
+### unregister()
 
-▸ **unregister**(): `any`
+> **unregister**(): `any`
 
 #### Returns
 
@@ -2079,17 +1896,17 @@ ___
 
 #### Inherited from
 
-ResServerTools.unregister
+`ResServerTools.unregister`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:82
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:82
 
-___
+***
 
-### valueOf
+### valueOf()
 
-▸ **valueOf**(): `Object`
+> **valueOf**(): `Object`
 
 Returns the primitive value of the specified object.
 
@@ -2099,175 +1916,239 @@ Returns the primitive value of the specified object.
 
 #### Inherited from
 
-ResServerTools.valueOf
+`ResServerTools.valueOf`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:134
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:134
 
-___
+***
 
-### assign
+### assign()
 
-▸ **assign**\<`T`, `U`\>(`target`, `source`): `T` & `U`
+#### assign(target, source)
+
+> `static` **assign**\<`T`, `U`\>(`target`, `source`): `T` & `U`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | `U` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `T` | The target object to copy to. |
-| `source` | `U` | The source object from which to copy properties. |
+##### Parameters
 
-#### Returns
+• **target**: `T`
+
+The target object to copy to.
+
+• **source**: `U`
+
+The source object from which to copy properties.
+
+##### Returns
 
 `T` & `U`
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.assign
+`ResServerTools.assign`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:284
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:286
 
-▸ **assign**\<`T`, `U`, `V`\>(`target`, `source1`, `source2`): `T` & `U` & `V`
+#### assign(target, source1, source2)
+
+> `static` **assign**\<`T`, `U`, `V`\>(`target`, `source1`, `source2`): `T` & `U` & `V`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | `U` |
-| `V` | `V` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `T` | The target object to copy to. |
-| `source1` | `U` | The first source object from which to copy properties. |
-| `source2` | `V` | The second source object from which to copy properties. |
+• **V**
 
-#### Returns
+##### Parameters
+
+• **target**: `T`
+
+The target object to copy to.
+
+• **source1**: `U`
+
+The first source object from which to copy properties.
+
+• **source2**: `V`
+
+The second source object from which to copy properties.
+
+##### Returns
 
 `T` & `U` & `V`
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.assign
+`ResServerTools.assign`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:293
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:295
 
-▸ **assign**\<`T`, `U`, `V`, `W`\>(`target`, `source1`, `source2`, `source3`): `T` & `U` & `V` & `W`
+#### assign(target, source1, source2, source3)
+
+> `static` **assign**\<`T`, `U`, `V`, `W`\>(`target`, `source1`, `source2`, `source3`): `T` & `U` & `V` & `W`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | `U` |
-| `V` | `V` |
-| `W` | `W` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `T` | The target object to copy to. |
-| `source1` | `U` | The first source object from which to copy properties. |
-| `source2` | `V` | The second source object from which to copy properties. |
-| `source3` | `W` | The third source object from which to copy properties. |
+• **V**
 
-#### Returns
+• **W**
+
+##### Parameters
+
+• **target**: `T`
+
+The target object to copy to.
+
+• **source1**: `U`
+
+The first source object from which to copy properties.
+
+• **source2**: `V`
+
+The second source object from which to copy properties.
+
+• **source3**: `W`
+
+The third source object from which to copy properties.
+
+##### Returns
 
 `T` & `U` & `V` & `W`
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.assign
+`ResServerTools.assign`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:303
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:305
 
-▸ **assign**(`target`, `...sources`): `any`
+#### assign(target, sources)
+
+> `static` **assign**(`target`, ...`sources`): `any`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `object` | The target object to copy to. |
-| `...sources` | `any`[] | One or more source objects from which to copy properties |
+• **target**: `object`
 
-#### Returns
+The target object to copy to.
+
+• ...**sources**: `any`[]
+
+One or more source objects from which to copy properties
+
+##### Returns
 
 `any`
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.assign
+`ResServerTools.assign`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:311
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:313
 
-___
+***
 
-### create
+### create()
 
-▸ **create**(`o`): `any`
+#### create(o)
+
+> `static` **create**(`o`): `any`
 
 Creates an object that has the specified prototype or that has null prototype.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | ``null`` \| `object` | Object to use as a prototype. May be null. |
+• **o**: `null` \| `object`
 
-#### Returns
+Object to use as a prototype. May be null.
+
+##### Returns
 
 `any`
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.create
+`ResServerTools.create`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:188
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:188
 
-▸ **create**(`o`, `properties`): `any`
+#### create(o, properties)
+
+> `static` **create**(`o`, `properties`): `any`
 
 Creates an object that has the specified prototype, and that optionally contains specified properties.
 
+##### Parameters
+
+• **o**: `null` \| `object`
+
+Object to use as a prototype. May be null
+
+• **properties**: `PropertyDescriptorMap` & `ThisType`\<`any`\>
+
+JavaScript object that contains one or more property descriptors.
+
+##### Returns
+
+`any`
+
+##### Inherited from
+
+`ResServerTools.create`
+
+##### Defined in
+
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:195
+
+***
+
+### defineProperties()
+
+> `static` **defineProperties**(`aTarget`, `aProperties`, `recreate`?): `any`
+
+Adds one or more properties to an object, and/or modifies attributes of existing properties.
+
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | ``null`` \| `object` | Object to use as a prototype. May be null |
-| `properties` | `PropertyDescriptorMap` & `ThisType`\<`any`\> | JavaScript object that contains one or more property descriptors. |
+• **aTarget**: `any`
+
+• **aProperties**: `PropDescriptors`
+
+• **recreate?**: `boolean`
 
 #### Returns
 
@@ -2275,59 +2156,37 @@ Creates an object that has the specified prototype, and that optionally contains
 
 #### Inherited from
 
-ResServerTools.create
+`ResServerTools.defineProperties`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:195
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:11
 
-___
+***
 
-### defineProperties
+### defineProperty()
 
-▸ **defineProperties**(`aTarget`, `aProperties`, `recreate?`): `any`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `aTarget` | `any` |
-| `aProperties` | `PropDescriptors` |
-| `recreate?` | `boolean` |
-
-#### Returns
-
-`any`
-
-#### Inherited from
-
-ResServerTools.defineProperties
-
-#### Defined in
-
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:11
-
-___
-
-### defineProperty
-
-▸ **defineProperty**\<`T`\>(`o`, `p`, `attributes`): `T`
+> `static` **defineProperty**\<`T`\>(`o`, `p`, `attributes`): `T`
 
 Adds a property to an object, or modifies attributes of an existing property.
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to add or modify the property. This can be a native JavaScript object (that is, a user-defined object or a built in object) or a DOM object. |
-| `p` | `PropertyKey` | The property name. |
-| `attributes` | `PropertyDescriptor` & `ThisType`\<`any`\> | Descriptor for the property. It can be for a data property or an accessor property. |
+• **o**: `T`
+
+Object on which to add or modify the property. This can be a native JavaScript object (that is, a user-defined object or a built in object) or a DOM object.
+
+• **p**: `PropertyKey`
+
+The property name.
+
+• **attributes**: `PropertyDescriptor` & `ThisType`\<`any`\>
+
+Descriptor for the property. It can be for a data property or an accessor property.
 
 #### Returns
 
@@ -2335,220 +2194,223 @@ Adds a property to an object, or modifies attributes of an existing property.
 
 #### Inherited from
 
-ResServerTools.defineProperty
+`ResServerTools.defineProperty`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:203
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:203
 
-___
+***
 
-### entries
+### entries()
 
-▸ **entries**\<`T`\>(`o`): [`string`, `T`][]
+#### entries(o)
 
-Returns an array of key/values of the enumerable properties of an object
+> `static` **entries**\<`T`\>(`o`): [`string`, `T`][]
 
-#### Type parameters
+Returns an array of key/values of the enumerable own properties of an object
 
-| Name |
-| :------ |
-| `T` |
+##### Type Parameters
 
-#### Parameters
+• **T**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | \{ `[s: string]`: `T`;  } \| `ArrayLike`\<`T`\> | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**: `object` \| `ArrayLike`\<`T`\>
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 [`string`, `T`][]
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.entries
+`ResServerTools.entries`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:36
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:36
 
-▸ **entries**(`o`): [`string`, `any`][]
+#### entries(o)
 
-Returns an array of key/values of the enumerable properties of an object
+> `static` **entries**(`o`): [`string`, `any`][]
 
-#### Parameters
+Returns an array of key/values of the enumerable own properties of an object
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `Object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 [`string`, `any`][]
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.entries
+`ResServerTools.entries`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:42
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:42
 
-___
+***
 
-### freeze
+### freeze()
 
-▸ **freeze**\<`T`\>(`f`): `T`
+#### freeze(f)
+
+> `static` **freeze**\<`T`\>(`f`): `T`
 
 Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Function` |
+• **T** *extends* `Function`
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `f` | `T` | Object on which to lock the attributes. |
+• **f**: `T`
 
-#### Returns
+Object on which to lock the attributes.
+
+##### Returns
 
 `T`
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.freeze
+`ResServerTools.freeze`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:222
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:222
 
-▸ **freeze**\<`T`, `U`\>(`o`): `Readonly`\<`T`\>
+#### freeze(o)
 
-Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | extends `string` \| `number` \| `bigint` \| `boolean` \| `symbol` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to lock the attributes. |
-
-#### Returns
-
-`Readonly`\<`T`\>
-
-#### Inherited from
-
-ResServerTools.freeze
-
-#### Defined in
-
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:228
-
-▸ **freeze**\<`T`\>(`o`): `Readonly`\<`T`\>
+> `static` **freeze**\<`T`, `U`\>(`o`): `Readonly`\<`T`\>
 
 Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
 
-#### Type parameters
+##### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U** *extends* `string` \| `number` \| `bigint` \| `boolean` \| `symbol`
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to lock the attributes. |
+##### Parameters
 
-#### Returns
+• **o**: `T`
+
+Object on which to lock the attributes.
+
+##### Returns
 
 `Readonly`\<`T`\>
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.freeze
+`ResServerTools.freeze`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:234
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:228
 
-___
+#### freeze(o)
 
-### fromEntries
+> `static` **freeze**\<`T`\>(`o`): `Readonly`\<`T`\>
 
-▸ **fromEntries**\<`T`\>(`entries`): `Object`
+Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
+
+##### Type Parameters
+
+• **T**
+
+##### Parameters
+
+• **o**: `T`
+
+Object on which to lock the attributes.
+
+##### Returns
+
+`Readonly`\<`T`\>
+
+##### Inherited from
+
+`ResServerTools.freeze`
+
+##### Defined in
+
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:234
+
+***
+
+### fromEntries()
+
+#### fromEntries(entries)
+
+> `static` **fromEntries**\<`T`\>(`entries`): `object`
 
 Returns an object created by key-value entries for properties and methods
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `any` |
+• **T** = `any`
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `entries` | `Iterable`\<readonly [`PropertyKey`, `T`]\> | An iterable object that contains key-value entries for properties and methods. |
+• **entries**: `Iterable`\<readonly [`PropertyKey`, `T`], `any`, `any`\>
 
-#### Returns
+An iterable object that contains key-value entries for properties and methods.
 
-`Object`
+##### Returns
 
-#### Inherited from
+`object`
 
-ResServerTools.fromEntries
+##### Inherited from
 
-#### Defined in
+`ResServerTools.fromEntries`
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2019.object.d.ts:26
+##### Defined in
 
-▸ **fromEntries**(`entries`): `any`
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2019.object.d.ts:26
+
+#### fromEntries(entries)
+
+> `static` **fromEntries**(`entries`): `any`
 
 Returns an object created by key-value entries for properties and methods
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `entries` | `Iterable`\<readonly `any`[]\> | An iterable object that contains key-value entries for properties and methods. |
+• **entries**: `Iterable`\<readonly `any`[], `any`, `any`\>
 
-#### Returns
+An iterable object that contains key-value entries for properties and methods.
+
+##### Returns
 
 `any`
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.fromEntries
+`ResServerTools.fromEntries`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2019.object.d.ts:32
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2019.object.d.ts:32
 
-___
+***
 
-### get
+### get()
 
-▸ **get**(`name`): `ToolFunc`
+> `static` **get**(`name`): `ToolFunc`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -2556,23 +2418,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.get
+`ResServerTools.get`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:65
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:65
 
-___
+***
 
-### getAllByTag
+### getAllByTag()
 
-▸ **getAllByTag**(`tagName`): `ToolFunc`[]
+> `static` **getAllByTag**(`tagName`): `ToolFunc`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tagName` | `string` |
+• **tagName**: `string`
 
 #### Returns
 
@@ -2580,23 +2440,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.getAllByTag
+`ResServerTools.getAllByTag`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:68
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:68
 
-___
+***
 
-### getByTag
+### getByTag()
 
-▸ **getByTag**(`tagName`): `undefined` \| `ToolFunc`
+> `static` **getByTag**(`tagName`): `undefined` \| `ToolFunc`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tagName` | `string` |
+• **tagName**: `string`
 
 #### Returns
 
@@ -2604,23 +2462,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.getByTag
+`ResServerTools.getByTag`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:67
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:67
 
-___
+***
 
-### getFunc
+### getFunc()
 
-▸ **getFunc**(`name`): `any`
+> `static` **getFunc**(`name`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -2628,23 +2484,21 @@ ___
 
 #### Inherited from
 
-ResServerTools.getFunc
+`ResServerTools.getFunc`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:72
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:72
 
-___
+***
 
-### getFuncWithPos
+### getFuncWithPos()
 
-▸ **getFuncWithPos**(`name`): `any`
+> `static` **getFuncWithPos**(`name`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -2652,27 +2506,30 @@ ___
 
 #### Inherited from
 
-ResServerTools.getFuncWithPos
+`ResServerTools.getFuncWithPos`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:75
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:75
 
-___
+***
 
-### getOwnPropertyDescriptor
+### getOwnPropertyDescriptor()
 
-▸ **getOwnPropertyDescriptor**(`o`, `p`): `undefined` \| `PropertyDescriptor`
+> `static` **getOwnPropertyDescriptor**(`o`, `p`): `undefined` \| `PropertyDescriptor`
 
 Gets the own property descriptor of the specified object.
 An own property descriptor is one that is defined directly on the object and is not inherited from the object's prototype.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object that contains the property. |
-| `p` | `PropertyKey` | Name of the property. |
+• **o**: `any`
+
+Object that contains the property.
+
+• **p**: `PropertyKey`
+
+Name of the property.
 
 #### Returns
 
@@ -2680,58 +2537,56 @@ An own property descriptor is one that is defined directly on the object and is 
 
 #### Inherited from
 
-ResServerTools.getOwnPropertyDescriptor
+`ResServerTools.getOwnPropertyDescriptor`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:175
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:175
 
-___
+***
 
-### getOwnPropertyDescriptors
+### getOwnPropertyDescriptors()
 
-▸ **getOwnPropertyDescriptors**\<`T`\>(`o`): \{ [P in string \| number \| symbol]: TypedPropertyDescriptor\<T[P]\> } & \{ `[x: string]`: `PropertyDescriptor`;  }
+> `static` **getOwnPropertyDescriptors**\<`T`\>(`o`): \{ \[P in string \| number \| symbol\]: TypedPropertyDescriptor\<T\[P\]\> \} & `object`
 
 Returns an object containing all own property descriptors of an object
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+• **o**: `T`
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
 
 #### Returns
 
-\{ [P in string \| number \| symbol]: TypedPropertyDescriptor\<T[P]\> } & \{ `[x: string]`: `PropertyDescriptor`;  }
+\{ \[P in string \| number \| symbol\]: TypedPropertyDescriptor\<T\[P\]\> \} & `object`
 
 #### Inherited from
 
-ResServerTools.getOwnPropertyDescriptors
+`ResServerTools.getOwnPropertyDescriptors`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:48
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:48
 
-___
+***
 
-### getOwnPropertyNames
+### getOwnPropertyNames()
 
-▸ **getOwnPropertyNames**(`o`): `string`[]
+> `static` **getOwnPropertyNames**(`o`): `string`[]
 
 Returns the names of the own properties of an object. The own properties of an object are those that are defined directly
 on that object, and are not inherited from the object's prototype. The properties of an object include both fields (objects) and functions.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object that contains the own properties. |
+• **o**: `any`
+
+Object that contains the own properties.
 
 #### Returns
 
@@ -2739,25 +2594,25 @@ on that object, and are not inherited from the object's prototype. The propertie
 
 #### Inherited from
 
-ResServerTools.getOwnPropertyNames
+`ResServerTools.getOwnPropertyNames`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:182
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:182
 
-___
+***
 
-### getOwnPropertySymbols
+### getOwnPropertySymbols()
 
-▸ **getOwnPropertySymbols**(`o`): `symbol`[]
+> `static` **getOwnPropertySymbols**(`o`): `symbol`[]
 
 Returns an array of all symbol properties found directly on object o.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to retrieve the symbols from. |
+• **o**: `any`
+
+Object to retrieve the symbols from.
 
 #### Returns
 
@@ -2765,17 +2620,17 @@ Returns an array of all symbol properties found directly on object o.
 
 #### Inherited from
 
-ResServerTools.getOwnPropertySymbols
+`ResServerTools.getOwnPropertySymbols`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:317
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:319
 
-___
+***
 
-### getProperties
+### getProperties()
 
-▸ **getProperties**(): `PropDescriptors`
+> `static` **getProperties**(): `PropDescriptors`
 
 get all properties descriptor include inherited.
 
@@ -2785,25 +2640,25 @@ get all properties descriptor include inherited.
 
 #### Inherited from
 
-ResServerTools.getProperties
+`ResServerTools.getProperties`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:10
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:10
 
-___
+***
 
-### getPrototypeOf
+### getPrototypeOf()
 
-▸ **getPrototypeOf**(`o`): `any`
+> `static` **getPrototypeOf**(`o`): `any`
 
 Returns the prototype of an object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | The object that references the prototype. |
+• **o**: `any`
+
+The object that references the prototype.
 
 #### Returns
 
@@ -2811,23 +2666,21 @@ Returns the prototype of an object.
 
 #### Inherited from
 
-ResServerTools.getPrototypeOf
+`ResServerTools.getPrototypeOf`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:167
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:167
 
-___
+***
 
-### hasAsyncFeature
+### hasAsyncFeature()
 
-▸ **hasAsyncFeature**(`feature`): `boolean`
+> `static` **hasAsyncFeature**(`feature`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `feature` | `AsyncFeatureBits` |
+• **feature**: `AsyncFeatureBits`
 
 #### Returns
 
@@ -2835,26 +2688,29 @@ ___
 
 #### Inherited from
 
-ResServerTools.hasAsyncFeature
+`ResServerTools.hasAsyncFeature`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:69
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:69
 
-___
+***
 
-### is
+### is()
 
-▸ **is**(`value1`, `value2`): `boolean`
+> `static` **is**(`value1`, `value2`): `boolean`
 
 Returns true if the values are the same value, false otherwise.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value1` | `any` | The first value. |
-| `value2` | `any` | The second value. |
+• **value1**: `any`
+
+The first value.
+
+• **value2**: `any`
+
+The second value.
 
 #### Returns
 
@@ -2862,25 +2718,25 @@ Returns true if the values are the same value, false otherwise.
 
 #### Inherited from
 
-ResServerTools.is
+`ResServerTools.is`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:330
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:332
 
-___
+***
 
-### isExtensible
+### isExtensible()
 
-▸ **isExtensible**(`o`): `boolean`
+> `static` **isExtensible**(`o`): `boolean`
 
 Returns a value that indicates whether new properties can be added to an object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to test. |
+• **o**: `any`
+
+Object to test.
 
 #### Returns
 
@@ -2888,25 +2744,25 @@ Returns a value that indicates whether new properties can be added to an object.
 
 #### Inherited from
 
-ResServerTools.isExtensible
+`ResServerTools.isExtensible`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:258
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:258
 
-___
+***
 
-### isFrozen
+### isFrozen()
 
-▸ **isFrozen**(`o`): `boolean`
+> `static` **isFrozen**(`o`): `boolean`
 
 Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to test. |
+• **o**: `any`
+
+Object to test.
 
 #### Returns
 
@@ -2914,25 +2770,25 @@ Returns true if existing property attributes and values cannot be modified in an
 
 #### Inherited from
 
-ResServerTools.isFrozen
+`ResServerTools.isFrozen`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:252
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:252
 
-___
+***
 
-### isSealed
+### isSealed()
 
-▸ **isSealed**(`o`): `boolean`
+> `static` **isSealed**(`o`): `boolean`
 
 Returns true if existing property attributes cannot be modified in an object and new properties cannot be added to the object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to test. |
+• **o**: `any`
+
+Object to test.
 
 #### Returns
 
@@ -2940,65 +2796,69 @@ Returns true if existing property attributes cannot be modified in an object and
 
 #### Inherited from
 
-ResServerTools.isSealed
+`ResServerTools.isSealed`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:246
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:246
 
-___
+***
 
-### keys
+### keys()
 
-▸ **keys**(`o`): `string`[]
+#### keys(o)
+
+> `static` **keys**(`o`): `string`[]
 
 Returns the names of the enumerable string properties and methods of an object.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+• **o**: `object`
 
-#### Returns
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `string`[]
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.keys
+`ResServerTools.keys`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:264
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:264
 
-▸ **keys**(`o`): `string`[]
+#### keys(o)
+
+> `static` **keys**(`o`): `string`[]
 
 Returns the names of the enumerable string properties and methods of an object.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `Object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+• **o**
 
-#### Returns
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `string`[]
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.keys
+`ResServerTools.keys`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:323
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:325
 
-___
+***
 
-### list
+### list()
 
-▸ **list**(): `Funcs`
+> `static` **list**(): `Funcs`
 
 #### Returns
 
@@ -3006,31 +2866,29 @@ ___
 
 #### Inherited from
 
-ResServerTools.list
+`ResServerTools.list`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:66
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:66
 
-___
+***
 
-### preventExtensions
+### preventExtensions()
 
-▸ **preventExtensions**\<`T`\>(`o`): `T`
+> `static` **preventExtensions**\<`T`\>(`o`): `T`
 
 Prevents the addition of new properties to an object.
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object to make non-extensible. |
+• **o**: `T`
+
+Object to make non-extensible.
 
 #### Returns
 
@@ -3038,91 +2896,93 @@ Prevents the addition of new properties to an object.
 
 #### Inherited from
 
-ResServerTools.preventExtensions
+`ResServerTools.preventExtensions`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:240
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:240
 
-___
+***
 
-### register
+### register()
 
-▸ **register**(`name`, `options`): `boolean` \| `ToolFunc`
+#### register(name, options)
 
-#### Parameters
+> `static` **register**(`name`, `options`): `boolean` \| `ToolFunc`
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `options` | `FuncItem` |
+##### Parameters
 
-#### Returns
+• **name**: `string`
+
+• **options**: `FuncItem`
+
+##### Returns
 
 `boolean` \| `ToolFunc`
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.register
+`ResServerTools.register`
 
-#### Defined in
+##### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:76
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:76
 
-▸ **register**(`func`, `options`): `boolean` \| `ToolFunc`
+#### register(func, options)
 
-#### Parameters
+> `static` **register**(`func`, `options`): `boolean` \| `ToolFunc`
 
-| Name | Type |
-| :------ | :------ |
-| `func` | `Function` |
-| `options` | `FuncItem` |
+##### Parameters
 
-#### Returns
+• **func**: `Function`
 
-`boolean` \| `ToolFunc`
+• **options**: `FuncItem`
 
-#### Inherited from
-
-ResServerTools.register
-
-#### Defined in
-
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:77
-
-▸ **register**(`name`, `options?`): `boolean` \| `ToolFunc`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` \| `Function` \| `ToolFunc` \| `FuncItem` |
-| `options?` | `FuncItem` |
-
-#### Returns
+##### Returns
 
 `boolean` \| `ToolFunc`
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.register
+`ResServerTools.register`
 
-#### Defined in
+##### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:78
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:77
 
-___
+#### register(name, options)
 
-### run
+> `static` **register**(`name`, `options`?): `boolean` \| `ToolFunc`
 
-▸ **run**(`name`, `params?`): `Promise`\<`any`\>
+##### Parameters
+
+• **name**: `string` \| `Function` \| `ToolFunc` \| `FuncItem`
+
+• **options?**: `FuncItem`
+
+##### Returns
+
+`boolean` \| `ToolFunc`
+
+##### Inherited from
+
+`ResServerTools.register`
+
+##### Defined in
+
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:78
+
+***
+
+### run()
+
+> `static` **run**(`name`, `params`?): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -3130,24 +2990,23 @@ ___
 
 #### Inherited from
 
-ResServerTools.run
+`ResServerTools.run`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:70
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:70
 
-___
+***
 
-### runSync
+### runSync()
 
-▸ **runSync**(`name`, `params?`): `any`
+> `static` **runSync**(`name`, `params`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -3155,24 +3014,23 @@ ___
 
 #### Inherited from
 
-ResServerTools.runSync
+`ResServerTools.runSync`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:71
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:71
 
-___
+***
 
-### runWithPos
+### runWithPos()
 
-▸ **runWithPos**(`name`, `...params`): `Promise`\<`any`\>
+> `static` **runWithPos**(`name`, ...`params`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -3180,24 +3038,23 @@ ___
 
 #### Inherited from
 
-ResServerTools.runWithPos
+`ResServerTools.runWithPos`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:73
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:73
 
-___
+***
 
-### runWithPosSync
+### runWithPosSync()
 
-▸ **runWithPosSync**(`name`, `...params`): `any`
+> `static` **runWithPosSync**(`name`, ...`params`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -3205,31 +3062,29 @@ ___
 
 #### Inherited from
 
-ResServerTools.runWithPosSync
+`ResServerTools.runWithPosSync`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:74
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:74
 
-___
+***
 
-### seal
+### seal()
 
-▸ **seal**\<`T`\>(`o`): `T`
+> `static` **seal**\<`T`\>(`o`): `T`
 
 Prevents the modification of attributes of existing properties, and prevents the addition of new properties.
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to lock the attributes. |
+• **o**: `T`
+
+Object on which to lock the attributes.
 
 #### Returns
 
@@ -3237,23 +3092,21 @@ Prevents the modification of attributes of existing properties, and prevents the
 
 #### Inherited from
 
-ResServerTools.seal
+`ResServerTools.seal`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:216
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:216
 
-___
+***
 
-### setApiRoot
+### setApiRoot()
 
-▸ **setApiRoot**(`v`): `void`
+> `static` **setApiRoot**(`v`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
+• **v**: `string`
 
 #### Returns
 
@@ -3261,26 +3114,29 @@ ___
 
 #### Inherited from
 
-ResServerTools.setApiRoot
+`ResServerTools.setApiRoot`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:284
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:284
 
-___
+***
 
-### setPrototypeOf
+### setPrototypeOf()
 
-▸ **setPrototypeOf**(`o`, `proto`): `any`
+> `static` **setPrototypeOf**(`o`, `proto`): `any`
 
 Sets the prototype of a specified object o to object proto or null. Returns the object o.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | The object to change its prototype. |
-| `proto` | ``null`` \| `object` | The value of the new prototype or null. |
+• **o**: `any`
+
+The object to change its prototype.
+
+• **proto**: `null` \| `object`
+
+The value of the new prototype or null.
 
 #### Returns
 
@@ -3288,41 +3144,39 @@ Sets the prototype of a specified object o to object proto or null. Returns the 
 
 #### Inherited from
 
-ResServerTools.setPrototypeOf
+`ResServerTools.setPrototypeOf`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:337
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:339
 
-___
+***
 
-### toJSON
+### toJSON()
 
-▸ **toJSON**(): `Object`
+> `static` **toJSON**(): `object`
 
 #### Returns
 
-`Object`
+`object`
 
 #### Inherited from
 
-ResServerTools.toJSON
+`ResServerTools.toJSON`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:285
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:285
 
-___
+***
 
-### unregister
+### unregister()
 
-▸ **unregister**(`name`): `undefined` \| `ToolFunc`
+> `static` **unregister**(`name`): `undefined` \| `ToolFunc`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -3330,62 +3184,64 @@ ___
 
 #### Inherited from
 
-ResServerTools.unregister
+`ResServerTools.unregister`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:79
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:79
 
-___
+***
 
-### values
+### values()
 
-▸ **values**\<`T`\>(`o`): `T`[]
+#### values(o)
 
-Returns an array of values of the enumerable properties of an object
+> `static` **values**\<`T`\>(`o`): `T`[]
 
-#### Type parameters
+Returns an array of values of the enumerable own properties of an object
 
-| Name |
-| :------ |
-| `T` |
+##### Type Parameters
 
-#### Parameters
+• **T**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | \{ `[s: string]`: `T`;  } \| `ArrayLike`\<`T`\> | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**: `object` \| `ArrayLike`\<`T`\>
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `T`[]
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.values
+`ResServerTools.values`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:24
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:24
 
-▸ **values**(`o`): `any`[]
+#### values(o)
 
-Returns an array of values of the enumerable properties of an object
+> `static` **values**(`o`): `any`[]
 
-#### Parameters
+Returns an array of values of the enumerable own properties of an object
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `Object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `any`[]
 
-#### Inherited from
+##### Inherited from
 
-ResServerTools.values
+`ResServerTools.values`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:30
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:30

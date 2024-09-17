@@ -1,41 +1,37 @@
-[@isdk/ai-tool-downloader](../README.md) / [Exports](../modules.md) / UrlMetaInfo
+[**@isdk/ai-tool-downloader**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-downloader](../globals.md) / UrlMetaInfo
 
 # Interface: UrlMetaInfo
-
-## Table of contents
-
-### Properties
-
-- [canRange](UrlMetaInfo.md#canrange)
-- [headers](UrlMetaInfo.md#headers)
-- [size](UrlMetaInfo.md#size)
 
 ## Properties
 
 ### canRange
 
-• **canRange**: `boolean`
+> **canRange**: `boolean`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/utils.ts:17](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/utils.ts#L17)
+[packages/ai-tool-downloader/src/utils.ts:17](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/utils.ts#L17)
 
-___
+***
 
-### headers
+### headers?
 
-• `Optional` **headers**: `Headers`
+> `optional` **headers**: `Headers`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/utils.ts:18](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/utils.ts#L18)
+[packages/ai-tool-downloader/src/utils.ts:18](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/utils.ts#L18)
 
-___
+***
 
 ### size
 
-• **size**: ``null`` \| `number`
+> **size**: `null` \| `number`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/utils.ts:16](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/utils.ts#L16)
+[packages/ai-tool-downloader/src/utils.ts:16](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/utils.ts#L16)

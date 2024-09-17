@@ -1,58 +1,24 @@
-[@isdk/ai-tool-downloader](../README.md) / [Exports](../modules.md) / ChunkDownload
+[**@isdk/ai-tool-downloader**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-downloader](../globals.md) / ChunkDownload
 
 # Class: ChunkDownload
 
-## Hierarchy
+## Extends
 
 - `EventEmitter`
 
-  ↳ **`ChunkDownload`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](ChunkDownload.md#constructor)
-
-### Properties
-
-- [\_status](ChunkDownload.md#_status)
-- [lastError](ChunkDownload.md#lasterror)
-- [options](ChunkDownload.md#options)
-- [defaultMaxListeners](ChunkDownload.md#defaultmaxlisteners)
-- [nextId](ChunkDownload.md#nextid)
-
-### Accessors
-
-- [status](ChunkDownload.md#status)
-
-### Methods
-
-- [emit](ChunkDownload.md#emit)
-- [emitAsync](ChunkDownload.md#emitasync)
-- [listenerCount](ChunkDownload.md#listenercount)
-- [listeners](ChunkDownload.md#listeners)
-- [off](ChunkDownload.md#off)
-- [on](ChunkDownload.md#on)
-- [once](ChunkDownload.md#once)
-- [removeAllListeners](ChunkDownload.md#removealllisteners)
-- [setMaxListeners](ChunkDownload.md#setmaxlisteners)
-- [start](ChunkDownload.md#start)
-- [stop](ChunkDownload.md#stop)
-- [toJSON](ChunkDownload.md#tojson)
-- [listenerCount](ChunkDownload.md#listenercount-1)
-
 ## Constructors
 
-### constructor
+### new ChunkDownload()
 
-• **new ChunkDownload**(`options`): [`ChunkDownload`](ChunkDownload.md)
+> **new ChunkDownload**(`options`): [`ChunkDownload`](ChunkDownload.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`ChunkOptions`](../interfaces/ChunkOptions.md) |
+• **options**: [`ChunkOptions`](../interfaces/ChunkOptions.md)
 
 #### Returns
 
@@ -60,110 +26,101 @@
 
 #### Overrides
 
-EventEmitter.constructor
+`EventEmitter.constructor`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/chunk-download.ts#L57)
+[packages/ai-tool-downloader/src/chunk-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/chunk-download.ts#L57)
 
 ## Properties
 
 ### \_status
 
-• **\_status**: [`FileDownloadStatus`](../modules.md#filedownloadstatus) = `'pending'`
+> **\_status**: [`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md) = `'pending'`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/chunk-download.ts#L45)
+[packages/ai-tool-downloader/src/chunk-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/chunk-download.ts#L45)
 
-___
+***
 
-### lastError
+### lastError?
 
-• `Optional` **lastError**: `Error`
+> `optional` **lastError**: `Error`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:44](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/chunk-download.ts#L44)
+[packages/ai-tool-downloader/src/chunk-download.ts:44](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/chunk-download.ts#L44)
 
-___
+***
 
 ### options
 
-• **options**: [`ChunkOptions`](../interfaces/ChunkOptions.md)
+> **options**: [`ChunkOptions`](../interfaces/ChunkOptions.md)
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:43](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/chunk-download.ts#L43)
+[packages/ai-tool-downloader/src/chunk-download.ts:43](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/chunk-download.ts#L43)
 
-___
+***
 
 ### defaultMaxListeners
 
-▪ `Static` **defaultMaxListeners**: `number`
+> `static` **defaultMaxListeners**: `number`
 
 #### Inherited from
 
-EventEmitter.defaultMaxListeners
+`EventEmitter.defaultMaxListeners`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:7
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:7
 
-___
+***
 
 ### nextId
 
-▪ `Static` **nextId**: `number` = `0`
+> `static` **nextId**: `number` = `0`
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:41](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/chunk-download.ts#L41)
+[packages/ai-tool-downloader/src/chunk-download.ts:41](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/chunk-download.ts#L41)
 
 ## Accessors
 
 ### status
 
-• `get` **status**(): [`FileDownloadStatus`](../modules.md#filedownloadstatus)
+> `get` **status**(): [`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md)
 
-#### Returns
-
-[`FileDownloadStatus`](../modules.md#filedownloadstatus)
-
-#### Defined in
-
-[packages/ai-tool-downloader/src/chunk-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/chunk-download.ts#L47)
-
-• `set` **status**(`value`): `void`
+> `set` **status**(`value`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | [`FileDownloadStatus`](../modules.md#filedownloadstatus) |
+• **value**: [`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md)
 
 #### Returns
 
-`void`
+[`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md)
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:50](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/chunk-download.ts#L50)
+[packages/ai-tool-downloader/src/chunk-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/chunk-download.ts#L47)
 
 ## Methods
 
-### emit
+### emit()
 
-▸ **emit**(`eventName`, `...args`): `any`
+> **emit**(`eventName`, ...`args`): `any`
 
 Emits the specified event type with the given arguments.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` | - |
-| `...args` | `any`[] | The event type followed by any number of arguments to be passed to the listener functions. |
+• **eventName**: `string`
+
+• ...**args**: `any`[]
+
+The event type followed by any number of arguments to be passed to the listener functions.
 
 #### Returns
 
@@ -173,26 +130,27 @@ The result of the event.
 
 #### Inherited from
 
-EventEmitter.emit
+`EventEmitter.emit`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:38
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:38
 
-___
+***
 
-### emitAsync
+### emitAsync()
 
-▸ **emitAsync**(`eventName`, `...args`): `Promise`\<`any`\>
+> **emitAsync**(`eventName`, ...`args`): `Promise`\<`any`\>
 
 Asynchronously emits the specified event type with the given arguments.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` | - |
-| `...args` | `any`[] | The event type followed by any number of arguments to be passed to the listener functions. |
+• **eventName**: `string`
+
+• ...**args**: `any`[]
+
+The event type followed by any number of arguments to be passed to the listener functions.
 
 #### Returns
 
@@ -202,25 +160,25 @@ A promise that resolves with the result of the event.
 
 #### Inherited from
 
-EventEmitter.emitAsync
+`EventEmitter.emitAsync`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:44
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:44
 
-___
+***
 
-### listenerCount
+### listenerCount()
 
-▸ **listenerCount**(`eventName`): `number`
+> **listenerCount**(`eventName`): `number`
 
 Returns the count of listeners that are registered to listen for the specified event.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `RegExp` | The name of the event to get the listeners for. |
+• **eventName**: `string` \| `RegExp`
+
+The name of the event to get the listeners for.
 
 #### Returns
 
@@ -230,25 +188,25 @@ Returns the count of listeners that are registered to listen for the specified e
 
 #### Inherited from
 
-EventEmitter.listenerCount
+`EventEmitter.listenerCount`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:66
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:66
 
-___
+***
 
-### listeners
+### listeners()
 
-▸ **listeners**(`eventName`): `Function`[]
+> **listeners**(`eventName`): `Function`[]
 
 Returns an array of functions that are registered to listen for the specified event.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `RegExp` | The name of the event to get the listeners for. |
+• **eventName**: `string` \| `RegExp`
+
+The name of the event to get the listeners for.
 
 #### Returns
 
@@ -258,26 +216,27 @@ Returns an array of functions that are registered to listen for the specified ev
 
 #### Inherited from
 
-EventEmitter.listeners
+`EventEmitter.listeners`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:59
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:59
 
-___
+***
 
-### off
+### off()
 
-▸ **off**(`eventName`, `listener`): `EventEmitter`
+> **off**(`eventName`, `listener`): `EventEmitter`
 
 Removes a listener function from the specified event type.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `RegExp` | - |
-| `listener` | `Function` | The listener function to be removed. |
+• **eventName**: `string` \| `RegExp`
+
+• **listener**: `Function`
+
+The listener function to be removed.
 
 #### Returns
 
@@ -285,32 +244,33 @@ Removes a listener function from the specified event type.
 
 The EventEmitter instance to allow chaining.
 
-**`Throws`**
+#### Throws
 
 If the listener is not a function.
 
 #### Inherited from
 
-EventEmitter.off
+`EventEmitter.off`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:32
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:32
 
-___
+***
 
-### on
+### on()
 
-▸ **on**(`eventName`, `listener`): `EventEmitter`
+> **on**(`eventName`, `listener`): `EventEmitter`
 
 Adds a listener function to the specified event type.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `RegExp` | - |
-| `listener` | `Function` | The listener function to be called when the event is emitted. |
+• **eventName**: `string` \| `RegExp`
+
+• **listener**: `Function`
+
+The listener function to be called when the event is emitted.
 
 #### Returns
 
@@ -318,32 +278,33 @@ Adds a listener function to the specified event type.
 
 The EventEmitter instance to allow chaining.
 
-**`Throws`**
+#### Throws
 
 If the listener is not a function.
 
 #### Inherited from
 
-EventEmitter.on
+`EventEmitter.on`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:16
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:16
 
-___
+***
 
-### once
+### once()
 
-▸ **once**(`eventName`, `listener`): `EventEmitter`
+> **once**(`eventName`, `listener`): `EventEmitter`
 
 Adds a one-time listener function to the specified event type.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `RegExp` | - |
-| `listener` | `Function` | The listener function to be called once when the event is emitted. |
+• **eventName**: `string` \| `RegExp`
+
+• **listener**: `Function`
+
+The listener function to be called once when the event is emitted.
 
 #### Returns
 
@@ -351,31 +312,31 @@ Adds a one-time listener function to the specified event type.
 
 The EventEmitter instance to allow chaining.
 
-**`Throws`**
+#### Throws
 
 If the listener is not a function.
 
 #### Inherited from
 
-EventEmitter.once
+`EventEmitter.once`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:24
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:24
 
-___
+***
 
-### removeAllListeners
+### removeAllListeners()
 
-▸ **removeAllListeners**(`eventName?`): `EventEmitter`
+> **removeAllListeners**(`eventName`?): `EventEmitter`
 
 Removes all listeners for a specific event or all events from an event emitter.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName?` | `string` \| `RegExp` | The event to remove listeners for. If not provided, all listeners for all events will be removed. |
+• **eventName?**: `string` \| `RegExp`
+
+The event to remove listeners for. If not provided, all listeners for all events will be removed.
 
 #### Returns
 
@@ -385,23 +346,21 @@ Removes all listeners for a specific event or all events from an event emitter.
 
 #### Inherited from
 
-EventEmitter.removeAllListeners
+`EventEmitter.removeAllListeners`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:51
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:51
 
-___
+***
 
-### setMaxListeners
+### setMaxListeners()
 
-▸ **setMaxListeners**(`n`): `EventEmitter`
+> **setMaxListeners**(`n`): `EventEmitter`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `n` | `number` |
+• **n**: `number`
 
 #### Returns
 
@@ -409,23 +368,21 @@ ___
 
 #### Inherited from
 
-EventEmitter.setMaxListeners
+`EventEmitter.setMaxListeners`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:52
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:52
 
-___
+***
 
-### start
+### start()
 
-▸ **start**(`options?`): `Promise`\<`void`\>
+> **start**(`options`?): `Promise`\<`void`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`ChunkOptions`](../interfaces/ChunkOptions.md) |
+• **options?**: [`ChunkOptions`](../interfaces/ChunkOptions.md)
 
 #### Returns
 
@@ -433,19 +390,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:71](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/chunk-download.ts#L71)
+[packages/ai-tool-downloader/src/chunk-download.ts:71](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/chunk-download.ts#L71)
 
-___
+***
 
-### stop
+### stop()
 
-▸ **stop**(`options?`): `Promise`\<`void`\>
+> **stop**(`options`?): `Promise`\<`void`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`ChunkOptions`](../interfaces/ChunkOptions.md) |
+• **options?**: [`ChunkOptions`](../interfaces/ChunkOptions.md)
 
 #### Returns
 
@@ -453,13 +408,13 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:199](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/chunk-download.ts#L199)
+[packages/ai-tool-downloader/src/chunk-download.ts:199](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/chunk-download.ts#L199)
 
-___
+***
 
-### toJSON
+### toJSON()
 
-▸ **toJSON**(): `any`
+> **toJSON**(): `any`
 
 #### Returns
 
@@ -467,35 +422,34 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:212](https://github.com/isdk/ai-tool-download.js/blob/c919e17ce54509d2fa99fa359cd46320295cc012/src/chunk-download.ts#L212)
+[packages/ai-tool-downloader/src/chunk-download.ts:212](https://github.com/isdk/ai-tool-download.js/blob/609380d16e83ac2f77ffb9ec6a0d5aa57425a31a/src/chunk-download.ts#L212)
 
-___
+***
 
-### listenerCount
+### ~~listenerCount()~~
 
-▸ **listenerCount**(`emitter`, `eventName`): `number`
+> `static` **listenerCount**(`emitter`, `eventName`): `number`
 
 Returns the count of listeners that are registered to listen for the specified event.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `emitter` | `EventEmitter` |
-| `eventName` | `string` \| `RegExp` |
+• **emitter**: `EventEmitter`
+
+• **eventName**: `string` \| `RegExp`
 
 #### Returns
 
 `number`
 
-**`Deprecated`**
+#### Deprecated
 
 use emitter.listenerCount instead
 
 #### Inherited from
 
-EventEmitter.listenerCount
+`EventEmitter.listenerCount`
 
 #### Defined in
 
-node_modules/.pnpm/events-ex@2.0.0/node_modules/events-ex/lib/event-emitter.d.ts:74
+node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:74
