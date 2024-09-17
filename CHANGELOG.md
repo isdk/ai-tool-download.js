@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.1](https://github.com/isdk/ai-tool-download.js/compare/v0.1.0...v0.1.1) (2024-09-17)
+
+
+### Bug Fixes
+
+* destinationFolder should be cwd if no input ([2dc25ea](https://github.com/isdk/ai-tool-download.js/commit/2dc25eaa43b4bda0b8aacddca68c0ef546b52187))
+
 ## [0.1.0](https://github.com/isdk/ai-tool-download.js/compare/v0.0.18...v0.1.0) (2024-09-16)
 
 
