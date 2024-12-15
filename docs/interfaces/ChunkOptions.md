@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/1180561ce090d8a20a34e4d599228106f8c15a5b/src/chunk-download.ts#L36)
+[packages/ai-tool-downloader/src/chunk-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/f5dabf0a87cbd6138c71ae0b644fdaca433fad82/src/chunk-download.ts#L36)
 
 ***
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/1180561ce090d8a20a34e4d599228106f8c15a5b/src/chunk-download.ts#L37)
+[packages/ai-tool-downloader/src/chunk-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/f5dabf0a87cbd6138c71ae0b644fdaca433fad82/src/chunk-download.ts#L37)
 
 ***
 
@@ -44,7 +44,7 @@ A BodyInit object or null to set request's body.
 
 #### Defined in
 
-node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1694
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:1694
 
 ***
 
@@ -60,7 +60,7 @@ A string indicating how the request will interact with the browser's cache to se
 
 #### Defined in
 
-node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1696
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:1696
 
 ***
 
@@ -76,7 +76,7 @@ A string indicating whether credentials will be sent with the request always, ne
 
 #### Defined in
 
-node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1698
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:1698
 
 ***
 
@@ -88,7 +88,7 @@ The end byte of the chunk.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/1180561ce090d8a20a34e4d599228106f8c15a5b/src/chunk-download.ts#L29)
+[packages/ai-tool-downloader/src/chunk-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/f5dabf0a87cbd6138c71ae0b644fdaca433fad82/src/chunk-download.ts#L29)
 
 ***
 
@@ -146,7 +146,7 @@ save the content to the filePath
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:17](https://github.com/isdk/ai-tool-download.js/blob/1180561ce090d8a20a34e4d599228106f8c15a5b/src/chunk-download.ts#L17)
+[packages/ai-tool-downloader/src/chunk-download.ts:17](https://github.com/isdk/ai-tool-download.js/blob/f5dabf0a87cbd6138c71ae0b644fdaca433fad82/src/chunk-download.ts#L17)
 
 ***
 
@@ -223,7 +223,7 @@ The index of the chunk.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/1180561ce090d8a20a34e4d599228106f8c15a5b/src/chunk-download.ts#L21)
+[packages/ai-tool-downloader/src/chunk-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/f5dabf0a87cbd6138c71ae0b644fdaca433fad82/src/chunk-download.ts#L21)
 
 ***
 
@@ -239,7 +239,7 @@ A cryptographic hash of the resource to be fetched by request. Sets request's in
 
 #### Defined in
 
-node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1702
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:1702
 
 ***
 
@@ -273,7 +273,7 @@ A boolean to set request's keepalive.
 
 #### Defined in
 
-node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1704
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:1704
 
 ***
 
@@ -307,7 +307,7 @@ A string to indicate whether the request will use CORS, or will be restricted to
 
 #### Defined in
 
-node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1708
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:1708
 
 ***
 
@@ -362,7 +362,7 @@ overwrite the existing file.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/1180561ce090d8a20a34e4d599228106f8c15a5b/src/chunk-download.ts#L33)
+[packages/ai-tool-downloader/src/chunk-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/f5dabf0a87cbd6138c71ae0b644fdaca433fad82/src/chunk-download.ts#L33)
 
 ***
 
@@ -417,7 +417,7 @@ node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:46
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/1180561ce090d8a20a34e4d599228106f8c15a5b/src/chunk-download.ts#L35)
+[packages/ai-tool-downloader/src/chunk-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/f5dabf0a87cbd6138c71ae0b644fdaca433fad82/src/chunk-download.ts#L35)
 
 ***
 
@@ -467,7 +467,7 @@ node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:10
 
 #### Defined in
 
-node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1709
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:1709
 
 ***
 
@@ -483,7 +483,7 @@ A string indicating whether request follows redirects, results in an error upon 
 
 #### Defined in
 
-node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1711
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:1711
 
 ***
 
@@ -499,7 +499,7 @@ A string whose value is a same-origin URL, "about:client", or the empty string, 
 
 #### Defined in
 
-node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1713
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:1713
 
 ***
 
@@ -515,7 +515,7 @@ A referrer policy to set request's referrerPolicy.
 
 #### Defined in
 
-node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1715
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:1715
 
 ***
 
@@ -589,7 +589,7 @@ An AbortSignal to set request's signal.
 
 #### Defined in
 
-node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1717
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:1717
 
 ***
 
@@ -599,7 +599,7 @@ node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/1180561ce090d8a20a34e4d599228106f8c15a5b/src/chunk-download.ts#L34)
+[packages/ai-tool-downloader/src/chunk-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/f5dabf0a87cbd6138c71ae0b644fdaca433fad82/src/chunk-download.ts#L34)
 
 ***
 
@@ -611,7 +611,7 @@ The start byte of the chunk.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/1180561ce090d8a20a34e4d599228106f8c15a5b/src/chunk-download.ts#L25)
+[packages/ai-tool-downloader/src/chunk-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/f5dabf0a87cbd6138c71ae0b644fdaca433fad82/src/chunk-download.ts#L25)
 
 ***
 
@@ -722,7 +722,7 @@ download the url content
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:13](https://github.com/isdk/ai-tool-download.js/blob/1180561ce090d8a20a34e4d599228106f8c15a5b/src/chunk-download.ts#L13)
+[packages/ai-tool-downloader/src/chunk-download.ts:13](https://github.com/isdk/ai-tool-download.js/blob/f5dabf0a87cbd6138c71ae0b644fdaca433fad82/src/chunk-download.ts#L13)
 
 ***
 
@@ -738,4 +738,4 @@ Can only be null. Used to disassociate request from any Window.
 
 #### Defined in
 
-node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.dom.d.ts:1719
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:1719

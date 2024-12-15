@@ -14,7 +14,7 @@
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/utils.ts:17](https://github.com/isdk/ai-tool-download.js/blob/1180561ce090d8a20a34e4d599228106f8c15a5b/src/utils.ts#L17)
+[packages/ai-tool-downloader/src/utils.ts:17](https://github.com/isdk/ai-tool-download.js/blob/f5dabf0a87cbd6138c71ae0b644fdaca433fad82/src/utils.ts#L17)
 
 ***
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/utils.ts:18](https://github.com/isdk/ai-tool-download.js/blob/1180561ce090d8a20a34e4d599228106f8c15a5b/src/utils.ts#L18)
+[packages/ai-tool-downloader/src/utils.ts:18](https://github.com/isdk/ai-tool-download.js/blob/f5dabf0a87cbd6138c71ae0b644fdaca433fad82/src/utils.ts#L18)
 
 ***
 
@@ -34,4 +34,4 @@
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/utils.ts:16](https://github.com/isdk/ai-tool-download.js/blob/1180561ce090d8a20a34e4d599228106f8c15a5b/src/utils.ts#L16)
+[packages/ai-tool-downloader/src/utils.ts:16](https://github.com/isdk/ai-tool-download.js/blob/f5dabf0a87cbd6138c71ae0b644fdaca433fad82/src/utils.ts#L16)

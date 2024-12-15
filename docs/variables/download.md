@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[packages/ai-tool-downloader/src/ai-tool-download.ts:482](https://github.com/isdk/ai-tool-download.js/blob/1180561ce090d8a20a34e4d599228106f8c15a5b/src/ai-tool-download.ts#L482)
+[packages/ai-tool-downloader/src/ai-tool-download.ts:482](https://github.com/isdk/ai-tool-download.js/blob/f5dabf0a87cbd6138c71ae0b644fdaca433fad82/src/ai-tool-download.ts#L482)
