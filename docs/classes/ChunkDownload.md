@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/chunk-download.ts#L57)
+[packages/ai-tool-downloader/src/chunk-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/chunk-download.ts#L57)
 
 ## Properties
 
@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/chunk-download.ts#L45)
+[packages/ai-tool-downloader/src/chunk-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/chunk-download.ts#L45)
 
 ***
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:44](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/chunk-download.ts#L44)
+[packages/ai-tool-downloader/src/chunk-download.ts:44](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/chunk-download.ts#L44)
 
 ***
 
@@ -60,7 +60,7 @@
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:43](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/chunk-download.ts#L43)
+[packages/ai-tool-downloader/src/chunk-download.ts:43](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/chunk-download.ts#L43)
 
 ***
 
@@ -84,7 +84,7 @@ node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:41](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/chunk-download.ts#L41)
+[packages/ai-tool-downloader/src/chunk-download.ts:41](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/chunk-download.ts#L41)
 
 ## Accessors
 
@@ -104,7 +104,7 @@ node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/chunk-download.ts#L47)
+[packages/ai-tool-downloader/src/chunk-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/chunk-download.ts#L47)
 
 ## Methods
 
@@ -390,7 +390,7 @@ node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:71](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/chunk-download.ts#L71)
+[packages/ai-tool-downloader/src/chunk-download.ts:71](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/chunk-download.ts#L71)
 
 ***
 
@@ -408,7 +408,7 @@ node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:199](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/chunk-download.ts#L199)
+[packages/ai-tool-downloader/src/chunk-download.ts:202](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/chunk-download.ts#L202)
 
 ***
 
@@ -422,7 +422,7 @@ node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/chunk-download.ts:212](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/chunk-download.ts#L212)
+[packages/ai-tool-downloader/src/chunk-download.ts:215](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/chunk-download.ts#L215)
 
 ***
 

@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/base-file-download.ts#L35)
+[packages/ai-tool-downloader/src/base-file-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/base-file-download.ts#L35)
 
 ***
 
@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/base-file-download.ts#L37)
+[packages/ai-tool-downloader/src/base-file-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/base-file-download.ts#L37)
 
 ***
 
@@ -84,7 +84,7 @@ The size of each chunk.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/base-file-download.ts#L29)
+[packages/ai-tool-downloader/src/base-file-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/base-file-download.ts#L29)
 
 ***
 
@@ -98,7 +98,7 @@ The size of each chunk.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/base-file-download.ts#L34)
+[packages/ai-tool-downloader/src/base-file-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/base-file-download.ts#L34)
 
 ***
 
@@ -114,7 +114,7 @@ The number of concurrent chunk downloads.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/base-file-download.ts#L25)
+[packages/ai-tool-downloader/src/base-file-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/base-file-download.ts#L25)
 
 ***
 
@@ -146,7 +146,7 @@ The folder where the downloaded file will be saved.
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/base-file-download.ts#L33)
+[packages/ai-tool-downloader/src/base-file-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/base-file-download.ts#L33)
 
 ***
 
@@ -206,7 +206,7 @@ node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:18
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/base-file-download.ts#L21)
+[packages/ai-tool-downloader/src/base-file-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/base-file-download.ts#L21)
 
 ***
 
@@ -331,7 +331,7 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:1
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/file-download.ts:6](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/file-download.ts#L6)
+[packages/ai-tool-downloader/src/file-download.ts:6](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/file-download.ts#L6)
 
 ***
 
@@ -422,7 +422,7 @@ node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:16
 
 #### Defined in
 
-[packages/ai-tool-downloader/src/base-file-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/80d9e6be3e3b64743a58ca4b0eb84d7461594811/src/base-file-download.ts#L36)
+[packages/ai-tool-downloader/src/base-file-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/92e9fe5642765d2f86d8f4b90e248c22c49d4fa3/src/base-file-download.ts#L36)
 
 ***
 
