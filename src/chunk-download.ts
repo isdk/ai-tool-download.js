@@ -143,6 +143,9 @@ export class ChunkDownload extends EventEmitter {
         if (isPart) options.headers = { ...options.headers, Range: rangeHeader }
       }
 
+      const retry = options.retry ?? 9
+      if (options.retry !== retry) {options.retry = retry}
+
       if (contentLength == null && !options.skipCheck) {
         // check the range when the server does not return content-length
         const response = await ky.head(options.url, {
