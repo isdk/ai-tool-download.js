@@ -8,4 +8,4 @@
 
 > `const` **minSplitSizeInBytes**: `number`
 
-Defined in: [packages/ai-tool-downloader/src/utils.ts:13](https://github.com/isdk/ai-tool-download.js/blob/5c633badb58d2b1edcb590d9347934219b941226/src/utils.ts#L13)
+Defined in: [packages/ai-tool-downloader/src/utils.ts:13](https://github.com/isdk/ai-tool-download.js/blob/9e1990e4a372ec30be96b98684d0c457e02ab7f5/src/utils.ts#L13)
