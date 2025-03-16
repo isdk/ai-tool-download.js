@@ -8,4 +8,4 @@
 
 > `const` **defaultChunkSizeInBytes**: `number`
 
-Defined in: [packages/ai-tool-downloader/src/utils.ts:11](https://github.com/isdk/ai-tool-download.js/blob/9899344a67863acfa03d6df4c6ba1f7ac38d4db9/src/utils.ts#L11)
+Defined in: [packages/ai-tool-downloader/src/utils.ts:11](https://github.com/isdk/ai-tool-download.js/blob/7a4c0812ca18d551acb75853ed2757a99829977f/src/utils.ts#L11)
