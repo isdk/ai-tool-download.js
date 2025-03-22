@@ -8,4 +8,4 @@
 
 > `const` **DownloadName**: `"download"` = `'download'`
 
-Defined in: [packages/ai-tool-downloader/src/ai-tool-download.ts:55](https://github.com/isdk/ai-tool-download.js/blob/a6010246fb9c1159eaba313faa1f5d4252f9f418/src/ai-tool-download.ts#L55)
+Defined in: [packages/ai-tool-downloader/src/ai-tool-download.ts:55](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/ai-tool-download.ts#L55)

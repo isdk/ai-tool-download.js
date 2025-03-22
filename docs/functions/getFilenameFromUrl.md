@@ -8,7 +8,7 @@
 
 > **getFilenameFromUrl**(`url`): `string`
 
-Defined in: [packages/ai-tool-downloader/src/utils.ts:53](https://github.com/isdk/ai-tool-download.js/blob/a6010246fb9c1159eaba313faa1f5d4252f9f418/src/utils.ts#L53)
+Defined in: [packages/ai-tool-downloader/src/utils.ts:53](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/utils.ts#L53)
 
 ## Parameters
 
