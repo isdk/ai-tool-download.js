@@ -8,4 +8,4 @@
 
 > `const` **DownloadStatusEventName**: `string`
 
-Defined in: [packages/ai-tool-downloader/src/ai-tool-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/ai-tool-download.ts#L57)
+Defined in: [packages/ai-tool-downloader/src/ai-tool-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/ai-tool-download.ts#L57)

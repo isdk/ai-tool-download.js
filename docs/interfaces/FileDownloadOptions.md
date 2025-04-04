@@ -6,7 +6,7 @@
 
 # Interface: FileDownloadOptions
 
-Defined in: [packages/ai-tool-downloader/src/file-download.ts:5](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/file-download.ts#L5)
+Defined in: [packages/ai-tool-downloader/src/file-download.ts:5](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/file-download.ts#L5)
 
 ## Extends
 
@@ -22,7 +22,7 @@ Defined in: [packages/ai-tool-downloader/src/file-download.ts:5](https://github.
 
 > `optional` **aborter**: `AbortController`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/base-file-download.ts#L35)
+Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L35)
 
 #### Inherited from
 
@@ -34,7 +34,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:35](https://g
 
 > `optional` **agent**: `any`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/base-file-download.ts#L37)
+Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L37)
 
 #### Inherited from
 
@@ -74,7 +74,7 @@ A string indicating how the request will interact with the browser's cache to se
 
 > `optional` **chunkSizeInBytes**: `number`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/base-file-download.ts#L29)
+Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L29)
 
 The size of each chunk.
 
@@ -88,7 +88,7 @@ The size of each chunk.
 
 > `optional` **cleanTempFile**: `boolean`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/base-file-download.ts#L34)
+Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L34)
 
 #### Inherited from
 
@@ -100,7 +100,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:34](https://g
 
 > `optional` **concurrency**: `number`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/base-file-download.ts#L25)
+Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L25)
 
 The number of concurrent chunk downloads.
 
@@ -128,7 +128,7 @@ A string indicating whether credentials will be sent with the request always, ne
 
 > `optional` **destinationFolder**: `string`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/base-file-download.ts#L33)
+Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L33)
 
 The folder where the downloaded file will be saved.
 
@@ -190,7 +190,7 @@ const json = await ky('https://example.com', {fetch}).json();
 
 > `optional` **filepath**: `string`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/base-file-download.ts#L21)
+Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L21)
 
 #### Inherited from
 
@@ -307,7 +307,7 @@ A boolean to set request's keepalive.
 
 > `optional` **limit**: `LimitFunction`
 
-Defined in: [packages/ai-tool-downloader/src/file-download.ts:6](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/file-download.ts#L6)
+Defined in: [packages/ai-tool-downloader/src/file-download.ts:6](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/file-download.ts#L6)
 
 ***
 
@@ -390,7 +390,7 @@ const response = await ky('https://example.com', {
 
 > `optional` **overwrite**: `boolean`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/base-file-download.ts#L36)
+Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L36)
 
 #### Inherited from
 

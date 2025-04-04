@@ -40,4 +40,6 @@
 - [createWritableStream](functions/createWritableStream.md)
 - [getFilenameFromResponse](functions/getFilenameFromResponse.md)
 - [getFilenameFromUrl](functions/getFilenameFromUrl.md)
+- [getFilenameFromUrlEx](functions/getFilenameFromUrlEx.md)
+- [getFilenameFromUrlHead](functions/getFilenameFromUrlHead.md)
 - [getUrlMetaInfo](functions/getUrlMetaInfo.md)

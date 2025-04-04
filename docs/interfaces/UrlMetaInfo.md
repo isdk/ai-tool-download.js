@@ -6,7 +6,7 @@
 
 # Interface: UrlMetaInfo
 
-Defined in: [packages/ai-tool-downloader/src/utils.ts:15](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/utils.ts#L15)
+Defined in: [packages/ai-tool-downloader/src/utils.ts:15](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/utils.ts#L15)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/ai-tool-downloader/src/utils.ts:15](https://github.com/isd
 
 > **canRange**: `boolean`
 
-Defined in: [packages/ai-tool-downloader/src/utils.ts:17](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/utils.ts#L17)
+Defined in: [packages/ai-tool-downloader/src/utils.ts:17](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/utils.ts#L17)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [packages/ai-tool-downloader/src/utils.ts:17](https://github.com/isd
 
 > `optional` **headers**: `Headers`
 
-Defined in: [packages/ai-tool-downloader/src/utils.ts:18](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/utils.ts#L18)
+Defined in: [packages/ai-tool-downloader/src/utils.ts:18](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/utils.ts#L18)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [packages/ai-tool-downloader/src/utils.ts:18](https://github.com/isd
 
 > **size**: `null` \| `number`
 
-Defined in: [packages/ai-tool-downloader/src/utils.ts:16](https://github.com/isdk/ai-tool-download.js/blob/48cca8d2cdefd1e29a3aac72c5374cc03b11f332/src/utils.ts#L16)
+Defined in: [packages/ai-tool-downloader/src/utils.ts:16](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/utils.ts#L16)
