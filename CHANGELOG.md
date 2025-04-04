@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.14](https://github.com/isdk/ai-tool-download.js/compare/v0.1.13...v0.1.14) (2025-04-04)
+
+
+### Features
+
+* add getFilenameFromUrlEx, getFilenameFromUrlHead funcs ([09ce910](https://github.com/isdk/ai-tool-download.js/commit/09ce910da0a60480ec886fed5ae17c2c57345f16))
+
 ## [0.1.13](https://github.com/isdk/ai-tool-download.js/compare/v0.1.12...v0.1.13) (2025-03-22)
 
 ## [0.1.12](https://github.com/isdk/ai-tool-download.js/compare/v0.1.11...v0.1.12) (2025-03-17)
