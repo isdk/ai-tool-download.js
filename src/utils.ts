@@ -68,6 +68,31 @@ export function getFilenameFromUrl(url: string) {
   return "";
 }
 
+export async function getFilenameFromUrlHead(url: string, options?: Options) {
+  try {
+    const response = await ky.head(url, {
+      ...options,
+      throwHttpErrors: false,
+    })
+    const filename = getFilenameFromResponse(response)
+    if (filename) {
+      return filename
+    }
+  } catch (error) {
+    // console.error('Error getting filename from URL:', error);
+  }
+}
+
+export async function getFilenameFromUrlEx(url: string, options?: Options) {
+  // first try kv.head to get filenamee from the header
+  let result = await getFilenameFromUrlHead(url, options)
+  if (!result) {
+    // if not found, try to get filename from the header
+    result = getFilenameFromUrl(url)
+  }
+  return result
+}
+
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition
 export function getFilenameFromResponse(response: KyResponse) {
   const disposition = response.headers.get('content-disposition')
