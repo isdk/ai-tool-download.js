@@ -2,7 +2,7 @@ import fs from "fs";
 import path from 'path'
 import type { Options } from 'ky';
 import { EventEmitter } from 'events-ex';
-import { AbortErrorCode, AlreadyExistsError, NotImplementationError, throwError, wait } from "@isdk/ai-tool";
+import { AbortErrorCode, AlreadyExistsError, NotImplementationError, throwError, sleep } from "@isdk/ai-tool";
 
 import { ChunkDownload, type ChunkOptions } from "./chunk-download";
 import {
@@ -224,6 +224,9 @@ export class BaseFileDownload extends EventEmitter {
     if (this.status === 'downloading') {
       throwError('File download has already started.', 'FileDownload', AlreadyDownloadErrCode)
     }
+    if (this.status === 'pausing') {
+      throwError('File download is pausing.', 'FileDownload')
+    }
 
     this.status = 'downloading'
     options = this.resolveOptions(options)
@@ -261,7 +264,7 @@ export class BaseFileDownload extends EventEmitter {
       await this._stop(options)
       try {
         options.aborter?.abort({code: AbortErrorCode, message: 'paused'})
-        await wait(0)
+        await sleep(0)
         await Promise.all(this.chunks.map(chunk => chunk.stop()))
         if (cleanTempFile) { this.cleanTemp(options) }
       } finally {
