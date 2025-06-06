@@ -1,4 +1,4 @@
-import { AbortErrorCode, throwError, wait } from "@isdk/ai-tool";
+import { AbortErrorCode, throwError, sleep } from "@isdk/ai-tool";
 import fs from "fs";
 import ky, { type Options } from 'ky';
 
@@ -204,7 +204,7 @@ export class ChunkDownload extends EventEmitter {
       if (!options) {options = this.options}
       this.status = 'pausing'
       try {
-        await wait(0)
+        await sleep(0)
         options.aborter?.abort({code: AbortErrorCode, message: 'paused'})
       } finally {
         this.status = 'paused'

@@ -1,7 +1,7 @@
 import { inject } from 'vitest'
 import fs from 'fs'
 import path from 'path'
-import { AbortErrorCode, wait } from '@isdk/ai-tool';
+import { AbortErrorCode, sleep } from '@isdk/ai-tool';
 
 import { compareStr, rmFile } from '@isdk/ai-tool/test/util'
 
@@ -59,7 +59,7 @@ describe('FileDownload', () => {
       }
     }
     expect(reqAbort).toBe(false)
-    await wait(10)
+    await sleep(10)
     expect(fs.existsSync(tmpDir)).toBeFalsy()
   })
 
@@ -93,7 +93,7 @@ describe('FileDownload', () => {
     }
 
     let dn = new FileDownload({url: url+xyj, filepath: tmpFilePath, cleanTempFile: false, chunkSizeInBytes, onDownloadProgress})
-    await wait(150)
+    await sleep(150)
     try {
       await dn.start()
     } catch (error) {
@@ -103,7 +103,7 @@ describe('FileDownload', () => {
         throw error
       }
     }
-    await wait(50)
+    await sleep(50)
     expect(reqAbort).toBe(false)
     const chunkCount = Math.ceil(totalBytes / chunkSizeInBytes)
     expect(dn.chunks.length).toBe(chunkCount)

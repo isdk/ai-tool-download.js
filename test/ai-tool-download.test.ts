@@ -9,7 +9,7 @@ import {
   ResClientTools,
   type ResServerFuncParams,
   ResServerTools,
-  wait,
+  sleep,
   xxhashAsStr,
   event, // event bus for server
   backendEventable,
@@ -131,7 +131,7 @@ describe('Tool Download class', () => {
         }
       }
     })
-    await wait(10)
+    await sleep(10)
     const port = await findPort(3000) as number
     const result = await server.listen({port})
     console.log('server listening on ', result)
@@ -178,7 +178,7 @@ describe('Tool Download class', () => {
     res = await result.list()
     expect(res).toStrictEqual([expectId, xxhashAsStr(url + xyjA)])
     res = await result.post({url: url + three})
-    await wait(100)
+    await sleep(100)
     res = await result.get({id: expectId})
     expect(res).toHaveProperty('status', 'completed')
     res = await result.list()
@@ -195,7 +195,7 @@ describe('Tool Download class', () => {
     expect(res).toStrictEqual([])
     rmFile(tmpFilePath)
     res = await result.post({url: xyjUrl, start: true})
-    await wait(5)
+    await sleep(5)
     res = await result.clean({downloading: true})
     expect(res).toStrictEqual([{id: expectId, url: xyjUrl, filepath: xyj}])
     res = await result.list()
@@ -217,7 +217,7 @@ describe('Tool Download class', () => {
     expect(res).toHaveProperty('id', expectId)
     res = await result.get({id})
     expect(res).toHaveProperty('status', 'downloading')
-    await wait(100)
+    await sleep(100)
     res = await result.get({id})
     expect(res).toHaveProperty('status', 'completed')
     const content = fs.readFileSync('/tmp/'+cgt)
@@ -239,10 +239,10 @@ describe('Tool Download class', () => {
     expect(res).toHaveProperty('url', xyjUrl)
     res = await result.start({id})
     expect(res).toHaveProperty('id', expectId)
-    await wait(5)
+    await sleep(5)
     res = await result.get({id})
     expect(res).toHaveProperty('status', 'downloading')
-    await wait(100)
+    await sleep(100)
     res = await result.get({id})
     expect(res).toHaveProperty('status', 'completed')
     const content = fs.readFileSync(tmpFilePath)
@@ -266,12 +266,12 @@ describe('Tool Download class', () => {
     expect(res).toHaveProperty('id', expectId)
     res = await result.get({id})
     while (res.status === 'pending') {
-      await wait(500)
+      await sleep(500)
       res = await result.get({id})
     }
     expect(res).toHaveProperty('status', 'downloading')
     while (res.status === 'downloading') {
-      await wait(500)
+      await sleep(500)
       res = await result.get({id})
     }
     res = await result.get({id})
@@ -291,7 +291,7 @@ describe('Tool Download class', () => {
     res = await result.get({id})
     expect(res).toHaveProperty('id', expectId)
     expect(res).toHaveProperty('url', xyjUrl)
-    await wait(5)
+    await sleep(5)
     res = await result.get({id})
     expect(res).toHaveProperty('status', 'downloading')
     expect(res.chunks).toHaveLength(5)
@@ -302,7 +302,7 @@ describe('Tool Download class', () => {
 
     res = await result.start({id})
     expect(res).toHaveProperty('id', expectId)
-    await wait(100)
+    await sleep(100)
     res = await result.get({id})
     expect(res).toHaveProperty('status', 'completed')
     const content = fs.readFileSync(tmpFilePath)
@@ -320,7 +320,7 @@ describe('Tool Download class', () => {
     res = await result.get({id})
     expect(res).toHaveProperty('id', expectId)
     expect(res).toHaveProperty('url', xyjUrl)
-    await wait(5)
+    await sleep(5)
     res = await result.get({id})
     expect(res).toHaveProperty('status', 'downloading')
     res = await result.stop({id})
@@ -362,7 +362,7 @@ describe('Tool Download class', () => {
     })
     try {
       res = await result.post({url: xyjUrl, start: true})
-      await wait(100)
+      await sleep(100)
       let id = res.id
       res = await result.get({id})
       expect(res).toHaveProperty('status', 'completed')
@@ -377,7 +377,7 @@ describe('Tool Download class', () => {
         autoScaleDownloads: true,
       })
       res = await result.start({url: url + xyjA})
-      await wait(5)
+      await sleep(5)
       res = await result.list({downloadingOnly: true})
       expect(res).toHaveLength(1)
       expect(res).toStrictEqual([ xxhashAsStr(url + xyjA) ])
@@ -394,7 +394,7 @@ describe('Tool Download class', () => {
     await result.clean()
     await result.post({url: xyjUrl, start: true})
     await result.post({url: url + xyjA, start: true})
-    await wait(5)
+    await sleep(5)
     res = await result.list({downloadingOnly: true})
     expect(res).toHaveLength(2)
     expect(res).toStrictEqual([ expectId, xxhashAsStr(url + xyjA) ])
@@ -415,7 +415,7 @@ describe('Tool Download class', () => {
       })
       await result.post({url: xyjUrl, start: true})
       await result.post({url: url + xyjA, start: true})
-      await wait(5)
+      await sleep(5)
       let res = await result.list({downloadingOnly: true})
       expect(res).toHaveLength(1)
       expect(res).toStrictEqual([ xxhashAsStr(url + xyjA) ])
@@ -432,7 +432,7 @@ describe('Tool Download class', () => {
     const event = ResClientTools.get('event') as EventClient
     // await event.init([DownloadProgressEventName +':'+expectId, DownloadStatusEventName+':'+expectId])
     await event.subscribe([DownloadProgressEventName +':'+expectId, DownloadStatusEventName+':'+expectId])
-    await wait(60)
+    await sleep(60)
     try {
       // result.on(`/^${DownloadName}[:]/`, function() {
       //   console.log('event this', this)
@@ -447,12 +447,12 @@ describe('Tool Download class', () => {
         typ = this.type
       })
       await result.post({url: xyjUrl, start: true})
-      await wait(5)
+      await sleep(5)
       expect(c).toStrictEqual(1)
       expect(typ).toStrictEqual(DownloadStatusEventName+':'+expectId)
       expect(data).toStrictEqual([ 'Download', 'downloading', {filepath: 'xyj.txt',  id: expectId, url: xyjUrl } ])
       await result.stop({url: xyjUrl})
-      await wait(5)
+      await sleep(5)
       expect(c).toStrictEqual(3)
       expect(data).toStrictEqual([ 'Download', 'paused', {filepath: 'xyj.txt',  id: expectId, url: xyjUrl } ])
     } finally {
