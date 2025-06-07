@@ -38,6 +38,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^3.6.2",
     "@fastify/static": "^7.0.4",
+    "@kldzj/stream-throttle": "^1.1.1",
     "@types/better-sqlite3": "^7.6.11",
     "@types/got": "^9.6.12",
     "@types/jest": "^29.5.13",

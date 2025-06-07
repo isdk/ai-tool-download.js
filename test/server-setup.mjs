@@ -3,6 +3,8 @@ import path from 'path'
 import { fastify } from 'fastify';
 import { fastifyStatic } from '@fastify/static';
 import { findPort } from '@isdk/ai-tool/test/util'
+import { Readable } from 'stream';
+import { Throttle } from '@kldzj/stream-throttle';
 
 let server
 export async function setup({provide}) {
@@ -44,5 +46,15 @@ function createServer(options) {
   if (options.root) {
     server.register(fastifyStatic, options)
   }
+
+  server.addHook('onSend', throttleSpeedHook)
   return server
+}
+
+const bytesPerSecond = 10000000 // 10MB/s
+async function throttleSpeedHook(request, reply, payload) {
+  if (payload instanceof Readable) {
+    const throttle = new Throttle({ rate: bytesPerSecond });
+    return payload.pipe(throttle);
+  }
 }
