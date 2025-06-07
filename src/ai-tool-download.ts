@@ -11,6 +11,7 @@ import {
   ResServerFuncParams,
   NotFoundError,
   ErrorCode,
+  sleep,
   // EventBusName,
 } from "@isdk/ai-tool";
 // import type { DownloadProgress } from 'ky';
@@ -160,7 +161,7 @@ export class DownloadFunc extends ResServerTools {
         for (let i=0; i<left; i++) {
           const dn = ordered[i];
           setImmediate(async () => {
-            // console.log('🚀 ~ DownloadFunc ~ setImmediate ~ dn:', dn?.id, dn?.options.url)
+            // console.log('🚀 ~ DownloadFunc ~ startAll setImmediate ~ dn:', dn?.id, dn?.options.url)
             try {
               await dn.start()
             } catch(err) {
@@ -255,6 +256,7 @@ export class DownloadFunc extends ResServerTools {
   async start(options: DownloadFuncParams|string) {
     const id = this.getId(options)
     if (id) {
+      await sleep(1)
       const download = this.queue[id]
       if (download) {
         if (download.status !== 'downloading') {
@@ -262,6 +264,8 @@ export class DownloadFunc extends ResServerTools {
           if (this.concurrency - ordered.length <= 0) {
             if (this.autoScaleDownloads) {
               const dn = ordered[0]
+              await sleep(500)
+              // console.log('🚀 ~ file: ai-tool-download.ts:269 ~ stop dn:', dn.getIdInfo().url)
               await dn.stop()
             } else {
               download.status = 'pending'
