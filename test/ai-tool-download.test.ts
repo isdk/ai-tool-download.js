@@ -33,14 +33,15 @@ import {EventEmitter} from 'events-ex'
 const chunkSizeInBytes = 1024 * 512; // 512KB
 FileDownload.minSplitSizeInBytes = chunkSizeInBytes
 
+const mini = 'mini.txt'
 const xyj  = 'xyj.txt'
 const xyjA = 'xyj_annotated.txt'
 const cgt  = 'caigentang.txt'
 const three= 'the3Kingdoms.txt'
-const tmpFilePath = '/tmp/' + xyj
-const tmpDir = tmpFilePath + '.temp'
-const src = fs.readFileSync(path.join(__dirname, 'res', xyj))
-const totalBytes = src.length
+const xyjTmpFilePath = '/tmp/' + xyj
+const xyjTmpDir = xyjTmpFilePath + '.temp'
+const xyjSrc = fs.readFileSync(path.join(__dirname, 'res', xyj))
+const totalBytes = xyjSrc.length
 const eventBus4Client = new EventToolFunc(EventBusName)
 
 declare module 'vitest' {
@@ -51,6 +52,8 @@ declare module 'vitest' {
 
 describe('Tool Download class', () => {
   let apiRoot: string // = 'http://localhost:3000/api'
+  let downloader: DownloadFunc
+  let DefaultDownloadConig: any
   const server = fastify()
   const url: string = inject('server-url')
 
@@ -140,14 +143,16 @@ describe('Tool Download class', () => {
 
     ResServerTools.register(eventOnServer)
     ResServerTools.setApiRoot(apiRoot)
-    const res = new DownloadFunc(DownloadName)
-    res.rootDir = '/tmp/'
-    res.chunkSizeInBytes = chunkSizeInBytes
-    ResServerTools.register(res)
+    downloader = new DownloadFunc(DownloadName)
+    downloader.rootDir = '/tmp/'
+    downloader.chunkSizeInBytes = chunkSizeInBytes
+    ResServerTools.register(downloader)
 
     ResClientTools.register(eventOnClient)
     ResClientTools.setApiRoot(apiRoot)
     await ResClientTools.loadFrom()
+
+    DefaultDownloadConig = downloader.$config()
   })
 
   afterAll(async () => {
@@ -160,11 +165,14 @@ describe('Tool Download class', () => {
     const result = ResClientTools.get(DownloadName)
     // clean all completed tasks
     await result.clean()
-    rmFile(tmpFilePath)
+    rmFile(xyjTmpFilePath)
     rmFile('/tmp/' + xyjA)
     rmFile('/tmp/' + three)
     rmFile('/tmp/' + cgt)
+    rmFile('/tmp/' + mini)
     rmFile('/tmp/aa')
+    downloader.$clean({paused: true, downloading: true})
+    downloader.$config(DefaultDownloadConig)
   })
 
   it('should list download tasks', async () => {
@@ -178,8 +186,11 @@ describe('Tool Download class', () => {
     res = await result.list()
     expect(res).toStrictEqual([expectId, xxhashAsStr(url + xyjA)])
     res = await result.post({url: url + three})
-    await sleep(100)
-    res = await result.get({id: expectId})
+    do {
+      await sleep(10)
+      res = await result.get({id: expectId})
+    } while (res.status === 'downloading')
+
     expect(res).toHaveProperty('status', 'completed')
     res = await result.list()
     expect(res).toStrictEqual([xxhashAsStr(url + xyjA), xxhashAsStr(url + three)])
@@ -193,7 +204,7 @@ describe('Tool Download class', () => {
     expect(res).toStrictEqual([{id: xxhashAsStr(url + xyjA), url: url + xyjA, filepath: xyjA}, {id: xxhashAsStr(url + three), url: url + three, filepath: three}])
     res = await result.list()
     expect(res).toStrictEqual([])
-    rmFile(tmpFilePath)
+    rmFile(xyjTmpFilePath)
     res = await result.post({url: xyjUrl, start: true})
     await sleep(5)
     res = await result.clean({downloading: true})
@@ -242,12 +253,15 @@ describe('Tool Download class', () => {
     await sleep(5)
     res = await result.get({id})
     expect(res).toHaveProperty('status', 'downloading')
-    await sleep(100)
+    while(res.status === 'downloading') {
+      await sleep(30)
+      res = await result.get({id})
+    }
     res = await result.get({id})
     expect(res).toHaveProperty('status', 'completed')
-    const content = fs.readFileSync(tmpFilePath)
-    expect(content.length).toEqual(src.length)
-    expect(compareStr(src, content)).toBeTruthy()
+    const content = fs.readFileSync(xyjTmpFilePath)
+    expect(content.length).toEqual(xyjSrc.length)
+    expect(compareStr(xyjSrc, content)).toBeTruthy()
    });
 
    it.skip('should download file from remote', async () => {
@@ -291,7 +305,7 @@ describe('Tool Download class', () => {
     res = await result.get({id})
     expect(res).toHaveProperty('id', expectId)
     expect(res).toHaveProperty('url', xyjUrl)
-    await sleep(5)
+    await sleep(30)
     res = await result.get({id})
     expect(res).toHaveProperty('status', 'downloading')
     expect(res.chunks).toHaveLength(5)
@@ -302,12 +316,18 @@ describe('Tool Download class', () => {
 
     res = await result.start({id})
     expect(res).toHaveProperty('id', expectId)
-    await sleep(100)
+
+    do {
+      res = await result.get({id})
+      await sleep(30)
+    } while(res.status === 'downloading')
+
+
     res = await result.get({id})
     expect(res).toHaveProperty('status', 'completed')
-    const content = fs.readFileSync(tmpFilePath)
-    expect(content.length).toEqual(src.length)
-    expect(compareStr(src, content)).toBeTruthy()
+    const content = fs.readFileSync(xyjTmpFilePath)
+    expect(content.length).toEqual(xyjSrc.length)
+    expect(compareStr(xyjSrc, content)).toBeTruthy()
   })
 
   it('should clean temp file after removing task ', async () => {
@@ -320,16 +340,16 @@ describe('Tool Download class', () => {
     res = await result.get({id})
     expect(res).toHaveProperty('id', expectId)
     expect(res).toHaveProperty('url', xyjUrl)
-    await sleep(5)
+    await sleep(30)
     res = await result.get({id})
     expect(res).toHaveProperty('status', 'downloading')
     res = await result.stop({id})
     expect(res).toHaveProperty('status', 'paused')
-    expect(fs.existsSync(path.join(tmpDir, '0.part'))).toBeTruthy()
+    expect(fs.existsSync(path.join(xyjTmpDir, '0.part'))).toBeTruthy()
     res = await result.delete({id})
     expect(res).toHaveProperty('id', expectId)
     expect(res).toHaveProperty('status', 'paused')
-    expect(fs.existsSync(tmpDir)).toBeFalsy()
+    expect(fs.existsSync(xyjTmpDir)).toBeFalsy()
   })
 
   it('should config downloader', async () => {
@@ -362,17 +382,17 @@ describe('Tool Download class', () => {
     })
     try {
       res = await result.post({url: xyjUrl, start: true})
-      await sleep(100)
+      await sleep(200)
       let id = res.id
       res = await result.get({id})
       expect(res).toHaveProperty('status', 'completed')
       expect(fs.existsSync('/tmp/aa/'+xyj)).toBeTruthy()
       expect(fs.existsSync('/tmp/aa/'+xyj+'.temp')).toBeTruthy()
       rmFile('/tmp/aa')
-      rmFile(tmpFilePath)
+      rmFile(xyjTmpFilePath)
       await result.clean()
       await result.post({url: xyjUrl, start: true, order: 1})
-      expect(result.post({url: url + xyjA, start: true, order: 0})).rejects.toThrow('Concurrency limit reached')
+      await expect(result.post({url: url + xyjA, start: true, order: 0})).rejects.toThrow('Concurrency limit reached')
       res = await result.config({
         autoScaleDownloads: true,
       })
@@ -380,27 +400,28 @@ describe('Tool Download class', () => {
       await sleep(5)
       res = await result.list({downloadingOnly: true})
       expect(res).toHaveLength(1)
-      expect(res).toStrictEqual([ xxhashAsStr(url + xyjA) ])
-      expect(fs.existsSync('/tmp/aa/'+xyjA+'.temp')).toBeTruthy()
+      expect(res).toStrictEqual([ xxhashAsStr(url + xyj) ])
+      expect(fs.existsSync('/tmp/aa/'+xyj+'.temp')).toBeTruthy()
       res = await result.config({
         cleanTempFile: true,
       })
       await result.clean({downloading: true, paused: true})
-      expect(fs.existsSync('/tmp/aa/'+xyjA+'.temp')).toBeFalsy()
+      expect(fs.existsSync('/tmp/aa/'+xyj+'.temp')).toBeFalsy()
       rmFile('/tmp/aa')
     } finally {
-      await result.config(dnConfig)
+      // await result.config(dnConfig)
     }
     await result.clean()
+    await result.config(dnConfig)
     await result.post({url: xyjUrl, start: true})
     await result.post({url: url + xyjA, start: true})
-    await sleep(5)
+    await sleep(0)
     res = await result.list({downloadingOnly: true})
     expect(res).toHaveLength(2)
     expect(res).toStrictEqual([ expectId, xxhashAsStr(url + xyjA) ])
-    expect(fs.existsSync(tmpDir)).toBeTruthy()
+    expect(fs.existsSync(xyjTmpDir)).toBeTruthy()
     await result.clean({downloading: true})
-    expect(fs.existsSync(tmpDir)).toBeFalsy()
+    expect(fs.existsSync(xyjTmpDir)).toBeFalsy()
   })
 
   it('should use config autostart', async () => {
@@ -415,12 +436,12 @@ describe('Tool Download class', () => {
       })
       await result.post({url: xyjUrl, start: true})
       await result.post({url: url + xyjA, start: true})
-      await sleep(5)
+      await sleep(1)
       let res = await result.list({downloadingOnly: true})
       expect(res).toHaveLength(1)
-      expect(res).toStrictEqual([ xxhashAsStr(url + xyjA) ])
+      expect(res).toStrictEqual([ xxhashAsStr(url + xyj) ])
     } finally {
-      await result.config(dnConfig)
+      // await result.config(dnConfig)
       await result.clean({downloading: true, paused: true})
     }
   })

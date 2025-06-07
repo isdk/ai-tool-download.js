@@ -7,7 +7,7 @@ The Large File Downloader for `ServerTools`
 1. **ChunkDownload** 类：实现一个能够根据HTTP服务器range request特性进行指定范围内容的chunk下载并保存到文件的类。
 2. **BaseFileDownload** 抽象类：用于处理单文件的多块并发下载，要求HTTP服务器支持range request。
 3. **FileDownload** 类：基于`BaseFileDownload`实现一个异步多块并发下载工具，依赖ChunkDownload和p-limit库。
-4. **DownloadFunc（AI ResServerTool Func）**：提供文件下载管理RESTful API接口，支持配置服务器下载参数并获取下载状态。
+4. **DownloadFunc （AI ResServerTool Func）**：提供文件下载管理RESTful API接口，支持配置服务器下载参数并获取下载状态。
 
 注意：仅当服务器支持range request，才支持分块并发下载和断点续传。
 当前只完成了ChunkDownload(单块下载), BaseFileDownload(抽象多块并发下载), FileDownload(异步多块并发下载).
@@ -131,12 +131,12 @@ try {
 * get({id: string}): 获取指定id/url任务的状态 包括: {id, url, filepath, status}
 * put({id: string, start: boolean}): 暂停/启动指定id/url的任务
 * post({url: string, filepath?: string}): 添加新的任务,如果不指定filepath,则由`url`推断文件名
-* start({id: string}): 启动指定id/url的任务
+* start({id: string}): 启动指定id/url的任务, 如果队列满，并且没有设置`autoScaleDownloads`为true,则抛出错误，否则该任务会被加入到队列中。
 * stop({id: string}): 停止指定id/url的任务
 * config({concurrency = 3, rootDir: string, autostartQueue: boolean, cleanTempFile = true, autoScaleDownloads: boolean}): 配置服务器下载参数或获取下载参数
   * autostartQueue: 是否在下载任务完成后自动开始队列中的下一个pending任务, 默认false
   * cleanTempFile: 是否在移除任务后清理下载的临时文件, 默认为true
-  * autoScaleDownloads: 当当并发限制达到后,启动新加下载任务是自动停止一个最老的任务,还是报告错误, 默认为false,报告错误.
+  * autoScaleDownloads: 当当并发限制达到后,~~启动新加下载任务是自动停止一个最老的任务~~将新任务加入队列,还是报告错误, 默认为false,报告错误.
 * clean({completed?: boolean, paused?: boolean, downloading?: boolean}): 默认只清除已经下载完成的任务
   * completed: 清除已经下载完成的任务, 默认为 true
   * paused: 清除已经暂停的任务, 默认为 false

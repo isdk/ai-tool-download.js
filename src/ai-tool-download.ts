@@ -262,15 +262,17 @@ export class DownloadFunc extends ResServerTools {
         if (download.status !== 'downloading') {
           const ordered = this.getDownloadsInQueue('downloading').sort((a, b) => a.order! - b.order!)
           if (this.concurrency - ordered.length <= 0) {
+            download.status = 'pending'
             if (this.autoScaleDownloads) {
-              const dn = ordered[0]
-              await sleep(500)
+              // const dn = ordered[0]
+              // await sleep(150) //TODO: if no sleep engouth the stop can not work for chunks boot to download need time, it will change the download status!
               // console.log('🚀 ~ file: ai-tool-download.ts:269 ~ stop dn:', dn.getIdInfo().url)
-              await dn.stop()
+              // await dn.stop()
             } else {
-              download.status = 'pending'
+              // download.status = 'pending'
               throwError('Concurrency limit reached', 'start', ErrorCode.NotAcceptable)
             }
+            return
           }
           if (options && typeof options !== 'string' && options.waitForCompletion) {
             await this._start(id)
