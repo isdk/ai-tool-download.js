@@ -77,10 +77,10 @@ export class ChunkDownload extends EventEmitter {
 
     if (!options) { options = this.options }
     else {
-      if (!options.aborter) {options.aborter = new AbortController()}
       if (options.skipCheck === undefined) { options.skipCheck = this.options.skipCheck }
       if (!options.agent) {options.agent = this.options.agent}
     }
+    if (!options.aborter || options.aborter.signal.aborted) {this.options.aborter = options.aborter = new AbortController()}
 
     options.signal = options.aborter!.signal
 
