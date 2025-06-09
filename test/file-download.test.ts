@@ -146,7 +146,7 @@ describe('FileDownload', () => {
     let reqAbort = true
 
     // totalBytes: the file size
-    const onDownloadProgress: any = async function({percent: p, totalBytes, transferredBytes, id}, chunk: Uint8Array) {
+    const onDownloadProgress: any = async function(this: FileDownload, {percent: p, totalBytes, transferredBytes, id}, chunk: Uint8Array) {
       const percent = Math.round(p * 100)
       if (percent > last + 30) {
         // console.log(id, `🚀 ~ onDownloadProgress ~ percent: %${(p * 100)}, transferredBytes: ${transferredBytes}, totalBytes: ${totalBytes}`)
