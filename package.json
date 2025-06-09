@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@isdk/ai-tool": "workspace:*",
-    "events-ex": "2.0.0",
+    "events-ex": "^2.1.0",
     "ky": "^1.7.2",
     "p-limit": "^6.1.0",
     "tinypool": "^1.0.1"
