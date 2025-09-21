@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.2.0](https://github.com/isdk/ai-tool-download.js/compare/v0.1.14...v0.2.0) (2025-09-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* start will add task into queue if queue full and autoScaleDownloads, or raise error
+
+* start will add task into queue if queue full and autoScaleDownloads, or raise error ([6d52379](https://github.com/isdk/ai-tool-download.js/commit/6d52379e9dc2368748cbb71267c8a126ddf41241))
+
+
+### Bug Fixes
+
+* should check the aborter whether aborted before starting ([8f9e7ae](https://github.com/isdk/ai-tool-download.js/commit/8f9e7aea9e10f11fe6282908695977030727ff9a))
+* the check queue is not work, should sleep first ([0fcf2f7](https://github.com/isdk/ai-tool-download.js/commit/0fcf2f7232c224779edc986fc2cf167565ba65d3))
+
 ## [0.1.14](https://github.com/isdk/ai-tool-download.js/compare/v0.1.13...v0.1.14) (2025-04-04)
 
 
