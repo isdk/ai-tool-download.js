@@ -186,7 +186,7 @@ export class ChunkDownload extends EventEmitter {
       if (!body) { return }
 
       const writer = createWritableStream(options.filepath)
-      await body.pipeTo(writer)
+      await body.pipeTo(writer as any)
       this.status = 'completed'
     } catch (error: any) {
       if (error.code === AbortErrorCode) {
