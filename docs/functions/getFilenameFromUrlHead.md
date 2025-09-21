@@ -6,9 +6,9 @@
 
 # Function: getFilenameFromUrlHead()
 
-> **getFilenameFromUrlHead**(`url`, `options`?): `Promise`\<`undefined` \| `string`\>
+> **getFilenameFromUrlHead**(`url`, `options?`): `Promise`\<`undefined` \| `string`\>
 
-Defined in: [packages/ai-tool-downloader/src/utils.ts:71](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/utils.ts#L71)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/utils.ts:71](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/utils.ts#L71)
 
 ## Parameters
 

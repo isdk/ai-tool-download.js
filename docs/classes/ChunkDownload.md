@@ -6,7 +6,7 @@
 
 # Class: ChunkDownload
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:40](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L40)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:40](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L40)
 
 ## Extends
 
@@ -14,11 +14,11 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:40](https://githu
 
 ## Constructors
 
-### new ChunkDownload()
+### Constructor
 
-> **new ChunkDownload**(`options`): [`ChunkDownload`](ChunkDownload.md)
+> **new ChunkDownload**(`options`): `ChunkDownload`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L57)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L57)
 
 #### Parameters
 
@@ -28,7 +28,7 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:57](https://githu
 
 #### Returns
 
-[`ChunkDownload`](ChunkDownload.md)
+`ChunkDownload`
 
 #### Overrides
 
@@ -40,7 +40,7 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:57](https://githu
 
 > **\_status**: [`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md) = `'pending'`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L45)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L45)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:45](https://githu
 
 > `optional` **lastError**: `Error`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:44](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L44)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:44](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L44)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:44](https://githu
 
 > **options**: [`ChunkOptions`](../interfaces/ChunkOptions.md)
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:43](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L43)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:43](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L43)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:43](https://githu
 
 > `static` **defaultMaxListeners**: `number`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:7
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:7
 
 #### Inherited from
 
@@ -76,7 +76,7 @@ Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/even
 
 > `static` **nextId**: `number` = `0`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:41](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L41)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:41](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L41)
 
 ## Accessors
 
@@ -86,7 +86,7 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:41](https://githu
 
 > **get** **status**(): [`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md)
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L47)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L47)
 
 ##### Returns
 
@@ -96,7 +96,7 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:47](https://githu
 
 > **set** **status**(`value`): `void`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:50](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L50)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:50](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L50)
 
 ##### Parameters
 
@@ -114,7 +114,7 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:50](https://githu
 
 > **emit**(`eventName`, ...`args`): `any`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:38
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:38
 
 Emits the specified event type with the given arguments.
 
@@ -146,7 +146,7 @@ The result of the event.
 
 > **emitAsync**(`eventName`, ...`args`): `Promise`\<`any`\>
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:44
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:44
 
 Asynchronously emits the specified event type with the given arguments.
 
@@ -178,7 +178,7 @@ A promise that resolves with the result of the event.
 
 > **listenerCount**(`eventName`): `number`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:66
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:66
 
 Returns the count of listeners that are registered to listen for the specified event.
 
@@ -206,7 +206,7 @@ The name of the event to get the listeners for.
 
 > **listeners**(`eventName`): `Function`[]
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:59
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:59
 
 Returns an array of functions that are registered to listen for the specified event.
 
@@ -234,7 +234,7 @@ The name of the event to get the listeners for.
 
 > **off**(`eventName`, `listener`): `EventEmitter`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:32
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:32
 
 Removes a listener function from the specified event type.
 
@@ -270,7 +270,7 @@ If the listener is not a function.
 
 > **on**(`eventName`, `listener`): `EventEmitter`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:16
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:16
 
 Adds a listener function to the specified event type.
 
@@ -306,7 +306,7 @@ If the listener is not a function.
 
 > **once**(`eventName`, `listener`): `EventEmitter`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:24
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:24
 
 Adds a one-time listener function to the specified event type.
 
@@ -340,9 +340,9 @@ If the listener is not a function.
 
 ### removeAllListeners()
 
-> **removeAllListeners**(`eventName`?): `EventEmitter`
+> **removeAllListeners**(`eventName?`): `EventEmitter`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:51
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:51
 
 Removes all listeners for a specific event or all events from an event emitter.
 
@@ -370,7 +370,7 @@ The event to remove listeners for. If not provided, all listeners for all events
 
 > **setMaxListeners**(`n`): `EventEmitter`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:52
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:52
 
 #### Parameters
 
@@ -390,9 +390,9 @@ Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/even
 
 ### start()
 
-> **start**(`options`?): `Promise`\<`void`\>
+> **start**(`options?`): `Promise`\<`void`\>
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:71](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L71)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:71](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L71)
 
 #### Parameters
 
@@ -408,9 +408,9 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:71](https://githu
 
 ### stop()
 
-> **stop**(`options`?): `Promise`\<`void`\>
+> **stop**(`options?`): `Promise`\<`void`\>
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:202](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L202)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:202](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L202)
 
 #### Parameters
 
@@ -428,7 +428,7 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:202](https://gith
 
 > **toJSON**(): `any`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:215](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L215)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:215](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L215)
 
 #### Returns
 
@@ -440,7 +440,7 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:215](https://gith
 
 > `static` **listenerCount**(`emitter`, `eventName`): `number`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:74
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:74
 
 Returns the count of listeners that are registered to listen for the specified event.
 

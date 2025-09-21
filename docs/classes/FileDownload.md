@@ -6,7 +6,7 @@
 
 # Class: FileDownload
 
-Defined in: [packages/ai-tool-downloader/src/file-download.ts:9](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/file-download.ts#L9)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/file-download.ts:9](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/file-download.ts#L9)
 
 ## Extends
 
@@ -14,11 +14,11 @@ Defined in: [packages/ai-tool-downloader/src/file-download.ts:9](https://github.
 
 ## Constructors
 
-### new FileDownload()
+### Constructor
 
-> **new FileDownload**(`url`, `options`?): [`FileDownload`](FileDownload.md)
+> **new FileDownload**(`url`, `options?`): `FileDownload`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:59](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L59)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:59](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L59)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:59](https://g
 
 #### Returns
 
-[`FileDownload`](FileDownload.md)
+`FileDownload`
 
 #### Inherited from
 
@@ -44,7 +44,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:59](https://g
 
 > **\_status**: [`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md) = `'pending'`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:55](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L55)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:55](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L55)
 
 #### Inherited from
 
@@ -56,7 +56,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:55](https://g
 
 > **chunks**: [`ChunkDownload`](ChunkDownload.md)[] = `[]`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:54](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L54)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:54](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L54)
 
 #### Inherited from
 
@@ -68,7 +68,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:54](https://g
 
 > `optional` **id**: `string`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:50](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L50)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:50](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L50)
 
 #### Inherited from
 
@@ -80,7 +80,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:50](https://g
 
 > `optional` **manager**: `any`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:52](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L52)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:52](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L52)
 
 #### Inherited from
 
@@ -92,7 +92,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:52](https://g
 
 > **options**: `BaseFileDownloadOptions`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:53](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L53)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:53](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L53)
 
 #### Inherited from
 
@@ -104,7 +104,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:53](https://g
 
 > `optional` **order**: `number`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:51](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L51)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:51](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L51)
 
 #### Inherited from
 
@@ -116,7 +116,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:51](https://g
 
 > **transferredBytes**: `number` = `0`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:56](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L56)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:56](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L56)
 
 #### Inherited from
 
@@ -128,7 +128,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:56](https://g
 
 > `protected` `optional` **urlMetaInfo**: [`UrlMetaInfo`](../interfaces/UrlMetaInfo.md)
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L57)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L57)
 
 #### Inherited from
 
@@ -140,7 +140,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:57](https://g
 
 > `static` **defaultChunkSizeInBytes**: `number`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L47)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L47)
 
 #### Inherited from
 
@@ -152,7 +152,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:47](https://g
 
 > `static` **defaultConcurrency**: `number`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:48](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L48)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:48](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L48)
 
 #### Inherited from
 
@@ -164,7 +164,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:48](https://g
 
 > `static` **defaultMaxListeners**: `number`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:7
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:7
 
 #### Inherited from
 
@@ -176,7 +176,7 @@ Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/even
 
 > `static` **minSplitSizeInBytes**: `number`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:46](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L46)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:46](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L46)
 
 #### Inherited from
 
@@ -190,7 +190,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:46](https://g
 
 > **get** **minSplitSizeInBytes**(): `any`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:81](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L81)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:81](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L81)
 
 ##### Returns
 
@@ -208,7 +208,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:81](https://g
 
 > **get** **status**(): [`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md)
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:85](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L85)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:85](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L85)
 
 ##### Returns
 
@@ -218,7 +218,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:85](https://g
 
 > **set** **status**(`value`): `void`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:88](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L88)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:88](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L88)
 
 ##### Parameters
 
@@ -240,7 +240,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:88](https://g
 
 > **\_start**(`options`): `Promise`\<`void`[]\>
 
-Defined in: [packages/ai-tool-downloader/src/file-download.ts:23](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/file-download.ts#L23)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/file-download.ts:23](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/file-download.ts#L23)
 
 #### Parameters
 
@@ -262,7 +262,7 @@ Defined in: [packages/ai-tool-downloader/src/file-download.ts:23](https://github
 
 > **\_stop**(`options`): `Promise`\<`void`\>
 
-Defined in: [packages/ai-tool-downloader/src/file-download.ts:30](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/file-download.ts#L30)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/file-download.ts:30](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/file-download.ts#L30)
 
 #### Parameters
 
@@ -282,9 +282,9 @@ Defined in: [packages/ai-tool-downloader/src/file-download.ts:30](https://github
 
 ### cleanTemp()
 
-> **cleanTemp**(`options`?): `void`
+> **cleanTemp**(`options?`): `void`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:273](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L273)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:276](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L276)
 
 #### Parameters
 
@@ -306,7 +306,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:273](https://
 
 > **createChunk**(`options`): [`ChunkDownload`](ChunkDownload.md)
 
-Defined in: [packages/ai-tool-downloader/src/file-download.ts:11](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/file-download.ts#L11)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/file-download.ts:11](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/file-download.ts#L11)
 
 #### Parameters
 
@@ -328,7 +328,7 @@ Defined in: [packages/ai-tool-downloader/src/file-download.ts:11](https://github
 
 > **emit**(`eventName`, ...`args`): `any`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:38
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:38
 
 Emits the specified event type with the given arguments.
 
@@ -360,7 +360,7 @@ The result of the event.
 
 > **emitAsync**(`eventName`, ...`args`): `Promise`\<`any`\>
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:44
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:44
 
 Asynchronously emits the specified event type with the given arguments.
 
@@ -392,7 +392,7 @@ A promise that resolves with the result of the event.
 
 > **getAbsPath**(`options`): `string`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:103](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L103)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:103](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L103)
 
 #### Parameters
 
@@ -414,7 +414,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:103](https://
 
 > **getIdInfo**(): `object`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:96](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L96)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:96](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L96)
 
 #### Returns
 
@@ -442,7 +442,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:96](https://g
 
 > **listenerCount**(`eventName`): `number`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:66
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:66
 
 Returns the count of listeners that are registered to listen for the specified event.
 
@@ -470,7 +470,7 @@ The name of the event to get the listeners for.
 
 > **listeners**(`eventName`): `Function`[]
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:59
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:59
 
 Returns an array of functions that are registered to listen for the specified event.
 
@@ -498,7 +498,7 @@ The name of the event to get the listeners for.
 
 > **mergeChunks**(`options`): `Promise`\<`void`\>
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:129](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L129)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:129](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L129)
 
 #### Parameters
 
@@ -520,7 +520,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:129](https://
 
 > **off**(`eventName`, `listener`): `EventEmitter`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:32
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:32
 
 Removes a listener function from the specified event type.
 
@@ -556,7 +556,7 @@ If the listener is not a function.
 
 > **on**(`eventName`, `listener`): `EventEmitter`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:16
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:16
 
 Adds a listener function to the specified event type.
 
@@ -592,7 +592,7 @@ If the listener is not a function.
 
 > **once**(`eventName`, `listener`): `EventEmitter`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:24
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:24
 
 Adds a one-time listener function to the specified event type.
 
@@ -626,9 +626,9 @@ If the listener is not a function.
 
 ### removeAllListeners()
 
-> **removeAllListeners**(`eventName`?): `EventEmitter`
+> **removeAllListeners**(`eventName?`): `EventEmitter`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:51
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:51
 
 Removes all listeners for a specific event or all events from an event emitter.
 
@@ -654,9 +654,9 @@ The event to remove listeners for. If not provided, all listeners for all events
 
 ### resolveOptions()
 
-> **resolveOptions**(`options`?): [`FileDownloadOptions`](../interfaces/FileDownloadOptions.md)
+> **resolveOptions**(`options?`): [`FileDownloadOptions`](../interfaces/FileDownloadOptions.md)
 
-Defined in: [packages/ai-tool-downloader/src/file-download.ts:15](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/file-download.ts#L15)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/file-download.ts:15](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/file-download.ts#L15)
 
 #### Parameters
 
@@ -678,7 +678,7 @@ Defined in: [packages/ai-tool-downloader/src/file-download.ts:15](https://github
 
 > **setMaxListeners**(`n`): `EventEmitter`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:52
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:52
 
 #### Parameters
 
@@ -700,7 +700,7 @@ Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/even
 
 > **splitChunks**(`options`): `Promise`\<`void`\>
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:143](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L143)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:143](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L143)
 
 #### Parameters
 
@@ -720,9 +720,9 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:143](https://
 
 ### start()
 
-> **start**(`options`?): `Promise`\<`void`\>
+> **start**(`options?`): `Promise`\<`void`\>
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:223](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L223)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:223](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L223)
 
 #### Parameters
 
@@ -742,9 +742,9 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:223](https://
 
 ### stop()
 
-> **stop**(`options`?): `Promise`\<`void`\>
+> **stop**(`options?`): `Promise`\<`void`\>
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:256](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L256)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:259](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L259)
 
 #### Parameters
 
@@ -766,7 +766,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:256](https://
 
 > **toJSON**(): `any`
 
-Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:280](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/base-file-download.ts#L280)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/base-file-download.ts:283](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/base-file-download.ts#L283)
 
 #### Returns
 
@@ -782,7 +782,7 @@ Defined in: [packages/ai-tool-downloader/src/base-file-download.ts:280](https://
 
 > `static` **listenerCount**(`emitter`, `eventName`): `number`
 
-Defined in: node\_modules/.pnpm/events-ex@2.0.0/node\_modules/events-ex/lib/event-emitter.d.ts:74
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/events-ex/lib/event-emitter.d.ts:74
 
 Returns the count of listeners that are registered to listen for the specified event.
 

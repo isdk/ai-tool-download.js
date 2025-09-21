@@ -6,7 +6,7 @@
 
 # Interface: ChunkOptions
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:9](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L9)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:9](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L9)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:9](https://github
 
 > `optional` **aborter**: `AbortController`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L36)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L36)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:36](https://githu
 
 > `optional` **agent**: `any`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L37)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L37)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:37](https://githu
 
 > `optional` **body**: `null` \| `BodyInit`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1861
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1861
 
 A BodyInit object or null to set request's body.
 
@@ -48,7 +48,7 @@ A BodyInit object or null to set request's body.
 
 > `optional` **cache**: `RequestCache`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1863
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1863
 
 A string indicating how the request will interact with the browser's cache to set request's cache.
 
@@ -62,7 +62,7 @@ A string indicating how the request will interact with the browser's cache to se
 
 > `optional` **credentials**: `RequestCredentials`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1865
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1865
 
 A string indicating whether credentials will be sent with the request always, never, or only when sent to a same-origin URL. Sets request's credentials.
 
@@ -76,7 +76,7 @@ A string indicating whether credentials will be sent with the request always, ne
 
 > `optional` **endByte**: `number`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L29)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L29)
 
 The end byte of the chunk.
 
@@ -84,9 +84,9 @@ The end byte of the chunk.
 
 ### fetch()?
 
-> `optional` **fetch**: (`input`, `init`?) => `Promise`\<`Response`\>
+> `optional` **fetch**: (`input`, `init?`) => `Promise`\<`Response`\>
 
-Defined in: node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:187
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/ky@1.7.5/node\_modules/ky/distribution/types/options.d.ts:187
 
 User-defined `fetch` function.
 Has to be fully compatible with the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) standard.
@@ -134,7 +134,7 @@ const json = await ky('https://example.com', {fetch}).json();
 
 > **filepath**: `string`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:17](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L17)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:17](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L17)
 
 save the content to the filePath
 
@@ -144,7 +144,7 @@ save the content to the filePath
 
 > `optional` **headers**: `KyHeadersInit`
 
-Defined in: node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:242
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/ky@1.7.5/node\_modules/ky/distribution/types/options.d.ts:242
 
 HTTP headers used to make the request.
 
@@ -191,7 +191,7 @@ console.log('unicorn' in response);
 
 > `optional` **hooks**: `Hooks`
 
-Defined in: node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:138
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/ky@1.7.5/node\_modules/ky/distribution/types/options.d.ts:138
 
 Hooks allow modifications during the request lifecycle. Hook functions may be async and are run serially.
 
@@ -205,7 +205,7 @@ Hooks allow modifications during the request lifecycle. Hook functions may be as
 
 > `optional` **index**: `number`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L21)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L21)
 
 The index of the chunk.
 
@@ -215,7 +215,7 @@ The index of the chunk.
 
 > `optional` **integrity**: `string`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1869
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1869
 
 A cryptographic hash of the resource to be fetched by request. Sets request's integrity.
 
@@ -229,7 +229,7 @@ A cryptographic hash of the resource to be fetched by request. Sets request's in
 
 > `optional` **json**: `unknown`
 
-Defined in: node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:26
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/ky@1.7.5/node\_modules/ky/distribution/types/options.d.ts:26
 
 Shortcut for sending JSON. Use this instead of the `body` option.
 
@@ -245,7 +245,7 @@ Accepts any plain object or value, which will be `JSON.stringify()`'d and sent i
 
 > `optional` **keepalive**: `boolean`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1871
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1871
 
 A boolean to set request's keepalive.
 
@@ -259,7 +259,7 @@ A boolean to set request's keepalive.
 
 > `optional` **method**: `LiteralUnion`\<`HttpMethod`, `string`\>
 
-Defined in: node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:206
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/ky@1.7.5/node\_modules/ky/distribution/types/options.d.ts:206
 
 HTTP method used to make the request.
 
@@ -275,7 +275,7 @@ Internally, the standard methods (`GET`, `POST`, `PUT`, `PATCH`, `HEAD` and `DEL
 
 > `optional` **mode**: `RequestMode`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1875
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1875
 
 A string to indicate whether the request will use CORS, or will be restricted to same-origin URLs. Sets request's mode.
 
@@ -289,7 +289,7 @@ A string to indicate whether the request will use CORS, or will be restricted to
 
 > `optional` **onDownloadProgress**: (`progress`, `chunk`) => `void`
 
-Defined in: node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:168
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/ky@1.7.5/node\_modules/ky/distribution/types/options.d.ts:168
 
 Download progress event handler.
 
@@ -334,7 +334,7 @@ const response = await ky('https://example.com', {
 
 > `optional` **overwrite**: `boolean`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L33)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L33)
 
 overwrite the existing file.
 
@@ -344,7 +344,7 @@ overwrite the existing file.
 
 > `optional` **parseJson**: (`text`) => `unknown`
 
-Defined in: node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:46
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/ky@1.7.5/node\_modules/ky/distribution/types/options.d.ts:46
 
 User-defined JSON-parsing function.
 
@@ -389,7 +389,7 @@ const json = await ky('https://example.com', {
 
 > `optional` **port**: `MessagePort`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L35)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L35)
 
 ***
 
@@ -397,7 +397,7 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:35](https://githu
 
 > `optional` **prefixUrl**: `string` \| `URL`
 
-Defined in: node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:100
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/ky@1.7.5/node\_modules/ky/distribution/types/options.d.ts:100
 
 A prefix to prepend to the `input` URL when making the request. It can be any valid URL, either relative or absolute. A trailing slash `/` is optional and will be added automatically, if needed, when it is joined with `input`. Only takes effect when `input` is a string. The `input` argument cannot start with a slash `/` when using this option.
 
@@ -431,7 +431,7 @@ const response = await ky('unicorn', {prefixUrl: 'https://cats.com'});
 
 > `optional` **priority**: `RequestPriority`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1876
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1876
 
 #### Inherited from
 
@@ -443,7 +443,7 @@ Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/li
 
 > `optional` **redirect**: `RequestRedirect`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1878
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1878
 
 A string indicating whether request follows redirects, results in an error upon encountering a redirect, or returns the redirect (in an opaque fashion). Sets request's redirect.
 
@@ -457,7 +457,7 @@ A string indicating whether request follows redirects, results in an error upon 
 
 > `optional` **referrer**: `string`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1880
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1880
 
 A string whose value is a same-origin URL, "about:client", or the empty string, to set request's referrer.
 
@@ -471,7 +471,7 @@ A string whose value is a same-origin URL, "about:client", or the empty string, 
 
 > `optional` **referrerPolicy**: `ReferrerPolicy`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1882
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1882
 
 A referrer policy to set request's referrerPolicy.
 
@@ -485,7 +485,7 @@ A referrer policy to set request's referrerPolicy.
 
 > `optional` **retry**: `number` \| `RetryOptions`
 
-Defined in: node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:127
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/ky@1.7.5/node\_modules/ky/distribution/types/options.d.ts:127
 
 An object representing `limit`, `methods`, `statusCodes`, `afterStatusCodes`, and `maxRetryAfter` fields for maximum retry count, allowed methods, allowed status codes, status codes allowed to use the [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) time, and maximum [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) time.
 
@@ -523,7 +523,7 @@ const json = await ky('https://example.com', {
 
 > `optional` **searchParams**: `SearchParamsOption`
 
-Defined in: node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:77
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/ky@1.7.5/node\_modules/ky/distribution/types/options.d.ts:77
 
 Search parameters to include in the request URL. Setting this will override all existing search parameters in the input URL.
 
@@ -539,7 +539,7 @@ Accepts any value supported by [`URLSearchParams()`](https://developer.mozilla.o
 
 > `optional` **signal**: `null` \| `AbortSignal`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1884
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1884
 
 An AbortSignal to set request's signal.
 
@@ -553,7 +553,7 @@ An AbortSignal to set request's signal.
 
 > `optional` **skipCheck**: `Headers`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L34)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L34)
 
 ***
 
@@ -561,7 +561,7 @@ Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:34](https://githu
 
 > `optional` **startByte**: `number`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L25)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L25)
 
 The start byte of the chunk.
 
@@ -571,7 +571,7 @@ The start byte of the chunk.
 
 > `optional` **stringifyJson**: (`data`) => `string`
 
-Defined in: node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:71
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/ky@1.7.5/node\_modules/ky/distribution/types/options.d.ts:71
 
 User-defined JSON-stringifying function.
 
@@ -621,7 +621,7 @@ const json = await ky('https://example.com', {
 
 > `optional` **throwHttpErrors**: `boolean`
 
-Defined in: node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:148
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/ky@1.7.5/node\_modules/ky/distribution/types/options.d.ts:148
 
 Throw an `HTTPError` when, after following redirects, the response has a non-2xx status code. To also throw for redirects instead of following them, set the [`redirect`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters) option to `'manual'`.
 
@@ -645,7 +645,7 @@ true
 
 > `optional` **timeout**: `number` \| `false`
 
-Defined in: node\_modules/.pnpm/ky@1.7.2/node\_modules/ky/distribution/types/options.d.ts:134
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/ky@1.7.5/node\_modules/ky/distribution/types/options.d.ts:134
 
 Timeout in milliseconds for getting a response, including any retries. Can not be greater than 2147483647.
 If set to `false`, there will be no timeout.
@@ -666,7 +666,7 @@ If set to `false`, there will be no timeout.
 
 > **url**: `string`
 
-Defined in: [packages/ai-tool-downloader/src/chunk-download.ts:13](https://github.com/isdk/ai-tool-download.js/blob/09ce910da0a60480ec886fed5ae17c2c57345f16/src/chunk-download.ts#L13)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:13](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L13)
 
 download the url content
 
@@ -676,7 +676,7 @@ download the url content
 
 > `optional` **window**: `null`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1886
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.dom.d.ts:1886
 
 Can only be null. Used to disassociate request from any Window.
 
