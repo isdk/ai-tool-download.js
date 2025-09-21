@@ -6,7 +6,7 @@
 
 # Class: ChunkDownload
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:40](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L40)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:40](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L40)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:40
 
 > **new ChunkDownload**(`options`): `ChunkDownload`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L57)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:57](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L57)
 
 #### Parameters
 
@@ -40,7 +40,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:57
 
 > **\_status**: [`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md) = `'pending'`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L45)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:45](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L45)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:45
 
 > `optional` **lastError**: `Error`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:44](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L44)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:44](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L44)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:44
 
 > **options**: [`ChunkOptions`](../interfaces/ChunkOptions.md)
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:43](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L43)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:43](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L43)
 
 ***
 
@@ -76,7 +76,7 @@ Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/eve
 
 > `static` **nextId**: `number` = `0`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:41](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L41)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:41](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L41)
 
 ## Accessors
 
@@ -86,7 +86,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:41
 
 > **get** **status**(): [`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md)
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L47)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:47](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L47)
 
 ##### Returns
 
@@ -96,7 +96,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:47
 
 > **set** **status**(`value`): `void`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:50](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L50)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:50](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L50)
 
 ##### Parameters
 
@@ -392,7 +392,7 @@ Defined in: @isdk/ai-tools/node\_modules/.pnpm/events-ex@2.1.0/node\_modules/eve
 
 > **start**(`options?`): `Promise`\<`void`\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:71](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L71)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:71](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L71)
 
 #### Parameters
 
@@ -410,7 +410,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:71
 
 > **stop**(`options?`): `Promise`\<`void`\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:202](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L202)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:202](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L202)
 
 #### Parameters
 
@@ -428,7 +428,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:20
 
 > **toJSON**(): `any`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:215](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/chunk-download.ts#L215)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:215](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L215)
 
 #### Returns
 

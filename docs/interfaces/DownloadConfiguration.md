@@ -6,7 +6,7 @@
 
 # Interface: DownloadConfiguration
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:31](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/ai-tool-download.ts#L31)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:31](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L31)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > `optional` **autoScaleDownloads**: `boolean`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/ai-tool-download.ts#L37)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L37)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > `optional` **autostartQueue**: `boolean`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/ai-tool-download.ts#L34)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L34)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > `optional` **chunkSizeInBytes**: `number`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/ai-tool-download.ts#L36)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L36)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > `optional` **cleanTempFile**: `boolean`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/ai-tool-download.ts#L35)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L35)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > `optional` **concurrency**: `number`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:32](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/ai-tool-download.ts#L32)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:32](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L32)
 
 ***
 
@@ -54,4 +54,4 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > `optional` **rootDir**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/2a238540fc7f476208ad754c7d1575eda3aa9587/src/ai-tool-download.ts#L33)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L33)
