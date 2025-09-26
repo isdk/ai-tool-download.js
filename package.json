@@ -29,7 +29,7 @@
     "release.alpha": "pnpm run release -- --prerelease alpha"
   },
   "dependencies": {
-    "@isdk/ai-tool": "workspace:*",
+    "@isdk/ai-tool": "workspace:^",
     "events-ex": "^2.1.0",
     "ky": "^1.7.5",
     "p-limit": "^6.2.0",
@@ -39,8 +39,6 @@
     "@antfu/eslint-config": "^4.10.1",
     "@fastify/static": "^7.0.4",
     "@kldzj/stream-throttle": "^1.1.1",
-    "@types/better-sqlite3": "^7.6.13",
-    "@types/got": "^9.6.12",
     "@types/jest": "^29.5.14",
     "@types/node": "^24.3.0",
     "@typescript-eslint/eslint-plugin": "~8.41.0",
