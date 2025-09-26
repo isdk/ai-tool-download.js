@@ -8,7 +8,7 @@
 
 > **getUrlMetaInfo**(`url`, `options?`, `headers?`): `Promise`\<[`UrlMetaInfo`](../interfaces/UrlMetaInfo.md)\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/utils.ts:35](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/utils.ts#L35)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/utils.ts:35](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/utils.ts#L35)
 
 ## Parameters
 

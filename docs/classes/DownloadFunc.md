@@ -6,7 +6,7 @@
 
 # Class: DownloadFunc
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:65](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L65)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:65](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L65)
 
 Server-side download management utility that handles a file download queue and notifies progress via SSE events.
 Requires persistent storage of the download queue.
@@ -156,7 +156,7 @@ const func = new ToolFunc({
 
 > **autoScaleDownloads**: `undefined` \| `boolean`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:91](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L91)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:91](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L91)
 
 Determines whether to automatically scale downloads when the concurrency limit is reached.
 If set to `true`, the system will automatically stop existing download tasks to start new ones when the concurrency limit is reached.
@@ -168,7 +168,7 @@ If set to `false`, an error message "Concurrency limit reached" will be reported
 
 > **autostartQueue**: `undefined` \| `boolean`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:77](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L77)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:77](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L77)
 
 Indicates whether the download queue should automatically start processing the next task upon completion of the current one.
 
@@ -181,7 +181,7 @@ download task finishes successfully. If set to `false`, manual intervention will
 
 > **chunkSizeInBytes**: `number` = `defaultChunkSizeInBytes`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:85](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L85)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:85](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L85)
 
 ***
 
@@ -189,7 +189,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > **cleanTempFile**: `boolean` = `true`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:84](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L84)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:84](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L84)
 
 Determines whether to clean up temporary files when a downloading or paused task is removed.
 If set to `true`, temporary files will be deleted when a downloading or paused task is removed.
@@ -201,7 +201,7 @@ If set to `false`, temporary files will not be deleted.
 
 > **concurrency**: `number` = `defaultConcurrency`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:70](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L70)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:70](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L70)
 
 ***
 
@@ -245,7 +245,7 @@ The default options for export and assign
 
 > **depends**: `object`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:93](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L93)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:93](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L93)
 
 A map of dependencies this function has on other tool functions.
 Declaring dependencies ensures that they are automatically registered when this function is registered.
@@ -312,7 +312,7 @@ Addtional options to be passed to the underlying `fetch` call in a transport.
 
 > **finished**: `DownloadItems` = `{}`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:67](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L67)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:67](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L67)
 
 ***
 
@@ -360,7 +360,7 @@ The unique name of the function.
 
 > **nextOrder**: `number` = `0`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:69](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L69)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:69](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L69)
 
 ***
 
@@ -394,7 +394,7 @@ Defined in: @isdk/ai-tools/packages/ai-tool/dist/index-BLW3R7VS.d.ts:1756
 
 > **queue**: `DownloadItems` = `{}`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:66](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L66)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:66](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L66)
 
 ***
 
@@ -416,7 +416,7 @@ The expected return type of the function, described as a string or a JSON schema
 
 > **rootDir**: `undefined` \| `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:68](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L68)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:68](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L68)
 
 ***
 
@@ -625,7 +625,7 @@ The conventional root path for the API endpoint.
 
 > **\_start**(`options`): `Promise`\<`void`\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:240](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L240)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:240](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L240)
 
 #### Parameters
 
@@ -643,7 +643,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > **$clean**(`options`): `Promise`\<`any`[]\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:330](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L330)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:330](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L330)
 
 #### Parameters
 
@@ -671,7 +671,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > **$config**(`options?`): `object`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:360](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L360)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:360](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L360)
 
 #### Parameters
 
@@ -713,7 +713,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > **$start**(`options`): `Promise`\<`undefined` \| \{ `id`: `string`; \}\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:295](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L295)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:295](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L295)
 
 #### Parameters
 
@@ -731,7 +731,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > **$stop**(`options`): `Promise`\<\{ `id`: `string`; `status`: [`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md); `url`: `string`; \} \| \{ `id?`: `undefined`; `status`: `string`; `url?`: `undefined`; \}\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:310](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L310)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:310](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L310)
 
 #### Parameters
 
@@ -749,7 +749,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > **add**(`options`): `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:221](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L221)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:221](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L221)
 
 #### Parameters
 
@@ -1094,7 +1094,7 @@ the defined attributes of the object
 
 > **delete**(`options`): `Promise`\<\{ `filepath`: `undefined` \| `string`; `id`: `string`; `status`: [`FileDownloadStatus`](../type-aliases/FileDownloadStatus.md); `url`: `string`; \}\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:464](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L464)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:464](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L464)
 
 #### Parameters
 
@@ -1116,7 +1116,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > **exportQueue**(): `DownloadOptionsItems`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:115](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L115)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:115](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L115)
 
 #### Returns
 
@@ -1189,7 +1189,7 @@ The result of the function.
 
 > **get**(`options`): `any`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:427](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L427)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:427](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L427)
 
 #### Parameters
 
@@ -1211,7 +1211,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > **getDownloadsInQueue**(`status?`, `isNot?`): [`FileDownload`](FileDownload.md)[]
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:145](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L145)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:145](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L145)
 
 #### Parameters
 
@@ -1293,7 +1293,7 @@ A function reference or `undefined` if not found.
 
 > **getId**(`options`): `undefined` \| `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:126](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L126)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:126](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L126)
 
 #### Parameters
 
@@ -1311,7 +1311,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > **getItem**(`options`): `undefined` \| [`FileDownload`](FileDownload.md)
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:287](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L287)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:287](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L287)
 
 #### Parameters
 
@@ -1425,7 +1425,7 @@ A property name.
 
 > **importQueue**(`queue`): `void`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:106](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L106)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:106](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L106)
 
 #### Parameters
 
@@ -1581,7 +1581,7 @@ The runtime parameters passed to the function call.
 
 > **list**(`options`): `string`[]
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:445](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L445)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:445](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L445)
 
 #### Parameters
 
@@ -1635,7 +1635,7 @@ the dest object.
 
 > **newDownload**(`options`, `id`): [`FileDownload`](FileDownload.md)
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:186](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L186)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:186](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L186)
 
 #### Parameters
 
@@ -1686,7 +1686,7 @@ An array of positional arguments.
 
 > **onCompleted**(`id`): `void`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:135](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L135)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:135](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L135)
 
 #### Parameters
 
@@ -1704,7 +1704,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > **post**(`options`): `Promise`\<`undefined` \| \{ `id`: `string`; \}\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:391](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L391)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:391](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L391)
 
 #### Parameters
 
@@ -1752,7 +1752,7 @@ A property name.
 
 > **put**(`options`): `object`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:407](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L407)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:407](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L407)
 
 #### Parameters
 
@@ -2071,7 +2071,7 @@ The result of the function execution.
 
 > **start**(`options`): `Promise`\<`void`\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:256](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L256)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:256](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L256)
 
 #### Parameters
 
@@ -2089,7 +2089,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > **startAll**(): `void`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:155](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L155)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:155](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L155)
 
 #### Returns
 
@@ -2101,7 +2101,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:
 
 > **stopAll**(): `Promise`\<`void`\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:176](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/ai-tool-download.ts#L176)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/ai-tool-download.ts:176](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/ai-tool-download.ts#L176)
 
 #### Returns
 

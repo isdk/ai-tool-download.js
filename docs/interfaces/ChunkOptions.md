@@ -6,7 +6,7 @@
 
 # Interface: ChunkOptions
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:9](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L9)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:9](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/chunk-download.ts#L9)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:9]
 
 > `optional` **aborter**: `AbortController`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L36)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:36](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/chunk-download.ts#L36)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:36
 
 > `optional` **agent**: `any`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L37)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:37](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/chunk-download.ts#L37)
 
 ***
 
@@ -76,7 +76,7 @@ A string indicating whether credentials will be sent with the request always, ne
 
 > `optional` **endByte**: `number`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L29)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:29](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/chunk-download.ts#L29)
 
 The end byte of the chunk.
 
@@ -134,7 +134,7 @@ const json = await ky('https://example.com', {fetch}).json();
 
 > **filepath**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:17](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L17)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:17](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/chunk-download.ts#L17)
 
 save the content to the filePath
 
@@ -205,7 +205,7 @@ Hooks allow modifications during the request lifecycle. Hook functions may be as
 
 > `optional` **index**: `number`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L21)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:21](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/chunk-download.ts#L21)
 
 The index of the chunk.
 
@@ -334,7 +334,7 @@ const response = await ky('https://example.com', {
 
 > `optional` **overwrite**: `boolean`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L33)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:33](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/chunk-download.ts#L33)
 
 overwrite the existing file.
 
@@ -389,7 +389,7 @@ const json = await ky('https://example.com', {
 
 > `optional` **port**: `MessagePort`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L35)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:35](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/chunk-download.ts#L35)
 
 ***
 
@@ -553,7 +553,7 @@ An AbortSignal to set request's signal.
 
 > `optional` **skipCheck**: `Headers`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L34)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:34](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/chunk-download.ts#L34)
 
 ***
 
@@ -561,7 +561,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:34
 
 > `optional` **startByte**: `number`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L25)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:25](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/chunk-download.ts#L25)
 
 The start byte of the chunk.
 
@@ -666,7 +666,7 @@ If set to `false`, there will be no timeout.
 
 > **url**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:13](https://github.com/isdk/ai-tool-download.js/blob/bb7b97dd280c83d13cc627a69cac9a861e3cf016/src/chunk-download.ts#L13)
+Defined in: [@isdk/ai-tools/packages/ai-tool-downloader/src/chunk-download.ts:13](https://github.com/isdk/ai-tool-download.js/blob/05bb53b628f06761f19ed5d6dbc02c381e992ef5/src/chunk-download.ts#L13)
 
 download the url content
 
